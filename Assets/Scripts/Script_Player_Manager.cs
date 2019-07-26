@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Script_Player_Manager : MonoBehaviour
 {
     public enum DashState { Ready, Dashing, Cooldown }
-    public enum Player { Skye, Dawn, KingNimbus, CommanderBold, Smog, Angel, Sirocco, Entity, BirdMan, DarkSkye}
+    public enum Player { Skye, Dawn, KingNimbus, CommanderBolt, Smog, Angel, Sirocco, Entity, BirdMan, DarkSkye}
 
     [Header("Player")]
     public Player player_list;
@@ -22,18 +23,18 @@ public class Script_Player_Manager : MonoBehaviour
     private float f_current_dash_cooldown;
     public float f_dash_cooldown;
     private bool b_can_dash;
-    private float f_dash_timer;
+    private float f_dash_timer = 1f;
     public DashState dash_state;
 
     [Header("Cloud")]
     public SpriteRenderer cloud_sprite;
-    public List<Vector3> v_cloud_scale;
+    private Vector3 v_current_cloud_scale;
+    public int i_max_health;
     private int i_current_health;
 
     void Start()
     {
-        i_current_health = v_cloud_scale.Count;
-        Debug.Log(i_current_health);
+        i_current_health = i_max_health;
         f_current_dash_cooldown = f_dash_cooldown;
         rigidbody_player = GetComponent<Rigidbody2D>();
 
@@ -48,8 +49,8 @@ public class Script_Player_Manager : MonoBehaviour
             case Player.KingNimbus:
                 Debug.Log("KingNimbus");
                 break;
-            case Player.CommanderBold:
-                Debug.Log("CommanderBold");
+            case Player.CommanderBolt:
+                Debug.Log("CommanderBolt");
                 break;
             case Player.Smog:
                 Debug.Log("Smog");
@@ -87,6 +88,12 @@ public class Script_Player_Manager : MonoBehaviour
         if (Input.GetKeyDown("e") && b_can_dash)
         {
             Dash();
+        }
+
+        if (Input.GetKeyDown("m"))
+        {
+            Scene loadedLevel = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(loadedLevel.buildIndex);
         }
 
         #region Dash
@@ -129,10 +136,9 @@ public class Script_Player_Manager : MonoBehaviour
 
     public void ReduceCloud()
     {
-        if(i_current_health != 0)
+        if (i_current_health != 0)
         {
-            cloud_sprite.transform.localScale = v_cloud_scale[i_current_health-1];
-            Debug.Log(v_cloud_scale[i_current_health]);
+            cloud_sprite.transform.localScale = cloud_sprite.transform.localScale / 2;
             i_current_health--;
         }
         else

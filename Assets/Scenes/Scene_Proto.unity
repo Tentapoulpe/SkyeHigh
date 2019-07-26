@@ -480,10 +480,7 @@ MonoBehaviour:
   f_dash_cooldown: 2
   dash_state: 0
   cloud_sprite: {fileID: 942062439}
-  v_cloud_scale:
-  - {x: 0.25, y: 0.25, z: 0.25}
-  - {x: 0.5, y: 0.5, z: 0.5}
-  - {x: 0.75, y: 0.75, z: 0.75}
+  i_max_health: 3
 --- !u!50 &1197119057
 Rigidbody2D:
   serializedVersion: 4
