@@ -136,6 +136,7 @@ public class Script_Player_Manager : MonoBehaviour
 
     public void DecreaseCloud()
     {
+        Debug.Log("Decrease");
         if (i_current_health != 0)
         {
             cloud_sprite.transform.localScale = cloud_sprite.transform.localScale / 2;
@@ -149,7 +150,8 @@ public class Script_Player_Manager : MonoBehaviour
 
     public void IncreaseCloud()
     {
-        if(i_current_health != i_max_health)
+        Debug.Log("Increase");
+        if (i_current_health != i_max_health)
         {
             cloud_sprite.transform.localScale = cloud_sprite.transform.localScale * 2;
             i_current_health++;
@@ -158,7 +160,7 @@ public class Script_Player_Manager : MonoBehaviour
 
     public void ReduceVelocity()
     {
-
+        Debug.Log("ReduceVelocity");
     }
 
     public void Death()
