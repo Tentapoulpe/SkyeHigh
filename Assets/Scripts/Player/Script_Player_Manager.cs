@@ -9,36 +9,33 @@ public class Script_Player_Manager : MonoBehaviour
     public enum Player { Skye, Dawn, KingNimbus, CommanderBolt, Smog, Angel, Sirocco, Entity, BirdMan, DarkSkye}
 
     [Header("Player")]
-    public Player player_list;
+    public Player playerList;
 
-    [Header ("Movement")]
-    private Rigidbody2D rigidbody_player;
-    public float f_movement_speed;
-    private float f_move_horizontal;
-    private float f_move_vertical;
+    [Header("Movement")]
+    public float m_movementSpeed;
+    private float f_moveHorizontal;
+    private float f_moveVertical;
     private Vector2 v_movement;
+    private Rigidbody2D rigidbodyPlayer { get { return GetComponent<Rigidbody2D>(); } }
 
     [Header("Dash")]
-    public float f_dash_speed;
-    private float f_current_dash_cooldown;
-    public float f_dash_cooldown;
-    private bool b_can_dash;
-    private float f_dash_timer = 1f;
-    public DashState dash_state;
+    public float m_dashPower;
+    public int m_maxDashCooldown;
+
+    private bool b_canDash = true;
+    private float f_dashCooldown = 0f;
 
     [Header("Cloud")]
-    public SpriteRenderer cloud_sprite;
-    private Vector3 v_current_cloud_scale;
-    public int i_max_health;
-    private int i_current_health;
+    public SpriteRenderer cloudSprite;
+    private Vector3 v_currentCloudScale;
+    public int m_maxHealth;
+    private int i_currentHealth;
 
     void Start()
     {
-        i_current_health = i_max_health;
-        f_current_dash_cooldown = f_dash_cooldown;
-        rigidbody_player = GetComponent<Rigidbody2D>();
+        i_currentHealth = m_maxHealth;
 
-        switch(player_list)
+        switch(playerList)
         {
             case Player.Skye:
                 Debug.Log("Skye");
@@ -75,17 +72,17 @@ public class Script_Player_Manager : MonoBehaviour
 
     private void Movement()
     {
-        f_move_horizontal = Input.GetAxis("Horizontal");
-        f_move_vertical = Input.GetAxis("Vertical");
-        v_movement = new Vector2(f_move_horizontal, f_move_vertical);
-        rigidbody_player.velocity = (v_movement * f_movement_speed);
+        f_moveHorizontal = Input.GetAxis("Horizontal");
+        f_moveVertical = Input.GetAxis("Vertical");
+        v_movement = new Vector2(f_moveHorizontal, f_moveVertical);
+        rigidbodyPlayer.velocity = (v_movement * m_movementSpeed);
     }
 
     void Update()
     {
         Movement();
 
-        if (Input.GetKeyDown("e") && b_can_dash)
+        if (Input.GetKeyDown("e") && b_canDash)
         {
             Dash();
         }
@@ -95,51 +92,33 @@ public class Script_Player_Manager : MonoBehaviour
             Script_Game_Manager.Instance.RestartGame();
         }
 
-        #region Dash
-        switch (dash_state)
+        if (f_dashCooldown > 0)
+        {
+            f_dashCooldown -= Time.deltaTime;
+            if (f_dashCooldown <= 0)
             {
-                case DashState.Ready:
-                b_can_dash = true;
-                    break;
-
-                case DashState.Dashing:
-                f_dash_timer -= Time.deltaTime;
-                if(f_dash_timer <= 0)
-                {
-                    f_dash_timer = 1;
-                    dash_state = DashState.Cooldown;
-                }
-                dash_state = DashState.Cooldown;
-                    break;
-
-                case DashState.Cooldown:
-                f_current_dash_cooldown -= Time.deltaTime;
-                    if (f_current_dash_cooldown <= 0)
-                    {
-                        f_current_dash_cooldown = f_dash_cooldown;
-                        dash_state = DashState.Ready;
-                    }
-                    break;
+                f_dashCooldown = 0;
+                b_canDash = true;
+                Debug.Log("CanDash");
             }
-        #endregion
+        }
     }
 
     public void Dash()
     {
-        Debug.Log("Dash");
-        b_can_dash = false;
-        rigidbody_player.velocity = v_movement.normalized * f_dash_speed;
-        DecreaseCloud();
-        dash_state = DashState.Dashing;
+        Debug.Log("dashing");
+        b_canDash = false;
+        f_dashCooldown = m_maxDashCooldown;
+        rigidbodyPlayer.AddForce(v_movement * m_dashPower);
     }
 
     public void DecreaseCloud()
     {
         Debug.Log("Decrease");
-        if (i_current_health != 0)
+        if (i_currentHealth != 0)
         {
-            cloud_sprite.transform.localScale = cloud_sprite.transform.localScale / 2;
-            i_current_health--;
+            cloudSprite.transform.localScale = cloudSprite.transform.localScale / 2;
+            i_currentHealth--;
         }
         else
         {
@@ -150,10 +129,10 @@ public class Script_Player_Manager : MonoBehaviour
     public void IncreaseCloud()
     {
         Debug.Log("Increase");
-        if (i_current_health != i_max_health)
+        if (i_currentHealth != m_maxHealth)
         {
-            cloud_sprite.transform.localScale = cloud_sprite.transform.localScale * 2;
-            i_current_health = i_max_health;
+            cloudSprite.transform.localScale = cloudSprite.transform.localScale * 2;
+            i_currentHealth = m_maxHealth;
         }
     }
 

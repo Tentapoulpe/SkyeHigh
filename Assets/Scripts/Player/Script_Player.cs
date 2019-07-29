@@ -6,9 +6,9 @@ public class Script_Player : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponentInParent<Script_Player_Manager>().dash_state == Script_Player_Manager.DashState.Dashing && collision.CompareTag("Player"))
-        {
-            GetComponentInParent<Script_Player_Manager>().Death();
-        }
+        //if(collision.GetComponentInParent<Script_Player_Manager>().dashState == Script_Player_Manager.DashState.Dashing && collision.CompareTag("Player"))
+        //{
+        //    GetComponentInParent<Script_Player_Manager>().Death();
+        //}
     }
 }
