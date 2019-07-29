@@ -130,11 +130,11 @@ public class Script_Player_Manager : MonoBehaviour
         Debug.Log("Dash");
         b_can_dash = false;
         rigidbody_player.velocity = v_movement.normalized * f_dash_speed;
-        ReduceCloud();
+        DecreaseCloud();
         dash_state = DashState.Dashing;
     }
 
-    public void ReduceCloud()
+    public void DecreaseCloud()
     {
         if (i_current_health != 0)
         {
@@ -147,8 +147,23 @@ public class Script_Player_Manager : MonoBehaviour
         }
     }
 
+    public void IncreaseCloud()
+    {
+        if(i_current_health != i_max_health)
+        {
+            cloud_sprite.transform.localScale = cloud_sprite.transform.localScale * 2;
+            i_current_health++;
+        }
+    }
+
+    public void ReduceVelocity()
+    {
+
+    }
+
     public void Death()
     {
+        Debug.Log("Death");
         Destroy(transform.gameObject);
     }
 }
