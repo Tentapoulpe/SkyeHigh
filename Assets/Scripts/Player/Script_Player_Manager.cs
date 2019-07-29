@@ -92,8 +92,7 @@ public class Script_Player_Manager : MonoBehaviour
 
         if (Input.GetKeyDown("m"))
         {
-            Scene loadedLevel = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(loadedLevel.buildIndex);
+            Script_Game_Manager.Instance.RestartGame();
         }
 
         #region Dash
@@ -154,7 +153,7 @@ public class Script_Player_Manager : MonoBehaviour
         if (i_current_health != i_max_health)
         {
             cloud_sprite.transform.localScale = cloud_sprite.transform.localScale * 2;
-            i_current_health++;
+            i_current_health = i_max_health;
         }
     }
 
