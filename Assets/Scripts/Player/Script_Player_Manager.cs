@@ -12,15 +12,18 @@ public class Script_Player_Manager : MonoBehaviour
     public Player playerList;
 
     [Header("Movement")]
-    public float m_movementSpeed;
-    private float f_moveHorizontal;
-    private float f_moveVertical;
-    private Vector2 v_movement;
+    public float m_maxVerticalDownSpeed;
+    public float m_maxVerticalUpSpeed;
+    public float m_maxHorizontalSpeed;
+    [Space]
+    public float m_gravityMultiplier;
+    public float m_horizontalAcceleration;
+    public float m_VerticalAcceleration;
     private Rigidbody2D rigidbodyPlayer { get { return GetComponent<Rigidbody2D>(); } }
 
     [Header("Dash")]
     public float m_dashPower;
-    public int m_maxDashCooldown;
+    public float m_maxDashCooldown;
 
     private bool b_canDash = true;
     private float f_dashCooldown = 0f;
@@ -69,20 +72,43 @@ public class Script_Player_Manager : MonoBehaviour
                 break;
         }   
     }
+    
 
-    private void Movement()
+    private void FixedUpdate()
     {
-        f_moveHorizontal = Input.GetAxis("Horizontal");
-        f_moveVertical = Input.GetAxis("Vertical");
-        v_movement = new Vector2(f_moveHorizontal, f_moveVertical);
-        rigidbodyPlayer.velocity = (v_movement * m_movementSpeed);
+        float horizontal = Input.GetAxis("Horizontal") * m_horizontalAcceleration * Time.deltaTime;
+        if (horizontal >= 0)
+        {
+            if (horizontal > m_maxHorizontalSpeed)
+            horizontal = m_maxHorizontalSpeed;
+        }
+        else
+        {
+            if (horizontal < -m_maxHorizontalSpeed)
+                horizontal = -m_maxHorizontalSpeed;
+        }
+            
+        float vertical = Input.GetAxis("Vertical") * m_VerticalAcceleration * Time.deltaTime;
+        if (vertical > 0)
+        {
+            vertical /= m_gravityMultiplier;
+                if (vertical > m_maxVerticalUpSpeed)
+                    vertical = m_maxVerticalUpSpeed;
+            
+        }
+        else if (vertical < 0)
+        {
+            vertical *= m_gravityMultiplier;
+                if (vertical < -m_maxVerticalDownSpeed)
+                    vertical = -m_maxVerticalDownSpeed;
+            
+        }
+        rigidbodyPlayer.AddForce(new Vector2(horizontal, vertical), ForceMode2D.Impulse);
     }
-
     void Update()
     {
-        Movement();
 
-        if (Input.GetKeyDown("e") && b_canDash)
+        if (Input.GetKeyDown("space") && b_canDash)
         {
             Dash();
         }
@@ -99,17 +125,15 @@ public class Script_Player_Manager : MonoBehaviour
             {
                 f_dashCooldown = 0;
                 b_canDash = true;
-                Debug.Log("CanDash");
             }
         }
     }
 
     public void Dash()
     {
-        Debug.Log("dashing");
         b_canDash = false;
         f_dashCooldown = m_maxDashCooldown;
-        rigidbodyPlayer.AddForce(v_movement * m_dashPower);
+        rigidbodyPlayer.AddForce(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * m_dashPower, ForceMode2D.Impulse);
     }
 
     public void DecreaseCloud()
@@ -146,4 +170,5 @@ public class Script_Player_Manager : MonoBehaviour
         Debug.Log("Death");
         Destroy(transform.gameObject);
     }
+
 }
