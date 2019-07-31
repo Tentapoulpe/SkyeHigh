@@ -5,14 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public enum DashState { Ready, Dashing, Cooldown }
-    public enum Player { Skye, Dawn, KingNimbus, CommanderBolt, Smog, Angel, Sirocco, Entity, BirdMan, DarkSkye}
-
-    
-
     [Header("Player")]
-    public Player playerList;
-
     public int playerNumber;
     private string s_fireInput = "";
 
@@ -43,41 +36,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
-        i_currentHealth = m_maxHealth;
-
-        switch(playerList)
-        {
-            case Player.Skye:
-                Debug.Log("Skye");
-                break;
-            case Player.Dawn:
-                Debug.Log("Dawn");
-                break;
-            case Player.KingNimbus:
-                Debug.Log("KingNimbus");
-                break;
-            case Player.CommanderBolt:
-                Debug.Log("CommanderBolt");
-                break;
-            case Player.Smog:
-                Debug.Log("Smog");
-                break;
-            case Player.Angel:
-                Debug.Log("Angel");
-                break;
-            case Player.Sirocco:
-                Debug.Log("Sirocco");
-                break;
-            case Player.Entity:
-                Debug.Log("Entity");
-                break;
-            case Player.BirdMan:
-                Debug.Log("BirdMan");
-                break;
-            case Player.DarkSkye:
-                Debug.Log("DarkSkye");
-                break;
-        }   
+        i_currentHealth = m_maxHealth; 
     }
     
 

@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
 
     public string m_sceneToLoad;
 
+    [Header("Player")]
+    public Script_Scriptable_Characters m_characters;
+
     private void Awake()
     {
         if (Instance == null)
