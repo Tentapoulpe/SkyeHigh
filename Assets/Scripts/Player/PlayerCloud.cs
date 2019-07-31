@@ -21,6 +21,7 @@ public class PlayerCloud : MonoBehaviour
         if(collision.CompareTag("Player") && collision.transform.parent != player.transform)
         {
             player.GetComponent<PlayerController>().Death();
+            Destroy(gameObject);
         }
     }
 }
