@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     public string m_sceneToLoad;
 
     [Header("Player")]
-    public Script_Scriptable_Characters m_characters;
+    public GameObject[] m_character;
+    public GameObject[] m_mySpawn;
 
     private void Awake()
     {
@@ -24,6 +25,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        StartGame();
+    }
+
     public void RestartGame()
     {
         Scene loadedLevel = SceneManager.GetActiveScene();
@@ -32,7 +38,10 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(m_sceneToLoad);
+        for (int i = 0; i < m_mySpawn.Length; i++)
+        {
+            Instantiate(m_character[0], m_mySpawn[i].transform.position, Quaternion.identity);
+        }
     }
 
     public void Quit()
