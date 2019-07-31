@@ -7,7 +7,9 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Player")]
     public int playerNumber;
+
     private string s_fireInput = "";
+    private bool b_canMove = true;
 
     [Header("Movement")]
     public float m_maxVerticalDownSpeed;
@@ -18,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public float m_horizontalAcceleration;
     public float m_VerticalUpAcceleration;
     public float m_VerticalDownAcceleration;
+
     private Rigidbody2D rigidbodyPlayer = null;
 
     [Header("Dash")]
@@ -29,8 +32,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("Cloud")]
     public SpriteRenderer cloudSprite;
-    private Vector3 v_currentCloudScale;
+    private PlayerCloud cloud = null;
     public int m_maxHealth;
+
+    private Vector3 v_currentCloudScale;
     private int i_currentHealth;
 
     void Start()
@@ -42,6 +47,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!b_canMove)
+            return;
         float horizontal = Input.GetAxis("Horizontal_P" + playerNumber) * m_horizontalAcceleration * Time.deltaTime;
         if (horizontal >= 0)
         {
@@ -91,10 +98,9 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if (Input.GetButtonDown(s_fireInput) && b_canDash)
+        if (Input.GetButtonDown(s_fireInput) && b_canDash && b_canMove)
         {
             Dash();
-            print("dash");
         }
 
         if (Input.GetKeyDown("m"))
@@ -119,12 +125,10 @@ public class PlayerController : MonoBehaviour
         f_dashCooldown = m_maxDashCooldown;
         rigidbodyPlayer.AddForce(new Vector2(Input.GetAxis("Horizontal_P" + playerNumber), Input.GetAxis("Vertical_P" + playerNumber)) * m_dashPower, ForceMode2D.Impulse);
 
-        print(playerNumber);
     }
 
     public void DecreaseCloud()
     {
-        Debug.Log("Decrease");
         if (i_currentHealth != 0)
         {
             cloudSprite.transform.localScale = cloudSprite.transform.localScale / 2;
@@ -132,7 +136,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Death();
+            Fall();
         }
     }
 
@@ -151,9 +155,23 @@ public class PlayerController : MonoBehaviour
         Debug.Log("ReduceVelocity");
     }
 
+    public void setCloud(PlayerCloud Cloud)
+    {
+        cloud = Cloud;
+    }
+
+    public void Fall()
+    {
+        b_canMove = false;
+        if (cloud)
+            cloud.DestroyCloud();
+        rigidbodyPlayer.gravityScale = 2f;
+    }
+
     public void Death()
     {
-        Debug.Log("Death");
+        if (cloud)
+            cloud.DestroyCloud();
         Destroy(transform.gameObject);
     }
 

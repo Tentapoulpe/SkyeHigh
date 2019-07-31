@@ -8,6 +8,7 @@ public class PlayerCloud : MonoBehaviour
     private void Awake()
     {
         transform.SetParent(null);
+        player.setCloud(this);
     }
 
     private void Update()
@@ -18,10 +19,15 @@ public class PlayerCloud : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player") && collision.transform.parent != player.transform)
+        if(collision.CompareTag("Player") && collision.gameObject != player.transform.gameObject)
         {
-            player.GetComponent<PlayerController>().Death();
-            Destroy(gameObject);
+            player.Fall();
+            DestroyCloud();
         }
+    }
+
+    public void DestroyCloud()
+    {
+        Destroy(gameObject);
     }
 }
