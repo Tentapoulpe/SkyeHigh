@@ -8,8 +8,13 @@ public class PlayerController : MonoBehaviour
     public enum DashState { Ready, Dashing, Cooldown }
     public enum Player { Skye, Dawn, KingNimbus, CommanderBolt, Smog, Angel, Sirocco, Entity, BirdMan, DarkSkye}
 
+    
+
     [Header("Player")]
     public Player playerList;
+
+    public int playerNumber;
+    private string s_fireInput = "";
 
     [Header("Movement")]
     public float m_maxVerticalDownSpeed;
@@ -18,8 +23,9 @@ public class PlayerController : MonoBehaviour
     [Space]
     public float m_gravityMultiplier;
     public float m_horizontalAcceleration;
-    public float m_VerticalAcceleration;
-    private Rigidbody2D rigidbodyPlayer { get { return GetComponent<Rigidbody2D>(); } }
+    public float m_VerticalUpAcceleration;
+    public float m_VerticalDownAcceleration;
+    private Rigidbody2D rigidbodyPlayer = null;
 
     [Header("Dash")]
     public float m_dashPower;
@@ -36,6 +42,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        rigidbodyPlayer = GetComponent<Rigidbody2D>();
         i_currentHealth = m_maxHealth;
 
         switch(playerList)
@@ -76,7 +83,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float horizontal = Input.GetAxis("Horizontal") * m_horizontalAcceleration * Time.deltaTime;
+        float horizontal = Input.GetAxis("Horizontal_P" + playerNumber) * m_horizontalAcceleration * Time.deltaTime;
         if (horizontal >= 0)
         {
             if (horizontal > m_maxHorizontalSpeed)
@@ -88,16 +95,19 @@ public class PlayerController : MonoBehaviour
                 horizontal = -m_maxHorizontalSpeed;
         }
             
-        float vertical = Input.GetAxis("Vertical") * m_VerticalAcceleration * Time.deltaTime;
+        float vertical = Input.GetAxis("Vertical_P" + playerNumber) * Time.deltaTime;
         if (vertical > 0)
         {
+            vertical *= m_VerticalUpAcceleration;
             vertical /= m_gravityMultiplier;
                 if (vertical > m_maxVerticalUpSpeed)
                     vertical = m_maxVerticalUpSpeed;
+
             
         }
         else if (vertical < 0)
         {
+            vertical *= m_VerticalDownAcceleration;
             vertical *= m_gravityMultiplier;
                 if (vertical < -m_maxVerticalDownSpeed)
                     vertical = -m_maxVerticalDownSpeed;
@@ -107,10 +117,25 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        string[] names = Input.GetJoystickNames();
+        if (names[playerNumber - 1].Length == 19)
+        {
+            s_fireInput = "F_PS4_P" + playerNumber;
+        }
+        else if (names[playerNumber - 1].Length == 33)
+        {
+            s_fireInput = "F_XBOX_P" + playerNumber;
+        }
+        else
+        {
+            s_fireInput = "F_PC_P" + playerNumber;
+        }
 
-        if (Input.GetKeyDown("space") && b_canDash)
+
+        if (Input.GetButtonDown(s_fireInput) && b_canDash)
         {
             Dash();
+            print("dash");
         }
 
         if (Input.GetKeyDown("m"))
@@ -133,7 +158,9 @@ public class PlayerController : MonoBehaviour
     {
         b_canDash = false;
         f_dashCooldown = m_maxDashCooldown;
-        rigidbodyPlayer.AddForce(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * m_dashPower, ForceMode2D.Impulse);
+        rigidbodyPlayer.AddForce(new Vector2(Input.GetAxis("Horizontal_P" + playerNumber), Input.GetAxis("Vertical_P" + playerNumber)) * m_dashPower, ForceMode2D.Impulse);
+
+        print(playerNumber);
     }
 
     public void DecreaseCloud()
