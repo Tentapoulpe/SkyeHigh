@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Script_UI_Manager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

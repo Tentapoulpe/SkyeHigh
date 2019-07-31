@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Script_Game_Manager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public static Script_Game_Manager Instance { get; private set; }
+    public static GameManager Instance { get; private set; }
 
     public string m_sceneToLoad;
 

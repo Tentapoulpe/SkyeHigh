@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Script_Player_Manager : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public enum DashState { Ready, Dashing, Cooldown }
     public enum Player { Skye, Dawn, KingNimbus, CommanderBolt, Smog, Angel, Sirocco, Entity, BirdMan, DarkSkye}
@@ -115,7 +115,7 @@ public class Script_Player_Manager : MonoBehaviour
 
         if (Input.GetKeyDown("m"))
         {
-            Script_Game_Manager.Instance.RestartGame();
+            GameManager.Instance.RestartGame();
         }
 
         if (f_dashCooldown > 0)

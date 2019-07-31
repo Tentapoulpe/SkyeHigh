@@ -15,8 +15,8 @@ public class Script_Environment_Cloud : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponentInParent<Script_Player_Manager>().ReduceVelocity();
-            collision.GetComponentInParent<Script_Player_Manager>().IncreaseCloud();
+            collision.GetComponentInParent<PlayerController>().ReduceVelocity();
+            collision.GetComponentInParent<PlayerController>().IncreaseCloud();
         }
     }
 }
