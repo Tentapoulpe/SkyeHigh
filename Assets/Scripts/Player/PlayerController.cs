@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     [Header("Player")]
-    public Script_Scriptable_Characters[] m_characters;
-
     public int playerNumber;
     private string s_fireInput = "";
 

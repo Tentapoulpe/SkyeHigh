@@ -973,6 +973,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8615222593070687821, guid: 287e468c80a7c5e4799f9566f67f0831,
         type: 3}
+      propertyPath: m_characters.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8615222593070687821, guid: 287e468c80a7c5e4799f9566f67f0831,
+        type: 3}
       propertyPath: playerNumber
       value: 1
       objectReference: {fileID: 0}
@@ -991,5 +996,11 @@ PrefabInstance:
       propertyPath: m_horizontalAcceleration
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 8615222593070687821, guid: 287e468c80a7c5e4799f9566f67f0831,
+        type: 3}
+      propertyPath: m_characters.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: bb5e15160d9f51140831184eb3111ebc,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 287e468c80a7c5e4799f9566f67f0831, type: 3}
