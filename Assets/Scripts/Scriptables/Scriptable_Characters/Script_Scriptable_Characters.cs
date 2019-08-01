@@ -18,18 +18,18 @@ public class Script_Scriptable_Characters : ScriptableObject
     public float m_maxVerticalDrag;
 
     [Header("Gravity")]
-    public float m_gravityMultiplier;
+    public float m_gravityMultiplier;//gravity intensity
 
     [Header("Dash")]
-    public float m_dashPower;
-    public float m_maxDashCooldown;
-    public float m_dashCost;
-    public float m_dashPostStun;
-    public float m_dashStun;
+    public float m_dashPower;//distance of dashing
+    public float m_maxDashCooldown;//cd after press dash button
+    public float m_dashCost;//purcentage of life cost when player dash
+    public float m_dashPostStun;//stun time after a dash
+    public float m_dashStun;//stun time after a dash
 
     [Header("Environment")]
 
-    public float m_cloudSlow;
-    public float m_delayToRegenerate;
+    public float m_cloudSlow;//Slow when player enter in cloud
+    public float m_delayToRegenerate;//delay between enter a cloud and regenerate
 
 }

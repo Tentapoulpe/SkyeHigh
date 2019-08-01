@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class Menu_Manager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static Menu_Manager Instance { get; private set; }
 
     public string m_sceneToLoad;
 
@@ -25,11 +25,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        StartGame();
-    }
-
     private void Update()
     {
         for (int i = 1; i < 4; i++)
@@ -39,20 +34,6 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log(Input.GetJoystickNames()[i-1] + " is moved");
             }
-        }
-    }
-
-    public void RestartGame()
-    {
-        Scene loadedLevel = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(loadedLevel.buildIndex);
-    }
-
-    public void StartGame()
-    {
-        for (int i = 0; i < m_mySpawn.Length; i++)
-        {
-            Instantiate(m_character[0], m_mySpawn[i].transform.position, Quaternion.identity);
         }
     }
 
