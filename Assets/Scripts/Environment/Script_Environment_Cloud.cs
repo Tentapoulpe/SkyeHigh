@@ -13,13 +13,12 @@ public class Script_Environment_Cloud : MonoBehaviour
         my_rigidbody = GetComponent<Rigidbody2D>();    
     }
 
-    private void OnTriggeEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("blblbl");
             collision.gameObject.GetComponentInParent<PlayerController>().CloudSlow();
-            //StartCoroutine(WaitToRegenerate(collision.gameObject));
+            StartCoroutine(WaitToRegenerate(collision.gameObject));
         }
     }
 
