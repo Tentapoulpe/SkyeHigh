@@ -14,29 +14,29 @@ public class PlayerController : MonoBehaviour
     [Space]
 
     [Header("MovementHorizontal")]
-    public float m_maxVerticalDownSpeed;
-    public float m_maxVerticalUpSpeed;
-    public float m_maxHorizontalSpeed;
-    public float m_maxHorizontalDrag;
+    private float m_maxVerticalDownSpeed;
+    private float m_maxVerticalUpSpeed;
+    private float m_maxHorizontalSpeed;
+    private float m_maxHorizontalDrag;
     [Space]
 
     [Header("MovementVertical")]
-    public float m_horizontalAcceleration;
-    public float m_VerticalUpAcceleration;
-    public float m_VerticalDownAcceleration;
-    public float m_maxVerticalDrag;
+    private float m_horizontalAcceleration;
+    private float m_VerticalUpAcceleration;
+    private float m_VerticalDownAcceleration;
+    private float m_maxVerticalDrag;
     [Space]
 
     [Header("Gravity")]
-    public float m_gravityMultiplier;
+    private float m_gravityMultiplier;
     [Space]
 
     [Header("Dash")]
-    public float m_dashPower;
-    public float m_maxDashCooldown;
-    public float m_dashCost;
-    public float m_dashPostStun;
-    public float m_dashStun;
+    private float m_dashPower;
+    private float m_maxDashCooldown;
+    private float m_dashCost;
+    private float m_dashPostStun;
+    private float m_dashStun;
 
     private bool b_playerIsDashing;
     private bool b_canDash = true;
@@ -44,8 +44,8 @@ public class PlayerController : MonoBehaviour
     [Space]
 
     [Header("Environment")]
-    public float m_cloudSlow;
-    public float m_delayToRegenerate;
+    private float m_cloudSlow;
+    private float m_delayToRegenerate;
     [Space]
 
     private Rigidbody2D rigidbodyPlayer = null;
@@ -53,7 +53,8 @@ public class PlayerController : MonoBehaviour
     [Header("Cloud")]
     public SpriteRenderer cloudSprite;
     private PlayerCloud cloud = null;
-    public int m_maxHealth;
+    private int m_maxHealth;
+    private bool b_isInCloud;
 
     private Vector3 v_currentCloudScale;
     private int i_currentHealth;
@@ -84,6 +85,7 @@ public class PlayerController : MonoBehaviour
         m_dashStun = m_character_info.m_dashStun;
         m_cloudSlow = m_character_info.m_cloudSlow;
         m_delayToRegenerate = m_character_info.m_delayToRegenerate;
+        m_maxHealth = m_character_info.m_maxHealth;
 }
 
     private void FixedUpdate()
@@ -120,7 +122,14 @@ public class PlayerController : MonoBehaviour
                     vertical = -m_maxVerticalDownSpeed;
             
         }
-        rigidbodyPlayer.AddForce(new Vector2(horizontal, vertical), ForceMode2D.Impulse);
+
+
+        if(b_isInCloud)
+        {
+            rigidbodyPlayer.AddForce(new Vector2(horizontal, vertical) / m_cloudSlow, ForceMode2D.Impulse);
+        }
+        else
+            rigidbodyPlayer.AddForce(new Vector2(horizontal, vertical), ForceMode2D.Impulse);
     }
     void Update()
     {
@@ -194,13 +203,25 @@ public class PlayerController : MonoBehaviour
         if (i_currentHealth != m_maxHealth)
         {
             cloudSprite.transform.localScale = cloudSprite.transform.localScale * 2;
-            i_currentHealth = m_maxHealth;
+            i_currentHealth++;
         }
     }
 
-    public void ReduceVelocity()
+    public void CloudSlow()
     {
-        Debug.Log("ReduceVelocity");
+        Debug.Log("SLOW");
+        b_isInCloud = true;
+    }
+
+    public void CloudUnSlow()
+    {
+        Debug.Log("UNSLOW");
+        b_isInCloud = false;
+    }
+
+    public float ReturnTimeBeforeRegenerate()
+    {
+        return m_delayToRegenerate;
     }
 
     public void setCloud(PlayerCloud Cloud)

@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
     [Header("Player")]
     public GameObject[] m_character;
     public GameObject[] m_mySpawn;
+    public int playerNumber;
+    private string[] s_playerNames;
+    private string s_fireInput;
+    public bool b_spawnPlayer;
 
     private void Awake()
     {
@@ -27,19 +31,33 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        if(b_spawnPlayer)
         StartGame();
     }
 
     private void Update()
     {
-        for (int i = 1; i < 4; i++)
-        {
-            if (Mathf.Abs(Input.GetAxis("Horizontal_P" + i)) > 0.2 ||
-                Mathf.Abs(Input.GetAxis("Vertical_P" + i)) > 0.2)
-            {
-                Debug.Log(Input.GetJoystickNames()[i-1] + " is moved");
-            }
-        }
+        //for (int i = 1; i < 4; i++)
+        //{
+        //    if (Mathf.Abs(Input.GetAxis("Horizontal_P" + i)) > 0.2 || Mathf.Abs(Input.GetAxis("Vertical_P" + i)) > 0.2)
+        //    {
+        //        Debug.Log(Input.GetJoystickNames());
+        //    }
+        //}
+
+        //s_playerNames = Input.GetJoystickNames();
+        //if (s_playerNames[s_playerNames.Length].Length == 19)
+        //{
+        //    s_fireInput = "F_PS4_P" + playerNumber;
+        //}
+        //else if (s_playerNames[s_playerNames.Length].Length == 33)
+        //{
+        //    s_fireInput = "F_XBOX_P" + playerNumber;
+        //}
+        //else
+        //{
+        //    s_fireInput = "F_PC_P" + playerNumber;
+        //}
     }
 
     public void RestartGame()

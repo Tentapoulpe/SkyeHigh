@@ -32,4 +32,8 @@ public class Script_Scriptable_Characters : ScriptableObject
     public float m_cloudSlow;//Slow when player enter in cloud
     public float m_delayToRegenerate;//delay between enter a cloud and regenerate
 
+    [Header("Player")]
+
+    public int m_maxHealth;
+
 }
