@@ -19,7 +19,7 @@ public class PlayerCloud : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player") && collision.gameObject != player.transform.gameObject)
+        if(collision.CompareTag("Player") && collision.gameObject != player.transform.gameObject && collision.gameObject.GetComponent<PlayerController>().ReturnDashState())
         {
             player.Fall();
             DestroyCloud();

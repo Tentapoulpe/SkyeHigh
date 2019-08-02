@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     public float m_dashPostStun;
     public float m_dashStun;
 
+    private bool b_playerIsDashing;
     private bool b_canDash = true;
     private float f_dashCooldown = 0f;
     [Space]
@@ -150,6 +151,7 @@ public class PlayerController : MonoBehaviour
 
         if (f_dashCooldown > 0)
         {
+            b_playerIsDashing = false;
             f_dashCooldown -= Time.deltaTime;
             if (f_dashCooldown <= 0)
             {
@@ -159,8 +161,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool ReturnDashState()
+    {
+        return b_playerIsDashing;
+    }
+
     public void Dash()
     {
+        b_playerIsDashing = true;
         b_canDash = false;
         f_dashCooldown = m_maxDashCooldown;
         rigidbodyPlayer.AddForce(new Vector2(Input.GetAxis("Horizontal_P" + playerNumber), Input.GetAxis("Vertical_P" + playerNumber)) * m_dashPower, ForceMode2D.Impulse);
