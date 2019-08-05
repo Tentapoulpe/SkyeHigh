@@ -6,7 +6,7 @@ public class UI_Menu_Manager : MonoBehaviour
 {
     public static UI_Menu_Manager Instance { get; private set; }
 
-    public GameObject m_characterWindow;
+
 
     private void Awake()
     {
@@ -18,6 +18,7 @@ public class UI_Menu_Manager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        DontDestroyOnLoad(gameObject);
     }
 
     public void DisplayUI(GameObject current_go_to_display)

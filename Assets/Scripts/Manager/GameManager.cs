@@ -9,12 +9,14 @@ public class GameManager : MonoBehaviour
 
     public string m_sceneToLoad;
 
+
+
+    int[] l_ControllerUsed = new int[4];
+    int playerConnected = 0;
+
     [Header("Player")]
     public GameObject[] m_character;
     public GameObject[] m_mySpawn;
-    public int playerNumber;
-    private string[] s_playerNames;
-    private string s_fireInput;
     public bool b_spawnPlayer;
 
     private void Awake()
@@ -27,6 +29,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
@@ -37,27 +40,40 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        //for (int i = 1; i < 4; i++)
-        //{
-        //    if (Mathf.Abs(Input.GetAxis("Horizontal_P" + i)) > 0.2 || Mathf.Abs(Input.GetAxis("Vertical_P" + i)) > 0.2)
-        //    {
-        //        Debug.Log(Input.GetJoystickNames());
-        //    }
-        //}
+        string[] names = Input.GetJoystickNames();
+        if (((Input.GetButtonDown("F1_PS4_P1") && names[0].Length == 19) || (Input.GetButtonDown("F1_XBOX_P1") && names[0].Length == 33)) && l_ControllerUsed[0] == 0)
+        {
+            AddPlayer(0);
+        }
+        else if (((Input.GetButtonDown("F1_PS4_P2") && names[1].Length == 19) || (Input.GetButtonDown("F1_XBOX_P2") && names[1].Length == 33)) && l_ControllerUsed[1] == 0)
+        {
+            AddPlayer(1);
+        }
+        else if (((Input.GetButtonDown("F1_PS4_P3") && names[2].Length == 19) || (Input.GetButtonDown("F1_XBOX_P3") && names[2].Length == 33)) && l_ControllerUsed[2] == 0)
+        {
+            AddPlayer(2);
+        }
+        else if (((Input.GetButtonDown("F1_PS4_P4") && names[3].Length == 19) || (Input.GetButtonDown("F1_XBOX_P4") && names[3].Length == 33)) && l_ControllerUsed[3] == 0)
+        {
+            AddPlayer(3);
+        }
 
-        //s_playerNames = Input.GetJoystickNames();
-        //if (s_playerNames[s_playerNames.Length].Length == 19)
-        //{
-        //    s_fireInput = "F_PS4_P" + playerNumber;
-        //}
-        //else if (s_playerNames[s_playerNames.Length].Length == 33)
-        //{
-        //    s_fireInput = "F_XBOX_P" + playerNumber;
-        //}
-        //else
-        //{
-        //    s_fireInput = "F_PC_P" + playerNumber;
-        //}
+        if (((Input.GetButtonDown("F2_PS4_P1") && names[0].Length == 19) || (Input.GetButtonDown("F2_XBOX_P1") && names[0].Length == 33)) && l_ControllerUsed[0] != 0)
+        {
+            RemovePlayer(0);
+        }
+        else if (((Input.GetButtonDown("F2_PS4_P2") && names[1].Length == 19) || (Input.GetButtonDown("F2_XBOX_P2") && names[1].Length == 33)) && l_ControllerUsed[1] != 0)
+        {
+            RemovePlayer(1);
+        }
+        else if (((Input.GetButtonDown("F2_PS4_P3") && names[2].Length == 19) || (Input.GetButtonDown("F2_XBOX_P3") && names[2].Length == 33)) && l_ControllerUsed[2] != 0)
+        {
+            RemovePlayer(2);
+        }
+        else if (((Input.GetButtonDown("F2_PS4_P4") && names[3].Length == 19) || (Input.GetButtonDown("F2_XBOX_P4") && names[3].Length == 33)) && l_ControllerUsed[3] != 0)
+        {
+            RemovePlayer(3);
+        }
     }
 
     public void RestartGame()
@@ -78,4 +94,26 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+
+    public void AddPlayer(int player)
+    {
+        playerConnected++;
+        l_ControllerUsed[player] = playerConnected;
+    }
+
+    public void RemovePlayer(int player)
+    {
+        int playerPlace = l_ControllerUsed[player];
+        l_ControllerUsed[player] = 0;
+        for (int i = 0; i < l_ControllerUsed.Length; i++)
+        {
+            if (l_ControllerUsed[i] > playerPlace)
+            {
+                l_ControllerUsed[i]--;
+            }
+        }
+        playerConnected--;
+    }
+    
 }
