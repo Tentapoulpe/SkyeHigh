@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Gravity")]
     private float m_gravityMultiplier;
+    public float m_gravityFall;
     [Space]
 
     [Header("Dash")]
@@ -55,6 +56,7 @@ public class PlayerController : MonoBehaviour
     private PlayerCloud cloud = null;
     private int m_maxHealth;
     private bool b_isInCloud;
+    private bool b_canRegenerate = true;
 
     private Vector3 v_currentCloudScale;
     private int i_currentHealth;
@@ -131,7 +133,9 @@ public class PlayerController : MonoBehaviour
         }
         else
             rigidbodyPlayer.AddForce(new Vector2(horizontal, vertical), ForceMode2D.Impulse);
+
     }
+
     void Update()
     {
         string[] names = Input.GetJoystickNames();
@@ -198,11 +202,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool CanRegenerate()
+    {
+        return b_canRegenerate;
+    }
+
     public void IncreaseCloud()
     {
-        Debug.Log("Increase");
         if (i_currentHealth != m_maxHealth)
         {
+            Debug.Log("IncreaseCloud");
+            b_canRegenerate = false;
             cloudSprite.transform.localScale = cloudSprite.transform.localScale * 2;
             i_currentHealth++;
         }
@@ -210,7 +220,14 @@ public class PlayerController : MonoBehaviour
 
     public void CloudSlow()
     {
-        b_isInCloud = !b_isInCloud;
+        Debug.Log("Slow");
+        b_isInCloud = true;
+    }
+
+    public void CloudUnSlow()
+    {
+        Debug.Log("UnSlow");
+        b_isInCloud = false;
     }
 
     public float ReturnTimeBeforeRegenerate()
@@ -218,7 +235,7 @@ public class PlayerController : MonoBehaviour
         return m_delayToRegenerate;
     }
 
-    public void setCloud(PlayerCloud Cloud)
+    public void SetCloud(PlayerCloud Cloud)
     {
         cloud = Cloud;
     }
@@ -228,7 +245,8 @@ public class PlayerController : MonoBehaviour
         b_canMove = false;
         if (cloud)
             cloud.DestroyCloud();
-        rigidbodyPlayer.gravityScale = 2f;
+        rigidbodyPlayer.gravityScale = m_gravityFall;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
     }
 
     public void Death()

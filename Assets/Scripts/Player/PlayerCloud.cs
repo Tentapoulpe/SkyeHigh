@@ -8,7 +8,7 @@ public class PlayerCloud : MonoBehaviour
     private void Awake()
     {
         transform.SetParent(null);
-        player.setCloud(this);
+        player.SetCloud(this);
     }
 
     private void Update()
