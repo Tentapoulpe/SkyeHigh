@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     private bool b_playerIsDashing;
     private bool b_canDash = true;
     private float f_dashCooldown = 0f;
+    private bool b_lastDash = false;
     [Space]
 
     [Header("Environment")]
@@ -128,8 +129,16 @@ public class PlayerController : MonoBehaviour
             
         }
 
+        if(rigidbodyPlayer.velocity.x > m_maxHorizontalSpeed || rigidbodyPlayer.velocity.y > Mathf.Abs(m_maxVerticalUpSpeed))
+        {
+            b_playerIsDashing = true;
+            if (rigidbodyPlayer.velocity.x == m_maxHorizontalSpeed || rigidbodyPlayer.velocity.y == Mathf.Abs(m_maxVerticalUpSpeed) && b_lastDash)
+            {
+                Fall();
+            }
+        }
 
-        if(b_isInCloud)
+        if (b_isInCloud)
         {
             rigidbodyPlayer.AddForce(new Vector2(horizontal, vertical) / m_cloudSlow, ForceMode2D.Impulse);
         }
@@ -143,15 +152,15 @@ public class PlayerController : MonoBehaviour
         string[] names = Input.GetJoystickNames();
         if (names[playerNumber - 1].Length == 19)
         {
-            s_fireInput = "F_PS4_P" + playerNumber;
+            s_fireInput = "F1_PS4_P" + playerNumber;
         }
         else if (names[playerNumber - 1].Length == 33)
         {
-            s_fireInput = "F_XBOX_P" + playerNumber;
+            s_fireInput = "F1_XBOX_P" + playerNumber;
         }
         else
         {
-            s_fireInput = "F_PC_P" + playerNumber;
+            s_fireInput = "F1_PC_P" + playerNumber;
         }
 
 
@@ -184,7 +193,6 @@ public class PlayerController : MonoBehaviour
 
     public void Dash()
     {
-        b_playerIsDashing = true;
         b_canDash = false;
         f_dashCooldown = m_maxDashCooldown;
         rigidbodyPlayer.AddForce(new Vector2(Input.GetAxis("Horizontal_P" + playerNumber), Input.GetAxis("Vertical_P" + playerNumber)) * m_dashPower, ForceMode2D.Impulse);
@@ -199,7 +207,7 @@ public class PlayerController : MonoBehaviour
             f_currentHealth -= m_dashCost;
             if (f_currentHealth <= 0)
             {
-                Fall();
+                b_lastDash = true;
             }
         }
         UpdateCloudSprite();

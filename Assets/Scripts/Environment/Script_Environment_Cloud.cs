@@ -25,7 +25,6 @@ public class Script_Environment_Cloud : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             collision.GetComponentInParent<PlayerController>().IncreaseCloud(f_healthToRegenerate);
-            //StartCoroutine(WaitToRegenerate(collision.gameObject));
         }
     }
 
@@ -36,11 +35,4 @@ public class Script_Environment_Cloud : MonoBehaviour
             collision.gameObject.GetComponentInParent<PlayerController>().CloudUnSlow();
         }
     }
-
-    //IEnumerator WaitToRegenerate(GameObject g_player)
-    //{
-    //    yield return new WaitForSeconds(g_player.GetComponentInParent<PlayerController>().ReturnTimeBeforeRegenerate());
-    //    g_player.GetComponentInParent<PlayerController>().IncreaseCloud();
-    //}
-
 }
