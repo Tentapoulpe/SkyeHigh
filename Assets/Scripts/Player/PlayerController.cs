@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -52,14 +53,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rigidbodyPlayer = null;
 
     [Header("Cloud")]
-    public SpriteRenderer cloudSprite;
+    public SpriteRenderer m_cloudSprite;
+    public List<SpriteRenderer> m_cloudSpriteList = new List<SpriteRenderer>();
     private PlayerCloud cloud = null;
-    private int m_maxHealth;
+    private float m_maxHealth = 100;
     private bool b_isInCloud;
     private bool b_canRegenerate = true;
-
-    private Vector3 v_currentCloudScale;
-    private int i_currentHealth;
+    private float f_currentHealth;
+    public Text m_textHealth;
 
     private string s_fireInput = "";
 
@@ -67,7 +68,8 @@ public class PlayerController : MonoBehaviour
     {
         SetUpPlayer();
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
-        i_currentHealth = m_maxHealth; 
+        f_currentHealth = m_maxHealth;
+        m_textHealth.text = f_currentHealth.ToString();
     }
     
     private void SetUpPlayer()
@@ -191,15 +193,16 @@ public class PlayerController : MonoBehaviour
 
     public void DecreaseCloud()
     {
-        if (i_currentHealth != 0)
+        Debug.Log("IncreaseCloud");
+        if (f_currentHealth != 0)
         {
-            cloudSprite.transform.localScale = cloudSprite.transform.localScale / 2;
-            i_currentHealth--;
+            f_currentHealth -= m_dashCost;
+            if (f_currentHealth <= 0)
+            {
+                Fall();
+            }
         }
-        else
-        {
-            Fall();
-        }
+        UpdateCloudSprite();
     }
 
     public bool CanRegenerate()
@@ -207,15 +210,42 @@ public class PlayerController : MonoBehaviour
         return b_canRegenerate;
     }
 
-    public void IncreaseCloud()
+    public void IncreaseCloud(float f_health)
     {
-        if (i_currentHealth != m_maxHealth)
+        if (f_currentHealth <= m_maxHealth)
         {
             Debug.Log("IncreaseCloud");
             b_canRegenerate = false;
-            cloudSprite.transform.localScale = cloudSprite.transform.localScale * 2;
-            i_currentHealth++;
+            f_currentHealth += f_health;
+
+            if (f_currentHealth >= m_maxHealth)
+            {
+                f_currentHealth = m_maxHealth;
+            }
+            UpdateCloudSprite();
         }
+    }
+
+    public void UpdateCloudSprite()
+    {
+        Debug.Log("UpdateCloud");
+        if (f_currentHealth < 100)
+        {
+            if(f_currentHealth < 75)
+            {
+                if (f_currentHealth < 50)
+                {
+                    if (f_currentHealth < 25)
+                    {
+                        m_cloudSprite = m_cloudSpriteList[0];
+                    }
+                    m_cloudSprite = m_cloudSpriteList[1];
+                }
+                m_cloudSprite = m_cloudSpriteList[2];
+            }
+            m_cloudSprite = m_cloudSpriteList[3];
+        }
+        m_textHealth.text = f_currentHealth.ToString();
     }
 
     public void CloudSlow()

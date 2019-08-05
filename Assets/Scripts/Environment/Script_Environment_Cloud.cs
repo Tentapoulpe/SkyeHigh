@@ -5,6 +5,7 @@ using UnityEngine;
 public class Script_Environment_Cloud : MonoBehaviour
 {
     private Rigidbody2D my_rigidbody;
+    public float f_healthToRegenerate;
 
     private void Start()
     {
@@ -23,7 +24,7 @@ public class Script_Environment_Cloud : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            collision.GetComponentInParent<PlayerController>().IncreaseCloud();
+            collision.GetComponentInParent<PlayerController>().IncreaseCloud(f_healthToRegenerate);
             //StartCoroutine(WaitToRegenerate(collision.gameObject));
         }
     }

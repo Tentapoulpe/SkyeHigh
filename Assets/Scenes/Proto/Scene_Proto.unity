@@ -525,9 +525,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8615222593070687821, guid: 287e468c80a7c5e4799f9566f67f0831,
         type: 3}
-      propertyPath: m_gravityFall
-      value: 10
-      objectReference: {fileID: 0}
+      propertyPath: m_cloudSpriteList.Array.data[3]
+      value: 
+      objectReference: {fileID: 1049521091}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 287e468c80a7c5e4799f9566f67f0831, type: 3}
 --- !u!1 &659341297
