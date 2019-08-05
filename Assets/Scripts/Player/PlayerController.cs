@@ -14,14 +14,14 @@ public class PlayerController : MonoBehaviour
     [Space]
 
     [Header("MovementHorizontal")]
-    private float m_maxVerticalDownSpeed;
-    private float m_maxVerticalUpSpeed;
     private float m_maxHorizontalSpeed;
     private float m_maxHorizontalDrag;
+    private float m_horizontalAcceleration;
     [Space]
 
     [Header("MovementVertical")]
-    private float m_horizontalAcceleration;
+    private float m_maxVerticalUpSpeed;
+    private float m_maxVerticalDownSpeed;
     private float m_VerticalUpAcceleration;
     private float m_VerticalDownAcceleration;
     private float m_maxVerticalDrag;
@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
         m_maxHorizontalSpeed = m_character_info.m_maxHorizontalSpeed;
         m_horizontalAcceleration = m_character_info.m_horizontalAcceleration;
         m_maxHorizontalDrag = m_character_info.m_maxHorizontalDrag;
+        m_maxVerticalDownSpeed = m_character_info.m_maxVerticalDownSpeed;
         m_VerticalUpAcceleration = m_character_info.m_VerticalUpAcceleration;
         m_VerticalDownAcceleration = m_character_info.m_VerticalDownAcceleration;
         m_maxVerticalDrag = m_character_info.m_maxVerticalDrag;
@@ -209,14 +210,7 @@ public class PlayerController : MonoBehaviour
 
     public void CloudSlow()
     {
-        Debug.Log("SLOW");
-        b_isInCloud = true;
-    }
-
-    public void CloudUnSlow()
-    {
-        Debug.Log("UNSLOW");
-        b_isInCloud = false;
+        b_isInCloud = !b_isInCloud;
     }
 
     public float ReturnTimeBeforeRegenerate()

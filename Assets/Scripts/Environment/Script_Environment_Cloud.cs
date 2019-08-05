@@ -6,8 +6,6 @@ public class Script_Environment_Cloud : MonoBehaviour
 {
     private Rigidbody2D my_rigidbody;
 
-    //public static event 
-
     private void Start()
     {
         my_rigidbody = GetComponent<Rigidbody2D>();    
@@ -18,7 +16,15 @@ public class Script_Environment_Cloud : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.gameObject.GetComponentInParent<PlayerController>().CloudSlow();
-            StartCoroutine(WaitToRegenerate(collision.gameObject));
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            collision.GetComponentInParent<PlayerController>().IncreaseCloud();
+            //StartCoroutine(WaitToRegenerate(collision.gameObject));
         }
     }
 
@@ -26,14 +32,14 @@ public class Script_Environment_Cloud : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            collision.gameObject.GetComponentInParent<PlayerController>().CloudUnSlow();
+            collision.gameObject.GetComponentInParent<PlayerController>().CloudSlow();
         }
     }
 
-    IEnumerator WaitToRegenerate(GameObject g_player)
-    {
-        yield return new WaitForSeconds(g_player.GetComponentInParent<PlayerController>().ReturnTimeBeforeRegenerate());
-        g_player.GetComponentInParent<PlayerController>().IncreaseCloud();
-    }
+    //IEnumerator WaitToRegenerate(GameObject g_player)
+    //{
+    //    yield return new WaitForSeconds(g_player.GetComponentInParent<PlayerController>().ReturnTimeBeforeRegenerate());
+    //    g_player.GetComponentInParent<PlayerController>().IncreaseCloud();
+    //}
 
 }

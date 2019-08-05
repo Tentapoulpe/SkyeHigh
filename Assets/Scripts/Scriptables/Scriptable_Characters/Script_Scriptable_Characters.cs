@@ -13,6 +13,7 @@ public class Script_Scriptable_Characters : ScriptableObject
 
     [Header("Movement Vertical")]
     public float m_maxVerticalUpSpeed;
+    public float m_maxVerticalDownSpeed;
     public float m_VerticalUpAcceleration;
     public float m_VerticalDownAcceleration;
     public float m_maxVerticalDrag;
