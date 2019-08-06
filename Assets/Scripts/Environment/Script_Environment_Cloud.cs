@@ -14,7 +14,7 @@ public class Script_Environment_Cloud : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && collision.gameObject.GetComponentInParent<PlayerController>().CanRegenerate())
+        if (collision.CompareTag("Player"))
         {
             Debug.Log("InCloud");
             collision.gameObject.GetComponentInParent<PlayerController>().CloudSlow();
@@ -36,6 +36,7 @@ public class Script_Environment_Cloud : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            Debug.Log("OutCloud");
             collision.gameObject.GetComponentInParent<PlayerController>().CloudUnSlow();
         }
     }

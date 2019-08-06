@@ -186,8 +186,6 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        Debug.Log(b_playerIsDashing);
-
         if (f_currentHealth >= m_maxHealth)
         {
             b_canRegenerate = false;
@@ -215,7 +213,6 @@ public class PlayerController : MonoBehaviour
 
     public void DecreaseCloud()
     {
-        Debug.Log("IncreaseCloud");
         if (f_currentHealth != 0)
         {
             f_currentHealth -= m_dashCost;
@@ -236,7 +233,6 @@ public class PlayerController : MonoBehaviour
     {
         if (f_currentHealth <= m_maxHealth)
         {
-            Debug.Log("IncreaseCloud");
             f_currentHealth += f_health;
             if (f_currentHealth >= m_maxHealth)
             {
@@ -249,7 +245,6 @@ public class PlayerController : MonoBehaviour
 
     public void UpdateCloudSprite()
     {
-        Debug.Log("UpdateCloud");
         if (f_currentHealth < 100)
         {
             if(f_currentHealth < 75)
@@ -270,13 +265,11 @@ public class PlayerController : MonoBehaviour
 
     public void CloudSlow()
     {
-        Debug.Log("Slow");
         b_isInCloud = true;
     }
 
     public void CloudUnSlow()
     {
-        Debug.Log("UnSlow");
         b_isInCloud = false;
     }
 
