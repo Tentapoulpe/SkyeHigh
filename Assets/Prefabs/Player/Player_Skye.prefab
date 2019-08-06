@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 8615222593070687821}
   - component: {fileID: 8615222593070687820}
   - component: {fileID: 1741240727}
+  - component: {fileID: 1547568624}
   m_Layer: 0
   m_Name: Player_Skye
   m_TagString: Player
@@ -228,6 +229,8 @@ MonoBehaviour:
   playerNumber: 1
   m_character_info: {fileID: 11400000, guid: bb5e15160d9f51140831184eb3111ebc, type: 2}
   m_gravityFall: 10
+  m_timerDashing: 1
+  f_currentTimerDashing: 0
   m_cloudSprite: {fileID: 8615222594659535738}
   m_cloudSpriteList:
   - {fileID: 8615222594659535738}
@@ -282,6 +285,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.261056, y: 2.7299385}
   m_EdgeRadius: 0
+--- !u!95 &1547568624
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8615222593070687827}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b106d522416e0c449aebd590bcf5cd4e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8615222594659535736
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +451,7 @@ Transform:
   m_GameObject: {fileID: 8615222594661341241}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.001, y: 0.004, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 8615222593070687826}
   m_RootOrder: 0
@@ -471,7 +493,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3195c8f41229f8547bae69daee160cb4, type: 3}
+  m_Sprite: {fileID: -1527969820759630636, guid: 11d6fd93e1672534997e80ebc01f943f,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
