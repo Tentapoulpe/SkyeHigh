@@ -1,0 +1,893 @@
+fileFormatVersion: 2
+guid: c9631356a5a394446b0fdc747792c031
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1151927686058454767
+    second: Spritesheet_Skye_Fall_0
+  - first:
+      213: -884239057406576598
+    second: Spritesheet_Skye_Fall_1
+  - first:
+      213: -310870016605133177
+    second: Spritesheet_Skye_Fall_2
+  - first:
+      213: -2118935332770530730
+    second: Spritesheet_Skye_Fall_3
+  - first:
+      213: 7744144237733844643
+    second: Spritesheet_Skye_Fall_4
+  - first:
+      213: -3279973617998472412
+    second: Spritesheet_Skye_Fall_5
+  - first:
+      213: -3260752494369827061
+    second: Spritesheet_Skye_Fall_6
+  - first:
+      213: 4332112654649043632
+    second: Spritesheet_Skye_Fall_7
+  - first:
+      213: -2968328083944150655
+    second: Spritesheet_Skye_Fall_8
+  - first:
+      213: -6613956185509183100
+    second: Spritesheet_Skye_Fall_9
+  - first:
+      213: 3941560201729052890
+    second: Spritesheet_Skye_Fall_10
+  - first:
+      213: -6084136520179303365
+    second: Spritesheet_Skye_Fall_11
+  - first:
+      213: 8754472073592875027
+    second: Spritesheet_Skye_Fall_12
+  - first:
+      213: 6973040836414659619
+    second: Spritesheet_Skye_Fall_13
+  - first:
+      213: 7244052416531021825
+    second: Spritesheet_Skye_Fall_14
+  - first:
+      213: -9129594744110212221
+    second: Spritesheet_Skye_Fall_15
+  - first:
+      213: 276735903236112882
+    second: Spritesheet_Skye_Fall_16
+  - first:
+      213: -7246203411915063200
+    second: Spritesheet_Skye_Fall_17
+  - first:
+      213: -8427600303602363683
+    second: Spritesheet_Skye_Fall_18
+  - first:
+      213: -2736584125202859160
+    second: Spritesheet_Skye_Fall_19
+  - first:
+      213: -7653034784967559052
+    second: Spritesheet_Skye_Fall_20
+  - first:
+      213: -3466570543964338646
+    second: Spritesheet_Skye_Fall_21
+  - first:
+      213: -7845094933167358571
+    second: Spritesheet_Skye_Fall_22
+  - first:
+      213: 8224895495432494584
+    second: Spritesheet_Skye_Fall_23
+  - first:
+      213: 4143441587413932898
+    second: Spritesheet_Skye_Fall_24
+  - first:
+      213: -2419234132311268721
+    second: Spritesheet_Skye_Fall_25
+  - first:
+      213: 4846161026344160232
+    second: Spritesheet_Skye_Fall_26
+  - first:
+      213: 5569371961132867939
+    second: Spritesheet_Skye_Fall_27
+  - first:
+      213: 4061284206792051750
+    second: Spritesheet_Skye_Fall_28
+  - first:
+      213: -398867403699212657
+    second: Spritesheet_Skye_Fall_29
+  - first:
+      213: -6888141129884464462
+    second: Spritesheet_Skye_Fall_30
+  - first:
+      213: 2537291952947726783
+    second: Spritesheet_Skye_Fall_31
+  - first:
+      213: 3218263693805602838
+    second: Spritesheet_Skye_Fall_32
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_0
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 3133
+        width: 492
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cccaff12f387fab4fa7a1887ce15df34
+      internalID: -1151927686058454767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_1
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 3133
+        width: 518
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc30e4a111270de409aa5ba822e016d4
+      internalID: -884239057406576598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_2
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 3129
+        width: 540
+        height: 741
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed88e8093a68823489e4fa8310c39b1a
+      internalID: -310870016605133177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_3
+      rect:
+        serializedVersion: 2
+        x: 2777
+        y: 3129
+        width: 558
+        height: 741
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55201d51cf545b042aae7b9b7dcd68e7
+      internalID: -2118935332770530730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_4
+      rect:
+        serializedVersion: 2
+        x: 3655
+        y: 3129
+        width: 573
+        height: 739
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df686877a8e4d58448730dca07fefa4a
+      internalID: 7744144237733844643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_5
+      rect:
+        serializedVersion: 2
+        x: 4557
+        y: 3129
+        width: 555
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28d6f450d0190b48a9382d5fd4c4926
+      internalID: -3279973617998472412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_6
+      rect:
+        serializedVersion: 2
+        x: 5459
+        y: 3129
+        width: 542
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd522386e56fbd4292d32b11838f094
+      internalID: -3260752494369827061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_7
+      rect:
+        serializedVersion: 2
+        x: 6365
+        y: 3129
+        width: 520
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dfa4d0137e9999469999488aedee5b1
+      internalID: 4332112654649043632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_8
+      rect:
+        serializedVersion: 2
+        x: 7276
+        y: 3129
+        width: 489
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ed37ed39acf7b41ad57cd60debbd14
+      internalID: -2968328083944150655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_9
+      rect:
+        serializedVersion: 2
+        x: 8147
+        y: 3129
+        width: 515
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e372d34ddeda08d4f86f26de8dbf38ed
+      internalID: -6613956185509183100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_10
+      rect:
+        serializedVersion: 2
+        x: 9022
+        y: 3450
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4568861a8c29ae4b8d42e4b4c41827d
+      internalID: 3941560201729052890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_11
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 2130
+        width: 537
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac453c2c18babb479d0af8114918c86
+      internalID: -6084136520179303365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_12
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 2130
+        width: 555
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9212b00cd250d344bb8e0cb32bbf5319
+      internalID: 8754472073592875027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_13
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 2129
+        width: 569
+        height: 733
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57467e4a94715b4a80f2ab6f7fde605
+      internalID: 6973040836414659619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_14
+      rect:
+        serializedVersion: 2
+        x: 2817
+        y: 2129
+        width: 558
+        height: 733
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a944c11bfa3344429095485035c9263
+      internalID: 7244052416531021825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_15
+      rect:
+        serializedVersion: 2
+        x: 3721
+        y: 2129
+        width: 538
+        height: 733
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad2768f84d8be34eadbb00012a43a49
+      internalID: -9129594744110212221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_16
+      rect:
+        serializedVersion: 2
+        x: 4628
+        y: 2129
+        width: 515
+        height: 733
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27dc5456f18135d488101effc68b0132
+      internalID: 276735903236112882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_17
+      rect:
+        serializedVersion: 2
+        x: 5534
+        y: 2129
+        width: 493
+        height: 733
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c8d7be7587b1a46b0430cb7aeb9a5d
+      internalID: -7246203411915063200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_18
+      rect:
+        serializedVersion: 2
+        x: 6405
+        y: 2129
+        width: 520
+        height: 733
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8da5b0e60f2de42aea6f0b9eaac30b
+      internalID: -8427600303602363683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_19
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 2129
+        width: 538
+        height: 733
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 943812a762df59f4ba9d07ab9ff2017b
+      internalID: -2736584125202859160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_20
+      rect:
+        serializedVersion: 2
+        x: 8156
+        y: 2129
+        width: 559
+        height: 733
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4a147f8d6d6f84791ae0051fac997d
+      internalID: -7653034784967559052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_21
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 1064
+        width: 572
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f695234d75ec84dae95425bb0a487b
+      internalID: -3466570543964338646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_22
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 1068
+        width: 556
+        height: 733
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6edb1d425048e9b4e916d1b269468223
+      internalID: -7845094933167358571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_23
+      rect:
+        serializedVersion: 2
+        x: 1989
+        y: 1068
+        width: 541
+        height: 733
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6e0d904d241ff44a6892d8464ce618
+      internalID: 8224895495432494584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_24
+      rect:
+        serializedVersion: 2
+        x: 2895
+        y: 1068
+        width: 520
+        height: 733
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da05e6d8fe06dc149a690010c8f6741c
+      internalID: 4143441587413932898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_25
+      rect:
+        serializedVersion: 2
+        x: 3806
+        y: 1068
+        width: 488
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889980b63059453438ced1a95463150c
+      internalID: -2419234132311268721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_26
+      rect:
+        serializedVersion: 2
+        x: 4677
+        y: 1068
+        width: 515
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b06a6695f7ffb49bf5bbc80cad25fc
+      internalID: 4846161026344160232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_27
+      rect:
+        serializedVersion: 2
+        x: 5552
+        y: 1068
+        width: 538
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc10559c1beb2a947a2cfa886578828f
+      internalID: 5569371961132867939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_28
+      rect:
+        serializedVersion: 2
+        x: 6427
+        y: 1068
+        width: 556
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc01580ca9b8204c95685a363504115
+      internalID: 4061284206792051750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_29
+      rect:
+        serializedVersion: 2
+        x: 7307
+        y: 1068
+        width: 569
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a1c8e5755c6514db26652d41cd3b0a
+      internalID: -398867403699212657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_30
+      rect:
+        serializedVersion: 2
+        x: 8209
+        y: 1068
+        width: 555
+        height: 741
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a094b1ad924c8664d8ac3c77ca90b55d
+      internalID: -6888141129884464462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_31
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 135
+        width: 538
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b1ea30d51760b41b83a44e8ca73c5d
+      internalID: 2537291952947726783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Fall_32
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 135
+        width: 519
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be952a05bb749ae4e8d1b9a80606b916
+      internalID: 3218263693805602838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a08f2cde0697fc741af8bd0fb9fabb27
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
