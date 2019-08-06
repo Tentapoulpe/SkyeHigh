@@ -523,6 +523,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8615222593070687821, guid: 287e468c80a7c5e4799f9566f67f0831,
+        type: 3}
+      propertyPath: m_cloudSpriteList.Array.data[3]
+      value: 
+      objectReference: {fileID: 1049521091}
+    - target: {fileID: 8615222593070687821, guid: 287e468c80a7c5e4799f9566f67f0831,
+        type: 3}
+      propertyPath: m_timerDashing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8615222594661341243, guid: 287e468c80a7c5e4799f9566f67f0831,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -538,11 +548,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
-    - target: {fileID: 8615222593070687821, guid: 287e468c80a7c5e4799f9566f67f0831,
-        type: 3}
-      propertyPath: m_cloudSpriteList.Array.data[3]
-      value: 
-      objectReference: {fileID: 1049521091}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 287e468c80a7c5e4799f9566f67f0831, type: 3}
 --- !u!1 &659341297
@@ -1227,6 +1232,10 @@ PrefabInstance:
     - target: {fileID: 6022014901469629512, guid: 8c38fc274764fca4aa65b34f270734ac,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474255338, guid: 8c38fc274764fca4aa65b34f270734ac, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -43,7 +43,8 @@ public class PlayerController : MonoBehaviour
     private bool b_playerIsDashing;
     private bool b_canDash = true;
     private float f_dashCooldown = 0f;
-    private bool b_lastDash = false;
+    public float m_timerDashing;
+    public float f_currentTimerDashing;
     [Space]
 
     [Header("Environment")]
@@ -90,7 +91,6 @@ public class PlayerController : MonoBehaviour
         m_dashPostStun = m_character_info.m_dashPostStun;
         m_dashStun = m_character_info.m_dashStun;
         m_cloudSlow = m_character_info.m_cloudSlow;
-        m_delayToRegenerate = m_character_info.m_delayToRegenerate;
         m_maxHealth = m_character_info.m_maxHealth;
 }
 
@@ -129,15 +129,6 @@ public class PlayerController : MonoBehaviour
             
         }
 
-        if(rigidbodyPlayer.velocity.x > m_maxHorizontalSpeed || rigidbodyPlayer.velocity.y > Mathf.Abs(m_maxVerticalUpSpeed))
-        {
-            b_playerIsDashing = true;
-            if (rigidbodyPlayer.velocity.x == m_maxHorizontalSpeed || rigidbodyPlayer.velocity.y == Mathf.Abs(m_maxVerticalUpSpeed) && b_lastDash)
-            {
-                Fall();
-            }
-        }
-
         if (b_isInCloud)
         {
             rigidbodyPlayer.AddForce(new Vector2(horizontal, vertical) / m_cloudSlow, ForceMode2D.Impulse);
@@ -149,6 +140,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        m_textHealth.text = f_currentHealth.ToString();
+
         string[] names = Input.GetJoystickNames();
         if (names[playerNumber - 1].Length == 19)
         {
@@ -176,13 +169,32 @@ public class PlayerController : MonoBehaviour
 
         if (f_dashCooldown > 0)
         {
-            b_playerIsDashing = false;
             f_dashCooldown -= Time.deltaTime;
             if (f_dashCooldown <= 0)
             {
                 f_dashCooldown = 0;
                 b_canDash = true;
             }
+        }
+
+        if(b_playerIsDashing)
+        {
+            f_currentTimerDashing -= Time.deltaTime;
+            if (f_currentTimerDashing <= 0)
+            {
+                b_playerIsDashing = false;
+            }
+        }
+
+        Debug.Log(b_playerIsDashing);
+
+        if (f_currentHealth >= m_maxHealth)
+        {
+            b_canRegenerate = false;
+        }
+        else
+        {
+            b_canRegenerate = true;
         }
     }
 
@@ -194,6 +206,8 @@ public class PlayerController : MonoBehaviour
     public void Dash()
     {
         b_canDash = false;
+        b_playerIsDashing = true;
+        f_currentTimerDashing = m_timerDashing;
         f_dashCooldown = m_maxDashCooldown;
         rigidbodyPlayer.AddForce(new Vector2(Input.GetAxis("Horizontal_P" + playerNumber), Input.GetAxis("Vertical_P" + playerNumber)) * m_dashPower, ForceMode2D.Impulse);
         DecreaseCloud();
@@ -207,7 +221,7 @@ public class PlayerController : MonoBehaviour
             f_currentHealth -= m_dashCost;
             if (f_currentHealth <= 0)
             {
-                b_lastDash = true;
+                Fall();
             }
         }
         UpdateCloudSprite();
@@ -223,12 +237,11 @@ public class PlayerController : MonoBehaviour
         if (f_currentHealth <= m_maxHealth)
         {
             Debug.Log("IncreaseCloud");
-            b_canRegenerate = false;
             f_currentHealth += f_health;
-
             if (f_currentHealth >= m_maxHealth)
             {
                 f_currentHealth = m_maxHealth;
+                return;
             }
             UpdateCloudSprite();
         }
@@ -253,7 +266,6 @@ public class PlayerController : MonoBehaviour
             }
             m_cloudSprite = m_cloudSpriteList[3];
         }
-        m_textHealth.text = f_currentHealth.ToString();
     }
 
     public void CloudSlow()
@@ -282,7 +294,9 @@ public class PlayerController : MonoBehaviour
     {
         b_canMove = false;
         if (cloud)
+        {
             cloud.DestroyCloud();
+        }
         rigidbodyPlayer.gravityScale = m_gravityFall;
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
     }

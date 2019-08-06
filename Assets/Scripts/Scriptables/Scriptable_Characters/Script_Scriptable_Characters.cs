@@ -31,7 +31,6 @@ public class Script_Scriptable_Characters : ScriptableObject
     [Header("Environment")]
 
     public float m_cloudSlow;//Slow when player enter in cloud
-    public float m_delayToRegenerate;//delay between enter a cloud and regenerate
 
     [Header("Player")]
 

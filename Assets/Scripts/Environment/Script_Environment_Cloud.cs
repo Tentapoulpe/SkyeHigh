@@ -16,6 +16,7 @@ public class Script_Environment_Cloud : MonoBehaviour
     {
         if (collision.CompareTag("Player") && collision.gameObject.GetComponentInParent<PlayerController>().CanRegenerate())
         {
+            Debug.Log("InCloud");
             collision.gameObject.GetComponentInParent<PlayerController>().CloudSlow();
         }
     }
@@ -24,7 +25,10 @@ public class Script_Environment_Cloud : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            collision.GetComponentInParent<PlayerController>().IncreaseCloud(f_healthToRegenerate);
+            if(collision.GetComponentInParent<PlayerController>().CanRegenerate() == true)
+            {
+                collision.GetComponentInParent<PlayerController>().IncreaseCloud(f_healthToRegenerate);
+            }
         }
     }
 
