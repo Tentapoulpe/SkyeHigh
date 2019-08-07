@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943791614675356210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 284.1, y: 139.9, z: 0}
+  m_LocalPosition: {x: 13.68, y: 6.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3751687928610165685}
@@ -88,7 +88,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2409491687642809322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50, y: 28.1, z: 0}
+  m_LocalPosition: {x: -14.53, y: -7.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3751687928610165685}
@@ -118,7 +118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3037779559251894614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 284.1, y: 28.099998, z: 0}
+  m_LocalPosition: {x: 13.16, y: -7.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3751687928610165685}
@@ -171,6 +171,7 @@ MonoBehaviour:
   m_sceneToLoad: 
   m_character:
   - {fileID: 8615222593070687827, guid: 287e468c80a7c5e4799f9566f67f0831, type: 3}
+  - {fileID: 8615222593070687827, guid: c40916920086cd74c91e6ea8c87e7114, type: 3}
   m_mySpawn:
   - {fileID: 8133645349817674715}
   - {fileID: 943791614675356210}
@@ -201,7 +202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8133645349817674715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50, y: 139.9, z: 0}
+  m_LocalPosition: {x: -12.4, y: 5.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3751687928610165685}

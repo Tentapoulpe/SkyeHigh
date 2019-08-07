@@ -6,8 +6,11 @@ public class UI_Menu_Manager : MonoBehaviour
 {
     public static UI_Menu_Manager Instance { get; private set; }
 
-
-
+    public GameObject m_MainMenu;
+    public GameObject m_CharacterSelection;
+    public List<GameObject> m_Players;
+    public List<GameObject> m_PlayersDisplay;
+    public List<Sprite> m_Characters;
     private void Awake()
     {
         if (Instance == null)
@@ -21,15 +24,66 @@ public class UI_Menu_Manager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void DisplayUI(GameObject current_go_to_display)
+    public void StartToCharacterSelection()
     {
-        if(!current_go_to_display.activeSelf)
-        current_go_to_display.SetActive(true);
+        m_MainMenu.SetActive(false);
+        m_CharacterSelection.SetActive(true);
+        Invoke("EnterCharacterSelection", 0.1f);
     }
 
-    public void HideUI(GameObject current_go_to_hide)
+    public void CharacterSelectionToStart()
     {
-        if(current_go_to_hide.activeSelf)
-        current_go_to_hide.SetActive(false);
+        m_CharacterSelection.SetActive(false);
+        m_MainMenu.SetActive(true);
+    }
+
+    public void QuitGame()
+    {
+        GameManager.Instance.Quit();
+    }
+
+    public void ActivatePlayer(int player,int playername)
+    {
+        m_PlayersDisplay[player-1].SetActive(false);
+        m_Players[player - 1].GetComponent<SpriteRenderer>().sprite = m_Characters[0];
+        m_Players[player-1].SetActive(true);
+        m_Players[player-1].transform.GetChild(0).GetChild(0).GetComponent<UnityEngine.UI.Text>().text = "P" + (playername + 1);
+    }
+
+
+    public void DeactivatePlayer(int player)
+    {
+        m_Players[player-1].SetActive(false);
+        m_PlayersDisplay[player-1].SetActive(true);
+    }
+
+    public bool IsCharacterSelect()
+    {
+        return m_CharacterSelection.activeSelf;
+    }
+
+    public void UpdatePlayerCharacter(int player, int idx)
+    {
+        m_Players[player - 1].GetComponent<SpriteRenderer>().sprite = m_Characters[idx];
+    }
+
+    public void LockPlayerCharacter(int player)
+    {
+        m_Players[player - 1].GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 0.5f);
+    }
+
+    public void UnlockPlayerCharacter(int player)
+    {
+        m_Players[player - 1].GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
+    }
+
+    public void EnterCharacterSelection()
+    {
+        GameManager.Instance.GoToCharacterSelection();
+    }
+
+    public void GameScreen()
+    {
+        m_CharacterSelection.SetActive(false);
     }
 }

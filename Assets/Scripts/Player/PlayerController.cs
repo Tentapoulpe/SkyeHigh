@@ -300,4 +300,9 @@ public class PlayerController : MonoBehaviour
             cloud.DestroyCloud();
         Destroy(transform.gameObject);
     }
+
+    public void SetPlayerNumber(int i)
+    {
+        playerNumber = i;
+    }
 }
