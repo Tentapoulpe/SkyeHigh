@@ -1,16 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class UI_Menu_Manager : MonoBehaviour
 {
     public static UI_Menu_Manager Instance { get; private set; }
 
+    public EventSystemTool m_EventSystem;
     public GameObject m_MainMenu;
     public GameObject m_CharacterSelection;
+    public GameObject m_EndGame;
+    public TextMeshProUGUI m_EndGameText;
     public List<GameObject> m_Players;
     public List<GameObject> m_PlayersDisplay;
     public List<Sprite> m_Characters;
+
     private void Awake()
     {
         if (Instance == null)
@@ -34,6 +38,7 @@ public class UI_Menu_Manager : MonoBehaviour
     public void CharacterSelectionToStart()
     {
         m_CharacterSelection.SetActive(false);
+        m_EventSystem.SetStartPriority();
         m_MainMenu.SetActive(true);
     }
 
@@ -85,5 +90,12 @@ public class UI_Menu_Manager : MonoBehaviour
     public void GameScreen()
     {
         m_CharacterSelection.SetActive(false);
+    }
+
+    public void DisplayEndGame(int player)
+    {
+        m_EndGameText.text = "Player " + player + " wins";
+        m_EventSystem.SetRestartPriority();
+        m_EndGame.SetActive(true);
     }
 }

@@ -298,6 +298,7 @@ public class PlayerController : MonoBehaviour
     {
         if (cloud)
             cloud.DestroyCloud();
+        GameManager.Instance.PlayerDied(playerNumber);
         Destroy(transform.gameObject);
     }
 

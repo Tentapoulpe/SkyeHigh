@@ -13,7 +13,9 @@ public class GameManager : MonoBehaviour
 
     int[] l_Players = new int[4];
     int playerConnected = 0;
+    int playerAlive = 0;
     bool b_isInCharacterSelection = false;
+    List<PlayerController> l_playersPlaying = new List<PlayerController>();
 
     [Header("Player")]
     public GameObject[] m_character;
@@ -192,12 +194,12 @@ public class GameManager : MonoBehaviour
                 if (Input.GetAxis("Horizontal_P1") == 1)
                 {
                     ChangeCharacter(0, 1);
-                    axisCD[0] = 0.5f;
+                    axisCD[0] = 0.2f;
                 }
                 else if (Input.GetAxis("Horizontal_P1") == -1)
                 {
                     ChangeCharacter(0, -1);
-                    axisCD[0] = 0.5f;
+                    axisCD[0] = 0.2f;
                 }
             }
             if (!lockedPlayer[1] && axisCD[1] == 0 && l_Players[1] != 0)
@@ -205,12 +207,12 @@ public class GameManager : MonoBehaviour
                 if (Input.GetAxis("Horizontal_P2") == 1)
                 {
                     ChangeCharacter(1, 1);
-                    axisCD[1] = 0.5f;
+                    axisCD[1] = 0.2f;
                 }
                 else if (Input.GetAxis("Horizontal_P2") == -1)
                 {
                     ChangeCharacter(1, -1);
-                    axisCD[1] = 0.5f;
+                    axisCD[1] = 0.2f;
                 }
             }
             if (!lockedPlayer[2] && axisCD[2] == 0 && l_Players[2] != 0)
@@ -218,12 +220,12 @@ public class GameManager : MonoBehaviour
                 if (Input.GetAxis("Horizontal_P3") == 1)
                 {
                     ChangeCharacter(2, 1);
-                    axisCD[2] = 0.5f;
+                    axisCD[2] = 0.2f;
                 }
                 else if (Input.GetAxis("Horizontal_P3") == -1)
                 {
                     ChangeCharacter(2, -1);
-                    axisCD[2] = 0.5f;
+                    axisCD[2] = 0.2f;
                 }
             }
             if (!lockedPlayer[3] && axisCD[3] == 0 && l_Players[3] != 0)
@@ -231,12 +233,12 @@ public class GameManager : MonoBehaviour
                 if (Input.GetAxis("Horizontal_P4") == 1)
                 {
                     ChangeCharacter(3, 1);
-                    axisCD[3] = 0.5f;
+                    axisCD[3] = 0.2f;
                 }
                 else if (Input.GetAxis("Horizontal_P4") == -1)
                 {
                     ChangeCharacter(3, -1);
-                    axisCD[3] = 0.5f;
+                    axisCD[3] = 0.2f;
                 }
             }
         }
@@ -250,14 +252,17 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        l_playersPlaying.Clear();
         for (int i = 0; i < l_Players.Length; i++)
         {
             if (l_Players[i] !=0)
             {
                 GameObject player = Instantiate(m_character[m_PlayersCharacter[i]], m_mySpawn[l_Players[i]-1].transform.position, Quaternion.identity);
                 player.GetComponent<PlayerController>().SetPlayerNumber(i + 1);
+                l_playersPlaying.Add(player.GetComponent<PlayerController>());
             }
         }
+        playerAlive = playerConnected;
     }
 
     public void Quit()
@@ -317,12 +322,12 @@ public class GameManager : MonoBehaviour
                 {
                     playerLocked++;
                 }
-                if (playerLocked == playerConnected)
-                {
-                    b_isInCharacterSelection = false;
-                    SceneManager.LoadScene(1);
-                    UI_Menu_Manager.Instance.GameScreen();
-                }
+            }
+            if (playerLocked == playerConnected)
+            {
+                b_isInCharacterSelection = false;
+                SceneManager.LoadScene(1);
+                UI_Menu_Manager.Instance.GameScreen();
             }
         }
     }
@@ -336,6 +341,16 @@ public class GameManager : MonoBehaviour
     public void GoToCharacterSelection()
     {
         b_isInCharacterSelection = true;
+    }
+
+    public void PlayerDied(int player)
+    {
+        playerAlive--;
+        l_playersPlaying.Remove(l_playersPlaying[player]);
+        if (playerAlive == 1)
+        {
+            UI_Menu_Manager.Instance.DisplayEndGame(l_playersPlaying[0].playerNumber);
+        }
     }
 
 
