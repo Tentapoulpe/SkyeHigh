@@ -1,0 +1,869 @@
+fileFormatVersion: 2
+guid: 2330b8819bd628d43a1582577fb83d92
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9000325395565334814
+    second: Spritesheet_Skye_Idle_0
+  - first:
+      213: 5978351752882072237
+    second: Spritesheet_Skye_Idle_1
+  - first:
+      213: -3483788303628139695
+    second: Spritesheet_Skye_Idle_2
+  - first:
+      213: 1443084143378164731
+    second: Spritesheet_Skye_Idle_3
+  - first:
+      213: 603322943566601833
+    second: Spritesheet_Skye_Idle_4
+  - first:
+      213: -6656553159790233600
+    second: Spritesheet_Skye_Idle_5
+  - first:
+      213: -8613347238741236468
+    second: Spritesheet_Skye_Idle_6
+  - first:
+      213: -4063208678746241930
+    second: Spritesheet_Skye_Idle_7
+  - first:
+      213: -8345693514924839409
+    second: Spritesheet_Skye_Idle_8
+  - first:
+      213: -5245762357930716074
+    second: Spritesheet_Skye_Idle_9
+  - first:
+      213: -9076441731358584865
+    second: Spritesheet_Skye_Idle_10
+  - first:
+      213: -8220358258874464161
+    second: Spritesheet_Skye_Idle_11
+  - first:
+      213: -5390023948480578886
+    second: Spritesheet_Skye_Idle_12
+  - first:
+      213: 2936773968527221000
+    second: Spritesheet_Skye_Idle_13
+  - first:
+      213: 5214059873776743620
+    second: Spritesheet_Skye_Idle_14
+  - first:
+      213: -3951887120466944746
+    second: Spritesheet_Skye_Idle_15
+  - first:
+      213: -1695668792311377249
+    second: Spritesheet_Skye_Idle_16
+  - first:
+      213: 978224871967174532
+    second: Spritesheet_Skye_Idle_17
+  - first:
+      213: 8201922650315818594
+    second: Spritesheet_Skye_Idle_18
+  - first:
+      213: -4576253213411600920
+    second: Spritesheet_Skye_Idle_19
+  - first:
+      213: 8016477620707909453
+    second: Spritesheet_Skye_Idle_20
+  - first:
+      213: 1171503973644937825
+    second: Spritesheet_Skye_Idle_21
+  - first:
+      213: 2181688057963171601
+    second: Spritesheet_Skye_Idle_22
+  - first:
+      213: 4086275079619205466
+    second: Spritesheet_Skye_Idle_23
+  - first:
+      213: 2123458944621444806
+    second: Spritesheet_Skye_Idle_24
+  - first:
+      213: -4591901162257246720
+    second: Spritesheet_Skye_Idle_25
+  - first:
+      213: -3709778138505069491
+    second: Spritesheet_Skye_Idle_26
+  - first:
+      213: -2242404351547517917
+    second: Spritesheet_Skye_Idle_27
+  - first:
+      213: 48242939540859249
+    second: Spritesheet_Skye_Idle_28
+  - first:
+      213: -3521097443502052412
+    second: Spritesheet_Skye_Idle_29
+  - first:
+      213: -7753341585376866608
+    second: Spritesheet_Skye_Idle_30
+  - first:
+      213: 5084326912728333897
+    second: Spritesheet_Skye_Idle_31
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 3320
+        width: 278
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea337ccff4121944a888a710976fd14e
+      internalID: 9000325395565334814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 3320
+        width: 274
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50512def056736f41abf3256556a7871
+      internalID: 5978351752882072237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 3320
+        width: 273
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b810fd6fc4970429aab69f698dcd09
+      internalID: -3483788303628139695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 3320
+        width: 269
+        height: 683
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92dcacbc39cf9c4489ee8e2dcf25bd67
+      internalID: 1443084143378164731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 3258
+        y: 3320
+        width: 270
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82ae0b7df389c0e41b678d05d77320be
+      internalID: 603322943566601833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 3989
+        y: 3324
+        width: 271
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef389d9dda7b82c41afea80a2b660749
+      internalID: -6656553159790233600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 4718
+        y: 3324
+        width: 270
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25cab12a1ce6e904ea5a28a11d1de265
+      internalID: -8613347238741236468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 5450
+        y: 3324
+        width: 270
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16c0220be5e2d74ab8f3decdeebcbe5
+      internalID: -4063208678746241930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 2325
+        width: 273
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0c378a7267e004c96aa094bf17b5a5
+      internalID: -8345693514924839409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 2325
+        width: 270
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6552798c93f1b4543af4d830dc7fdac4
+      internalID: -5245762357930716074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 2325
+        width: 268
+        height: 683
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77dc46aa4a7acef4184948cbdc1939e9
+      internalID: -9076441731358584865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 2325
+        width: 271
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30fdd58b9388a5e4594471dd58143efe
+      internalID: -8220358258874464161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 3245
+        y: 2325
+        width: 268
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd856bd8ad65fbe44ba0551068143ffe
+      internalID: -5390023948480578886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 3979
+        y: 2326
+        width: 266
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c17b868026d144792c413fea61d5cf
+      internalID: 2936773968527221000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 4711
+        y: 2328
+        width: 270
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035a5c892cb444e47b98c2f4777ec6b3
+      internalID: 5214059873776743620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 5446
+        y: 2328
+        width: 267
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de026b34af0d8bb479a76ae357af6642
+      internalID: -3951887120466944746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 6178
+        y: 2328
+        width: 267
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46670bb55eb67af4c8354de9892aae01
+      internalID: -1695668792311377249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 6910
+        y: 2328
+        width: 267
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dff9fbdf9ca3534d8214e3776ab5ad4
+      internalID: 978224871967174532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_18
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 1264
+        width: 271
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ebd723468b17a479a41f7db2c2171d
+      internalID: 8201922650315818594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_19
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1261
+        width: 270
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584a4d0334ea018468dd2f892d2f93f7
+      internalID: -4576253213411600920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_20
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 1261
+        width: 269
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8d6a6b69565de45bbaff30f8fc04bd
+      internalID: 8016477620707909453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_21
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1261
+        width: 271
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebf6a18d94550d243a78afba12d2041b
+      internalID: 1171503973644937825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_22
+      rect:
+        serializedVersion: 2
+        x: 3232
+        y: 1261
+        width: 271
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39014250ed7e25842b26c28c984d9551
+      internalID: 2181688057963171601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_23
+      rect:
+        serializedVersion: 2
+        x: 3961
+        y: 1261
+        width: 270
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1d88c78a48ea045a898c22e464fabe
+      internalID: 4086275079619205466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_24
+      rect:
+        serializedVersion: 2
+        x: 4693
+        y: 1257
+        width: 270
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e5ced8b4cc05b4fbc57d5f765a1618
+      internalID: 2123458944621444806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_25
+      rect:
+        serializedVersion: 2
+        x: 5425
+        y: 1257
+        width: 270
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362db498b0ac1094ea7f3495cb7a4630
+      internalID: -4591901162257246720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_26
+      rect:
+        serializedVersion: 2
+        x: 6160
+        y: 1257
+        width: 270
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbefc20479192dc41903abd4ff0e8ea6
+      internalID: -3709778138505069491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_27
+      rect:
+        serializedVersion: 2
+        x: 6892
+        y: 1257
+        width: 270
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84280e3879a3e7d4e91df23695c0d5e5
+      internalID: -2242404351547517917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_28
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 204
+        width: 270
+        height: 683
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b67363d3ea11a449d12fe319743711
+      internalID: 48242939540859249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_29
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 204
+        width: 270
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32da6a41d72db874b844e26734838d97
+      internalID: -3521097443502052412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_30
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 204
+        width: 272
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c757ad4d9dd93249b0254685afef05e
+      internalID: -7753341585376866608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Idle_31
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 204
+        width: 274
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ebe7d3a02954eb4a96f5ab4a8b09461
+      internalID: 5084326912728333897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8d0fa190a8d24064a9759820a4656159
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
