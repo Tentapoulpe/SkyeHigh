@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour
 
     public string m_sceneToLoad;
 
-
+    private Camera m_Camera;
+    bool winState = false;
+    Vector3 v_winerPos = new Vector3();
 
     int[] l_Players = new int[4];
     int playerConnected = 0;
@@ -46,6 +48,22 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (winState)
+        {
+            m_Camera.orthographicSize -= Time.deltaTime * 40;
+            m_Camera.transform.position = Vector3.MoveTowards(m_Camera.transform.position, v_winerPos, Time.deltaTime * 80 );
+            if (m_Camera.orthographicSize <= 5f)
+            {
+                m_Camera.orthographicSize = 5f;
+                if (m_Camera.transform.position == v_winerPos)
+                {
+                    UIManager.Instance.DisplayEndGame(l_playersPlaying[0].playerNumber);
+                }
+            }
+
+
+        }
+
         for (int i = 0; i < axisCD.Length; i++)
         {
             if (axisCD[i] > 0)
@@ -116,7 +134,7 @@ public class GameManager : MonoBehaviour
                 {
                     if (playerConnected == 0)
                     {
-                        UI_Menu_Manager.Instance.CharacterSelectionToStart();
+                        UIManager.Instance.CharacterSelectionToStart();
                         b_isInCharacterSelection = false;
                     }
                 }
@@ -138,7 +156,7 @@ public class GameManager : MonoBehaviour
                 {
                     if (playerConnected == 0)
                     {
-                        UI_Menu_Manager.Instance.CharacterSelectionToStart();
+                        UIManager.Instance.CharacterSelectionToStart();
                         b_isInCharacterSelection = false;
                     }
                 }
@@ -160,7 +178,7 @@ public class GameManager : MonoBehaviour
                 {
                     if (playerConnected == 0)
                     {
-                        UI_Menu_Manager.Instance.CharacterSelectionToStart();
+                        UIManager.Instance.CharacterSelectionToStart();
                         b_isInCharacterSelection = false;
                     }
                 }
@@ -183,7 +201,7 @@ public class GameManager : MonoBehaviour
                 {
                     if (playerConnected == 0)
                     {
-                        UI_Menu_Manager.Instance.CharacterSelectionToStart();
+                        UIManager.Instance.CharacterSelectionToStart();
                         b_isInCharacterSelection = false;
                     }
                 }
@@ -246,12 +264,15 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
+        winState = false;
         Scene loadedLevel = SceneManager.GetActiveScene();
         SceneManager.LoadScene(loadedLevel.buildIndex);
     }
 
     public void StartGame()
     {
+        
+        m_Camera = Camera.main;
         l_playersPlaying.Clear();
         for (int i = 0; i < l_Players.Length; i++)
         {
@@ -275,21 +296,21 @@ public class GameManager : MonoBehaviour
     {
         playerConnected++;
         l_Players[player] = playerConnected;
-        UI_Menu_Manager.Instance.ActivatePlayer(playerConnected, player);
+        UIManager.Instance.ActivatePlayer(playerConnected, player);
     }
 
     public void RemovePlayer(int player)
     {
         int playerPlace = l_Players[player];
-        UI_Menu_Manager.Instance.DeactivatePlayer(playerPlace);
+        UIManager.Instance.DeactivatePlayer(playerPlace);
         l_Players[player] = 0;
         for (int i = 0; i < l_Players.Length; i++)
         {
             if (l_Players[i] > playerPlace)
             {
-                UI_Menu_Manager.Instance.DeactivatePlayer(l_Players[i]);
+                UIManager.Instance.DeactivatePlayer(l_Players[i]);
                 l_Players[i]--;
-                UI_Menu_Manager.Instance.ActivatePlayer(l_Players[i],i);
+                UIManager.Instance.ActivatePlayer(l_Players[i],i);
             }
         }
         playerConnected--;
@@ -306,13 +327,13 @@ public class GameManager : MonoBehaviour
         {
             m_PlayersCharacter[player] = 0;
         }
-        UI_Menu_Manager.Instance.UpdatePlayerCharacter(l_Players[player], m_PlayersCharacter[player]);
+        UIManager.Instance.UpdatePlayerCharacter(l_Players[player], m_PlayersCharacter[player]);
     }
 
     public void LockPlayer(int player)
     {
         lockedPlayer[player] = true;
-        UI_Menu_Manager.Instance.LockPlayerCharacter(l_Players[player]);
+        UIManager.Instance.LockPlayerCharacter(l_Players[player]);
         if (playerConnected >= 2)
         {
             int playerLocked = 0;
@@ -327,7 +348,7 @@ public class GameManager : MonoBehaviour
             {
                 b_isInCharacterSelection = false;
                 SceneManager.LoadScene(1);
-                UI_Menu_Manager.Instance.GameScreen();
+                UIManager.Instance.GameScreen();
             }
         }
     }
@@ -335,7 +356,7 @@ public class GameManager : MonoBehaviour
     public void UnlockPlayer(int player)
     {
         lockedPlayer[player] = false;
-        UI_Menu_Manager.Instance.UnlockPlayerCharacter(l_Players[player]);
+        UIManager.Instance.UnlockPlayerCharacter(l_Players[player]);
     }
 
     public void GoToCharacterSelection()
@@ -346,11 +367,26 @@ public class GameManager : MonoBehaviour
     public void PlayerDied(int player)
     {
         playerAlive--;
-        l_playersPlaying.Remove(l_playersPlaying[player]);
+        l_playersPlaying.Remove(l_playersPlaying[player-1]);
         if (playerAlive == 1)
         {
-            UI_Menu_Manager.Instance.DisplayEndGame(l_playersPlaying[0].playerNumber);
+            l_playersPlaying[0].LockControls();
+            WinScreen(l_playersPlaying[0].transform.position);
         }
+    }
+
+    public void ReturnMenu()
+    {
+        winState = false;
+        SceneManager.LoadScene(0);
+        Destroy(UIManager.Instance.gameObject);
+        Destroy(gameObject);
+    }
+
+    public void WinScreen(Vector3 WinPos)
+    {
+        v_winerPos = WinPos;
+        winState = true;
     }
 
 

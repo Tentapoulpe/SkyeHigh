@@ -27,5 +27,4 @@ MonoBehaviour:
   m_dashPostStun: 0.3
   m_dashStun: 1
   m_cloudSlow: 3
-  m_delayToRegenerate: 2
   m_maxHealth: 100

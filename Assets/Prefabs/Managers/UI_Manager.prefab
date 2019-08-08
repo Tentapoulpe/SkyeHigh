@@ -27,11 +27,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113762433}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -959.99994, y: -540.26904, z: 0}
+  m_LocalScale: {x: 4.3049326, y: 4.3049326, z: 4.3049326}
   m_Children: []
-  m_Father: {fileID: 6022014901469629512}
-  m_RootOrder: 2
+  m_Father: {fileID: 474255342}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &113762435
 MonoBehaviour:
@@ -428,7 +428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &474255342
 RectTransform:
   m_ObjectHideFlags: 0
@@ -443,6 +443,7 @@ RectTransform:
   - {fileID: 666924148}
   - {fileID: 870001460}
   - {fileID: 582523029}
+  - {fileID: 113762436}
   m_Father: {fileID: 6022014901469629512}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2541,8 +2542,9 @@ RectTransform:
   - {fileID: 775361721}
   - {fileID: 1771701631}
   - {fileID: 264684834}
+  - {fileID: 7789322957028372246}
   m_Father: {fileID: 6022014901469629512}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2833,6 +2835,86 @@ Transform:
   m_Father: {fileID: 1553582556}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3048940637888216071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7789322957028372246}
+  - component: {fileID: 2024412395520199577}
+  - component: {fileID: 3783688632887498074}
+  - component: {fileID: 1943011995386288665}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7789322957028372246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3048940637888216071}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2113130708}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2024412395520199577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3048940637888216071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 1771701630}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!114 &3783688632887498074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3048940637888216071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal_P1
+  m_VerticalAxis: Vertical_P1
+  m_SubmitButton: F1_PS4_P1
+  m_CancelButton: F2_PS4_P1
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1943011995386288665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3048940637888216071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1494c926fd21f464f833f2019e7888ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RestartButton: {fileID: 0}
 --- !u!1 &4573452967943798916
 GameObject:
   m_ObjectHideFlags: 0
@@ -3022,7 +3104,6 @@ Transform:
   m_Children:
   - {fileID: 474255342}
   - {fileID: 1553582556}
-  - {fileID: 113762436}
   - {fileID: 2113130708}
   m_Father: {fileID: 0}
   m_RootOrder: 0

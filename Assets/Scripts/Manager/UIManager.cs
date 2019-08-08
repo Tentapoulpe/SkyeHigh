@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class UI_Menu_Manager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
-    public static UI_Menu_Manager Instance { get; private set; }
+    public static UIManager Instance { get; private set; }
 
     public EventSystemTool m_EventSystem;
     public GameObject m_MainMenu;
@@ -38,7 +38,6 @@ public class UI_Menu_Manager : MonoBehaviour
     public void CharacterSelectionToStart()
     {
         m_CharacterSelection.SetActive(false);
-        m_EventSystem.SetStartPriority();
         m_MainMenu.SetActive(true);
     }
 
@@ -82,7 +81,7 @@ public class UI_Menu_Manager : MonoBehaviour
         m_Players[player - 1].GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
     }
 
-    public void EnterCharacterSelection()
+    void EnterCharacterSelection()
     {
         GameManager.Instance.GoToCharacterSelection();
     }
@@ -95,7 +94,19 @@ public class UI_Menu_Manager : MonoBehaviour
     public void DisplayEndGame(int player)
     {
         m_EndGameText.text = "Player " + player + " wins";
-        m_EventSystem.SetRestartPriority();
         m_EndGame.SetActive(true);
+    }
+
+    public void RestartGame()
+    {
+        m_EndGame.SetActive(false);
+        GameManager.Instance.RestartGame();
+    }
+
+    public void ReturnToMenu()
+    {
+        m_EndGame.SetActive(false);
+        GameManager.Instance.ReturnMenu();
+        m_MainMenu.SetActive(true);
     }
 }

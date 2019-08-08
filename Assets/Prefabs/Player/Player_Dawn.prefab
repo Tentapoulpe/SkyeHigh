@@ -228,6 +228,8 @@ MonoBehaviour:
   playerNumber: 1
   m_character_info: {fileID: 11400000, guid: f909b9db874643a41950381b9e1fd5d4, type: 2}
   m_gravityFall: 10
+  m_timerDashing: 1
+  f_currentTimerDashing: 0
   m_cloudSprite: {fileID: 8615222594659535738}
   m_cloudSpriteList:
   - {fileID: 8615222594659535738}

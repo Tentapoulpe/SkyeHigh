@@ -26,14 +26,6 @@ public class EventSystemTool : MonoBehaviour
         }
     }
 
-    public void SetStartPriority()
-    {
-        s_System.firstSelectedGameObject = StartButton;
-    }
-    public void SetRestartPriority()
-    {
-        s_System.firstSelectedGameObject = RestartButton;
-    }
 
 
 }

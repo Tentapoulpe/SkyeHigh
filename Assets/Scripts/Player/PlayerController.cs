@@ -285,13 +285,13 @@ public class PlayerController : MonoBehaviour
 
     public void Fall()
     {
-        b_canMove = false;
+        LockControls();
         if (cloud)
         {
             cloud.DestroyCloud();
         }
         rigidbodyPlayer.gravityScale = m_gravityFall;
-        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
     }
 
     public void Death()
@@ -305,5 +305,15 @@ public class PlayerController : MonoBehaviour
     public void SetPlayerNumber(int i)
     {
         playerNumber = i;
+    }
+
+    public void LockControls()
+    {
+        b_canMove = false;
+        rigidbodyPlayer.velocity = Vector3.zero;
+    }
+    public void UnlockControls()
+    {
+        b_canMove = true;
     }
 }
