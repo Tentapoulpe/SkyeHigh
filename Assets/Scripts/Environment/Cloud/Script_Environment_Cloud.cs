@@ -106,7 +106,7 @@ public class Script_Environment_Cloud : MonoBehaviour
         int i_third = Convert.ToInt32(my_cloudDirection.b_leftCloud);
         int i_fourth = Convert.ToInt32(my_cloudDirection.b_rightCloud);
 
-        i_amountSprite = 2 ^ i_first + 2 ^ i_second + 2 ^ i_third + 2 ^ i_fourth;
+        i_amountSprite = 2 ^ 0 * i_first + 2 ^ 1 *  i_second + 2 ^ 2 * i_third + 2 ^ 3 * i_fourth;
 
         switch(i_amountSprite)
         {
