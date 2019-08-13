@@ -9,20 +9,38 @@ public class Script_Environment_Cloud_Parent : MonoBehaviour
     public GameObject m_spawnPoint;
     public List<GameObject> g_cloudChild = new List<GameObject>();
     private Rigidbody2D my_rigidbody;
-    private RaycastHit2D hit = new RaycastHit2D();
     private GameObject myCloud;
+    private bool b_goRight;
+    private float f_cloudVelocity;
 
     private void Start()
     {
         my_rigidbody = GetComponent<Rigidbody2D>();
-        hit = Physics2D.Raycast(transform.position, Vector2.up, 1f);
-        if (hit.transform.gameObject.tag == "Untagged")
+        f_cloudVelocity = Random.Range(1f, 5f);
+        CreateCloudParent();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("LeftBorder"))
         {
-            Debug.Log("UNITY C DE LA MERDE");
+            b_goRight = true;
         }
         else
-            Debug.Log("bonsoir");
-        //CreateCloudParent();
+            b_goRight = false;
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("LeftBorder") && !b_goRight)
+        {
+            Destroy();
+        }
+        if( collision.CompareTag("RightBorder") && b_goRight)
+        {
+            Destroy();
+        }
     }
 
     public void UpdateCloudSprite()
@@ -31,13 +49,19 @@ public class Script_Environment_Cloud_Parent : MonoBehaviour
         {
             if(g_cloudChild.Count == 0)
             {
-                Destroy(this.gameObject);
+                Destroy();
             }
             else if(g_cloudChild[i].activeSelf)
             {
                 g_cloudChild[i].GetComponent<Script_Environment_Cloud>().CheckUpCloud();
             }
         }
+    }
+
+    private void Destroy()
+    {
+        GameManager.Instance.UnSpawnCloudParent();
+        Destroy(this.gameObject);
     }
 
     public void CreateCloudParent()
@@ -52,55 +76,86 @@ public class Script_Environment_Cloud_Parent : MonoBehaviour
             }
             else if(i > 0)
             {
+                RaycastHit hit;
                 int i_myDirection = Random.Range(0, 3);
                 switch (i_myDirection)
                 {
                     case 0:
-                        hit = Physics2D.Raycast(g_cloudChild[i - 1].transform.position, Vector2.up, 1f);
-                        if (hit.transform.gameObject.tag != "CloudEnvironment")
+                        if(Physics.Raycast(g_cloudChild[i - 1].transform.position, Vector2.up, out hit, 1f))
                         {
-                            myCloud = Instantiate(myCloud, m_spawnPoint.transform.position + Vector3.up, Quaternion.identity);
+                            if (hit.transform.gameObject.tag != "CloudEnvironment")
+                            {
+                                Debug.Log("HEY");
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            myCloud = Instantiate(m_prefabCloud, m_spawnPoint.transform.position + Vector3.up, Quaternion.identity,gameObject.transform);
                         }
                         break;
                     case 1:
-                        hit = Physics2D.Raycast(g_cloudChild[i-1].transform.position, -Vector2.up, 1f);
-                        if (hit.transform.gameObject.tag != "CloudEnvironment")
+                        if (Physics.Raycast(g_cloudChild[i - 1].transform.position, -Vector2.up, out hit, 1f))
                         {
-                            myCloud = Instantiate(myCloud, m_spawnPoint.transform.position + -Vector3.up, Quaternion.identity);
+                            if (hit.transform.gameObject.tag != "CloudEnvironment")
+                            {
+                                Debug.Log("HEY");
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            myCloud = Instantiate(m_prefabCloud, m_spawnPoint.transform.position + -Vector3.up, Quaternion.identity, gameObject.transform);
                         }
                         break;
                     case 2:
-                        hit = Physics2D.Raycast(g_cloudChild[i-1].transform.position, -Vector2.right, 1f);
-                        if (hit.transform.gameObject.tag != "CloudEnvironment")
+                        if (Physics.Raycast(g_cloudChild[i - 1].transform.position, -Vector2.right, out hit, 1f))
                         {
-                            myCloud = Instantiate(myCloud, m_spawnPoint.transform.position + -Vector3.right, Quaternion.identity);
+                            if (hit.transform.gameObject.tag != "CloudEnvironment")
+                            {
+                                Debug.Log("HEY");
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            myCloud = Instantiate(m_prefabCloud, m_spawnPoint.transform.position + -Vector3.right, Quaternion.identity, gameObject.transform);
                         }
                         break;
                     case 3:
-                        hit = Physics2D.Raycast(g_cloudChild[i-1].transform.position, Vector2.right, 1f);
-                        if (hit.transform.gameObject.tag != "CloudEnvironment")
+                        if (Physics.Raycast(g_cloudChild[i - 1].transform.position, Vector2.right, out hit, 1f))
                         {
-                            myCloud = Instantiate(myCloud, m_spawnPoint.transform.position + Vector3.right, Quaternion.identity);
+                            if (hit.transform.gameObject.tag != "CloudEnvironment")
+                            {
+                                Debug.Log("HEY");
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            myCloud = Instantiate(m_prefabCloud, m_spawnPoint.transform.position + Vector3.right, Quaternion.identity, gameObject.transform);
                         }
                         break;
                     default:
                         break;
                 }
             }
-            Debug.Log("add cloud");
             g_cloudChild.Add(myCloud);
             g_cloudChild[i].gameObject.tag = "CloudEnvironment";
             m_spawnPoint = myCloud;
         }
+        //UpdateCloudSprite();
     }
 
 
 
     private void Update()
     {
-        float my_velocity = Random.Range(0.1f, 1f);
-        //int my_Spawn = Random,Range(1, 
-        //if()
-        //my_rigidbody.velocity()   
+        if(b_goRight)
+        {
+            my_rigidbody.velocity = new Vector2(f_cloudVelocity,0);
+        }
+        else
+            my_rigidbody.velocity = new Vector2(-f_cloudVelocity, 0);
     }
 }

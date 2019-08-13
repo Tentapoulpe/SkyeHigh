@@ -31,6 +31,13 @@ public class GameManager : MonoBehaviour
     float[] axisCD = new float[4];
     bool[] lockedPlayer = new bool[4];
 
+    [Header("Cloud")]
+    public GameObject m_prefabCloudParent;
+    public List<GameObject> m_spawnPointCloud = new List<GameObject>();
+    private int i_numberOfCloud;
+    public int i_numberOfCloudMax;
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -71,8 +78,11 @@ public class GameManager : MonoBehaviour
                     UIManager.Instance.DisplayEndGame(0);
                 }
             }
+        }
 
-
+        if(i_numberOfCloud < i_numberOfCloudMax)
+        {
+            SpawnCloudParent();
         }
 
         for (int i = 0; i < axisCD.Length; i++)
@@ -271,6 +281,18 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SpawnCloudParent()
+    {
+        int i_spawnPoint = Random.Range(0, m_spawnPointCloud.Count);
+        Instantiate(m_prefabCloudParent, m_spawnPointCloud[i_spawnPoint].transform);
+        i_numberOfCloud++;
+    }
+
+    public void UnSpawnCloudParent()
+    {
+        i_numberOfCloud--;
     }
 
     public void RestartGame()

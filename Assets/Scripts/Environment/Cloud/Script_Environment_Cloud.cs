@@ -5,21 +5,20 @@ using System;
 
 public class Script_Environment_Cloud : MonoBehaviour
 {
-    public class CloudDirection
-    {
-        public bool b_upCloud;//0
-        public bool b_downCloud;//1
-        public bool b_leftCloud;//2
-        public bool b_rightCloud;//3
-    }
+    [Header("CloudDirection")]
+    private bool b_upCloud;//0
+    private bool b_downCloud;//1
+    private bool b_leftCloud;//2
+    private bool b_rightCloud;//3
+    [Space]
 
     private Rigidbody2D my_rigidbody;
     public float f_healthToRegenerate;
     private int i_cloudIdx;
     public List<SpriteRenderer> m_spriteList = new List<SpriteRenderer>();
     private RaycastHit2D hit;
-    private CloudDirection my_cloudDirection;
     private int i_amountSprite;
+    private bool b_bonsoir;
 
     private void Start()
     {
@@ -54,45 +53,49 @@ public class Script_Environment_Cloud : MonoBehaviour
 
     public void CheckUpCloud()
     {
-        for(int i = 0; i < 3; i++)
+        RaycastHit hit;
+        for (int i = 0; i < 3; i++)
         {
             switch(i)
             {
                 case 0:
-                    hit = Physics2D.Raycast(transform.position, Vector2.up, 1f);
+                    if(Physics.Raycast(transform.position, Vector2.up, out hit, 1f))
+                    {
+                        if (hit.transform.gameObject.tag != "CloudEnvironment")
+                        {
+                            b_upCloud = true;
+                        }
+                    }
                     break;
                 case 1:
-                    hit = Physics2D.Raycast(transform.position, -Vector2.up, 1f);
+                    if (Physics.Raycast(transform.position, -Vector2.up, out hit, 1f))
+                    {
+                        if (hit.transform.gameObject.tag != "CloudEnvironment")
+                        {
+                            b_downCloud = true;
+                        }
+                    }
                     break;
                 case 2:
-                    hit = Physics2D.Raycast(transform.position, -Vector2.right, 1f);
+                    if (Physics.Raycast(transform.position, -Vector2.right, out hit, 1f))
+                    {
+                        if (hit.transform.gameObject.tag != "CloudEnvironment")
+                        {
+                            b_leftCloud = true;
+                        }
+                    }
                     break;
                 case 3:
-                    hit = Physics2D.Raycast(transform.position, Vector2.right, 1f);
+                    if (Physics.Raycast(transform.position, Vector2.right, out hit, 1f))
+                    {
+                        if (hit.transform.gameObject.tag != "CloudEnvironment")
+                        {
+                            b_rightCloud = true;
+                        }
+                    }
                     break;
                 default:
                     break;
-            }
-
-            if(hit.collider != null && hit.collider.tag != "CloudEnvironment")
-            {
-                switch(i)
-                {
-                    case 0:
-                        my_cloudDirection.b_upCloud = true;
-                        break;
-                    case 1:
-                        my_cloudDirection.b_downCloud = true;
-                        break;
-                    case 2:
-                        my_cloudDirection.b_leftCloud = true;
-                        break;
-                    case 3:
-                        my_cloudDirection.b_rightCloud = true;
-                        break;
-                    default:
-                        break;
-                }
             }
         }
         UpdateCloud();
@@ -101,10 +104,10 @@ public class Script_Environment_Cloud : MonoBehaviour
     public void UpdateCloud()
     {
         //false = 1 true = 0
-        int i_first = Convert.ToInt32(my_cloudDirection.b_upCloud);
-        int i_second = Convert.ToInt32(my_cloudDirection.b_downCloud);
-        int i_third = Convert.ToInt32(my_cloudDirection.b_leftCloud);
-        int i_fourth = Convert.ToInt32(my_cloudDirection.b_rightCloud);
+        int i_first = Convert.ToInt32(b_upCloud);
+        int i_second = Convert.ToInt32(b_downCloud);
+        int i_third = Convert.ToInt32(b_leftCloud);
+        int i_fourth = Convert.ToInt32(b_rightCloud);
 
         i_amountSprite = 2 ^ 0 * i_first + 2 ^ 1 *  i_second + 2 ^ 2 * i_third + 2 ^ 3 * i_fourth;
 
