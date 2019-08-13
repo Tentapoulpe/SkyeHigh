@@ -309,13 +309,14 @@ public class PlayerController : MonoBehaviour
 
     public void Fall()
     {
+        a_Animator.SetTrigger("Fall");
         LockControls();
         if (cloud)
         {
             cloud.DestroyCloud();
         }
         rigidbodyPlayer.gravityScale = m_gravityFall;
-        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+        gameObject.GetComponent<Collider2D>().isTrigger = true;
     }
 
     public void Death()

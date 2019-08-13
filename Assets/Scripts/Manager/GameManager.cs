@@ -63,10 +63,12 @@ public class GameManager : MonoBehaviour
                 {
                     if (m_debugMode)
                     {
-                        UIManager.Instance.DisplayEndGame(666);
+                        UIManager.Instance.DisplayEndGame(0);
                     }
-                    else
+                    else if(v_winerPos != Vector3.zero)
                     UIManager.Instance.DisplayEndGame(l_playersPlaying[0].playerNumber);
+                    else
+                    UIManager.Instance.DisplayEndGame(0);
                 }
             }
 
@@ -386,6 +388,10 @@ public class GameManager : MonoBehaviour
         {
             l_playersPlaying[0].LockControls();
             WinScreen(l_playersPlaying[0].transform.position);
+        }
+        if (playerAlive <= 0)
+        {
+            WinScreen(Vector3.zero);
         }
     }
 

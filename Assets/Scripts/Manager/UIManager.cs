@@ -93,7 +93,12 @@ public class UIManager : MonoBehaviour
 
     public void DisplayEndGame(int player)
     {
-        m_EndGameText.text = "Player " + player + " wins";
+        if (player != 0)
+        {
+            m_EndGameText.text = "Player " + player + " wins";
+        }
+        else
+            m_EndGameText.text = "Draw !!";
         m_EndGame.SetActive(true);
     }
 

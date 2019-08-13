@@ -16,7 +16,7 @@ MonoBehaviour:
   m_horizontalAcceleration: 80
   m_maxHorizontalDrag: 0
   m_maxVerticalUpSpeed: 0.5
-  m_maxVerticalDownSpeed: 0.5
+  m_maxVerticalDownSpeed: 0.75
   m_VerticalUpAcceleration: 60
   m_VerticalDownAcceleration: 100
   m_maxVerticalDrag: 0
