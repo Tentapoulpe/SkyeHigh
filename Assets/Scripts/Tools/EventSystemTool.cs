@@ -7,14 +7,11 @@ public class EventSystemTool : MonoBehaviour
 {
     private StandaloneInputModule s_Module;
     private EventSystem s_System;
-    private GameObject StartButton;
-    public GameObject RestartButton;
 
     private void Awake()
     {
         s_Module = GetComponent<StandaloneInputModule>();
         s_System = GetComponent<EventSystem>();
-        StartButton = s_System.firstSelectedGameObject;
         string[] names = Input.GetJoystickNames();
         if (names.Length > 0)
         {

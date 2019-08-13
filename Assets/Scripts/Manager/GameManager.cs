@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+    public bool m_debugMode;
+
+    [Space(20f)]
+
     public string m_sceneToLoad;
 
     private Camera m_Camera;
@@ -57,6 +61,11 @@ public class GameManager : MonoBehaviour
                 m_Camera.orthographicSize = 5f;
                 if (m_Camera.transform.position == v_winerPos)
                 {
+                    if (m_debugMode)
+                    {
+                        UIManager.Instance.DisplayEndGame(666);
+                    }
+                    else
                     UIManager.Instance.DisplayEndGame(l_playersPlaying[0].playerNumber);
                 }
             }
@@ -334,7 +343,7 @@ public class GameManager : MonoBehaviour
     {
         lockedPlayer[player] = true;
         UIManager.Instance.LockPlayerCharacter(l_Players[player]);
-        if (playerConnected >= 2)
+        if ((playerConnected >= 2 && !m_debugMode) || (playerConnected >= 1 && m_debugMode))
         {
             int playerLocked = 0;
             for (int i = 0; i < lockedPlayer.Length; i++)
@@ -367,6 +376,11 @@ public class GameManager : MonoBehaviour
     public void PlayerDied(int player)
     {
         playerAlive--;
+        if (m_debugMode)
+        {
+            WinScreen(Vector3.zero);
+            return;
+        }
         l_playersPlaying.Remove(l_playersPlaying[player-1]);
         if (playerAlive == 1)
         {

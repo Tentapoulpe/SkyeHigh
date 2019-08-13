@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
     [Space]
 
     private Rigidbody2D rigidbodyPlayer = null;
+    private Animator a_Animator = null;
 
     [Header("Cloud")]
     public SpriteRenderer m_cloudSprite;
@@ -70,6 +71,7 @@ public class PlayerController : MonoBehaviour
     {
         SetUpPlayer();
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
+        a_Animator = GetComponent<Animator>();
         f_currentHealth = m_maxHealth;
         m_textHealth.text = f_currentHealth.ToString();
     }
@@ -136,6 +138,26 @@ public class PlayerController : MonoBehaviour
         else
             rigidbodyPlayer.AddForce(new Vector2(horizontal, vertical), ForceMode2D.Impulse);
 
+        //Animator
+        a_Animator.SetFloat("Vertical", Mathf.Clamp(vertical,-1,1));
+        a_Animator.SetFloat("Horizontal", Mathf.Clamp(horizontal,-1,1));
+        if (horizontal > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if (horizontal < 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        if (vertical > 0)
+        {
+            GetComponent<SpriteRenderer>().flipY = false;
+        }
+        else if (vertical < 0)
+        {
+            GetComponent<SpriteRenderer>().flipY = true;
+        }
+
     }
 
     void Update()
@@ -174,6 +196,7 @@ public class PlayerController : MonoBehaviour
             {
                 f_dashCooldown = 0;
                 b_canDash = true;
+                a_Animator.SetBool("Dash", false);
             }
         }
 
@@ -203,6 +226,7 @@ public class PlayerController : MonoBehaviour
 
     public void Dash()
     {
+        a_Animator.SetBool("Dash",true);
         b_canDash = false;
         b_playerIsDashing = true;
         f_currentTimerDashing = m_timerDashing;

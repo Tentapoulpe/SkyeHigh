@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Animation_Skye_Test
+  m_Name: Skye_Horizontal_Right
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -116,7 +116,7 @@ AnimationClip:
       value: {fileID: 2529776926446138847, guid: 11d6fd93e1672534997e80ebc01f943f,
         type: 3}
     attribute: m_Sprite
-    path: Player
+    path: 
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
@@ -127,7 +127,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2679471955
+      path: 0
       attribute: 0
       script: {fileID: 0}
       typeID: 212
