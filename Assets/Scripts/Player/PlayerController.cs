@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour
     public Text m_textHealth;
 
     private string s_fireInput = "";
+    private bool b_mustFall = false;
 
     void Start()
     {
@@ -179,6 +180,12 @@ public class PlayerController : MonoBehaviour
             s_fireInput = "F1_PC_P" + playerNumber;
         }
 
+        if(!b_playerIsDashing && b_mustFall)
+        {
+            Fall();
+            b_mustFall = false;
+        }
+
 
         if (Input.GetButtonDown(s_fireInput) && b_canDash && b_canMove)
         {
@@ -207,6 +214,7 @@ public class PlayerController : MonoBehaviour
             if (f_currentTimerDashing <= 0)
             {
                 b_playerIsDashing = false;
+                rigidbodyPlayer.velocity *= new Vector2(0.25f,0.25f);
             }
             else
             {
@@ -255,6 +263,12 @@ public class PlayerController : MonoBehaviour
         DecreaseCloud();
     }
 
+    public void StopDash()
+    {
+        b_playerIsDashing = false;
+        rigidbodyPlayer.velocity = Vector2.zero;
+    }
+
     public void DecreaseCloud()
     {
         if (f_currentHealth != 0)
@@ -262,7 +276,10 @@ public class PlayerController : MonoBehaviour
             f_currentHealth -= m_dashCost;
             if (f_currentHealth <= 0)
             {
-                Fall();
+                if (!b_playerIsDashing)
+                    Fall();
+                else
+                    b_mustFall = true;
             }
         }
         UpdateCloudSprite();
@@ -285,6 +302,20 @@ public class PlayerController : MonoBehaviour
             }
             UpdateCloudSprite();
         }
+    }
+
+    public void SetCloudHealth(float f_health)
+    {
+        f_currentHealth = f_health;
+        Mathf.Clamp(f_currentHealth,0f, m_maxHealth);
+        if (f_currentHealth > 0 && b_mustFall)
+            b_mustFall = false;
+        UpdateCloudSprite();
+    }
+
+    public float GetCloudHealth()
+    {
+        return f_currentHealth;
     }
 
     public void UpdateCloudSprite()
