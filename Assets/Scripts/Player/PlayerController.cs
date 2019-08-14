@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     private float m_dashCost;
     private float m_dashPostStun;
     private float m_dashStun;
+    private float m_dashMinimalSpeed = 20f;
 
     private bool b_playerIsDashing;
     private bool b_canDash = true;
@@ -207,6 +208,10 @@ public class PlayerController : MonoBehaviour
             {
                 b_playerIsDashing = false;
             }
+            else
+            {
+                DashApplyMinimalSpeed();
+            }
         }
 
         if (f_currentHealth >= m_maxHealth)
@@ -222,6 +227,21 @@ public class PlayerController : MonoBehaviour
     public bool ReturnDashState()
     {
         return b_playerIsDashing;
+    }
+
+    public void DashApplyMinimalSpeed()
+    {
+        float currentSpeed = Mathf.Abs(rigidbodyPlayer.velocity.x) + Mathf.Abs(rigidbodyPlayer.velocity.y);
+        if(currentSpeed < m_dashMinimalSpeed)
+        {
+            float hRatio = (Mathf.Abs(rigidbodyPlayer.velocity.x) * 100) / currentSpeed;
+            //Debug.Log("hRatio is: " + hRatio + "%");
+            float vRatio = 100 - hRatio;
+            //Debug.Log("vRatio is: " + vRatio + "%");
+            float hSpeed = m_dashMinimalSpeed * (hRatio / 100) * Mathf.Sign(rigidbodyPlayer.velocity.x);
+            float vSpeed = m_dashMinimalSpeed * (vRatio / 100) * Mathf.Sign(rigidbodyPlayer.velocity.y);
+            rigidbodyPlayer.velocity = new Vector2(hSpeed,vSpeed);
+        }
     }
 
     public void Dash()
@@ -315,6 +335,7 @@ public class PlayerController : MonoBehaviour
         {
             cloud.DestroyCloud();
         }
+        b_playerIsDashing = false;
         rigidbodyPlayer.gravityScale = m_gravityFall;
         gameObject.GetComponent<Collider2D>().isTrigger = true;
     }
