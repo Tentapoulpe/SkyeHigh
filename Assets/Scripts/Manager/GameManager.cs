@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,6 +32,15 @@ public class GameManager : MonoBehaviour
     float[] axisCD = new float[4];
     bool[] lockedPlayer = new bool[4];
 
+    [Header("Cloud")]
+    public GameObject m_prefabCloudParent;
+    private List<GameObject> g_cloudParentIdx = new List<GameObject>();
+    public List<GameObject> m_spawnPointCloud = new List<GameObject>();
+    private bool b_spawnIdx;
+    private int i_numberOfCloud;
+    public int i_numberOfCloudMax;
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -48,6 +58,11 @@ public class GameManager : MonoBehaviour
     {
         if(b_spawnPlayer)
         StartGame();
+        for (int i = 0; i < i_numberOfCloudMax; i++)
+        {
+            SpawnCloudParent();
+        }
+
     }
 
     private void Update()
@@ -71,8 +86,6 @@ public class GameManager : MonoBehaviour
                     UIManager.Instance.DisplayEndGame(0);
                 }
             }
-
-
         }
 
         for (int i = 0; i < axisCD.Length; i++)
@@ -270,6 +283,35 @@ public class GameManager : MonoBehaviour
                     axisCD[3] = 0.2f;
                 }
             }
+        }
+    }
+
+    public void SpawnCloudParent()
+    {
+        if(g_cloudParentIdx.Count < i_numberOfCloudMax)
+        {
+            int i_mySpawnIdx = Convert.ToInt32(b_spawnIdx);
+            if(i_mySpawnIdx == 0)
+            {
+                GameObject my_cloud = Instantiate(m_prefabCloudParent, m_spawnPointCloud[i_mySpawnIdx].transform);
+                g_cloudParentIdx.Add(my_cloud);
+                b_spawnIdx = true;
+            }
+            else
+            {
+                GameObject my_cloud = Instantiate(m_prefabCloudParent, m_spawnPointCloud[i_mySpawnIdx].transform);
+                g_cloudParentIdx.Add(my_cloud);
+                b_spawnIdx = false;
+            }
+        }
+    }
+
+    public void UnSpawnCloudParent(GameObject g_myGameobject)
+    {
+        if(g_cloudParentIdx.Count > 0)
+        {
+            g_cloudParentIdx.Remove(g_myGameobject);
+            SpawnCloudParent();
         }
     }
 

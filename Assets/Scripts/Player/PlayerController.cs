@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     private float m_dashCost;
     private float m_dashPostStun;
     private float m_dashStun;
+    private float m_dashMinimalSpeed = 20f;
 
     private bool b_playerIsDashing;
     private bool b_canDash = true;
@@ -66,6 +67,7 @@ public class PlayerController : MonoBehaviour
     public Text m_textHealth;
 
     private string s_fireInput = "";
+    private bool b_mustFall = false;
 
     void Start()
     {
@@ -178,6 +180,12 @@ public class PlayerController : MonoBehaviour
             s_fireInput = "F1_PC_P" + playerNumber;
         }
 
+        if(!b_playerIsDashing && b_mustFall)
+        {
+            Fall();
+            b_mustFall = false;
+        }
+
 
         if (Input.GetButtonDown(s_fireInput) && b_canDash && b_canMove)
         {
@@ -206,6 +214,11 @@ public class PlayerController : MonoBehaviour
             if (f_currentTimerDashing <= 0)
             {
                 b_playerIsDashing = false;
+                rigidbodyPlayer.velocity *= new Vector2(0.25f,0.25f);
+            }
+            else
+            {
+                DashApplyMinimalSpeed();
             }
         }
 
@@ -224,6 +237,21 @@ public class PlayerController : MonoBehaviour
         return b_playerIsDashing;
     }
 
+    public void DashApplyMinimalSpeed()
+    {
+        float currentSpeed = Mathf.Abs(rigidbodyPlayer.velocity.x) + Mathf.Abs(rigidbodyPlayer.velocity.y);
+        if(currentSpeed < m_dashMinimalSpeed)
+        {
+            float hRatio = (Mathf.Abs(rigidbodyPlayer.velocity.x) * 100) / currentSpeed;
+            //Debug.Log("hRatio is: " + hRatio + "%");
+            float vRatio = 100 - hRatio;
+            //Debug.Log("vRatio is: " + vRatio + "%");
+            float hSpeed = m_dashMinimalSpeed * (hRatio / 100) * Mathf.Sign(rigidbodyPlayer.velocity.x);
+            float vSpeed = m_dashMinimalSpeed * (vRatio / 100) * Mathf.Sign(rigidbodyPlayer.velocity.y);
+            rigidbodyPlayer.velocity = new Vector2(hSpeed,vSpeed);
+        }
+    }
+
     public void Dash()
     {
         a_Animator.SetBool("Dash",true);
@@ -235,6 +263,12 @@ public class PlayerController : MonoBehaviour
         DecreaseCloud();
     }
 
+    public void StopDash()
+    {
+        b_playerIsDashing = false;
+        rigidbodyPlayer.velocity = Vector2.zero;
+    }
+
     public void DecreaseCloud()
     {
         if (f_currentHealth != 0)
@@ -242,7 +276,10 @@ public class PlayerController : MonoBehaviour
             f_currentHealth -= m_dashCost;
             if (f_currentHealth <= 0)
             {
-                Fall();
+                if (!b_playerIsDashing)
+                    Fall();
+                else
+                    b_mustFall = true;
             }
         }
         UpdateCloudSprite();
@@ -265,6 +302,20 @@ public class PlayerController : MonoBehaviour
             }
             UpdateCloudSprite();
         }
+    }
+
+    public void SetCloudHealth(float f_health)
+    {
+        f_currentHealth = f_health;
+        Mathf.Clamp(f_currentHealth,0f, m_maxHealth);
+        if (f_currentHealth > 0 && b_mustFall)
+            b_mustFall = false;
+        UpdateCloudSprite();
+    }
+
+    public float GetCloudHealth()
+    {
+        return f_currentHealth;
     }
 
     public void UpdateCloudSprite()
@@ -315,6 +366,7 @@ public class PlayerController : MonoBehaviour
         {
             cloud.DestroyCloud();
         }
+        b_playerIsDashing = false;
         rigidbodyPlayer.gravityScale = m_gravityFall;
         gameObject.GetComponent<Collider2D>().isTrigger = true;
     }
