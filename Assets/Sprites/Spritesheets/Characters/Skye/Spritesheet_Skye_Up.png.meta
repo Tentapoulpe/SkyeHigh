@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3ecc335a05dbbba49ab9ba40f2ccea55
+guid: 4a564130112940346b1aee2c38ded992
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -116,7 +116,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
@@ -138,7 +138,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -183,10 +183,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_0
       rect:
         serializedVersion: 2
-        x: 179
-        y: 3150
-        width: 319
-        height: 754
+        x: 195
+        y: 2730
+        width: 278
+        height: 672
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,7 +194,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f03570506b069447947bc0ea9f4b31b
+      spriteID: 461e7dacf1c13dc498062b0d8828a621
       internalID: 5397412804443258258
       vertices: []
       indices: 
@@ -204,10 +204,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_1
       rect:
         serializedVersion: 2
-        x: 1003
-        y: 3150
-        width: 311
-        height: 755
+        x: 926
+        y: 2734
+        width: 275
+        height: 668
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,7 +215,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e24ddbaef8c5d724da4c0a161b63b90d
+      spriteID: 9fac060bd3ce61e45ab12d1498072a61
       internalID: 5474280775276230778
       vertices: []
       indices: 
@@ -225,10 +225,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_2
       rect:
         serializedVersion: 2
-        x: 1823
-        y: 3151
-        width: 304
-        height: 754
+        x: 1658
+        y: 2734
+        width: 267
+        height: 668
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,7 +236,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34a2fe602a0d79248b7e9290b83d0444
+      spriteID: 042d62a7a84d5494ebd62931b8eac9a0
       internalID: 2541700955401517211
       vertices: []
       indices: 
@@ -246,10 +246,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_3
       rect:
         serializedVersion: 2
-        x: 2643
-        y: 3154
-        width: 300
-        height: 751
+        x: 2386
+        y: 2734
+        width: 267
+        height: 668
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,7 +257,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 260cf320dea45a04c83c109245c5a256
+      spriteID: 384b857ba5536be40a1305ee74fee932
       internalID: 4567590812546535758
       vertices: []
       indices: 
@@ -267,10 +267,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_4
       rect:
         serializedVersion: 2
-        x: 3460
-        y: 3154
-        width: 299
-        height: 751
+        x: 3117
+        y: 2734
+        width: 263
+        height: 668
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,7 +278,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdbbacf2c48a9454bbd993a310dbf5b0
+      spriteID: 1d3102fab712c854f96dcf97b24b710f
       internalID: 926246377444444100
       vertices: []
       indices: 
@@ -288,10 +288,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_5
       rect:
         serializedVersion: 2
-        x: 4278
-        y: 3154
-        width: 297
-        height: 754
+        x: 3841
+        y: 2734
+        width: 263
+        height: 671
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,7 +299,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8f5d0f639ba9d144872ae1933a21efb
+      spriteID: 7349fae431a7f0b48865e069c074ad85
       internalID: 782950198253848487
       vertices: []
       indices: 
@@ -309,10 +309,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_6
       rect:
         serializedVersion: 2
-        x: 5096
-        y: 3154
-        width: 295
-        height: 755
+        x: 4569
+        y: 2737
+        width: 263
+        height: 668
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,7 +320,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb663fb55e0190448ae4d7d3798c7eec
+      spriteID: bd9cd2166761ea04d8933b13474fe765
       internalID: -5114904423387238279
       vertices: []
       indices: 
@@ -330,10 +330,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_7
       rect:
         serializedVersion: 2
-        x: 5912
-        y: 3154
-        width: 300
-        height: 755
+        x: 5297
+        y: 2737
+        width: 263
+        height: 668
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,7 +341,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6ee7b7691c70a04b827c96080330e88
+      spriteID: be7824b8ce49970448bc0f5b09432851
       internalID: -5761671608150115530
       vertices: []
       indices: 
@@ -351,10 +351,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_8
       rect:
         serializedVersion: 2
-        x: 6729
-        y: 3158
-        width: 303
-        height: 754
+        x: 6024
+        y: 2737
+        width: 267
+        height: 672
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,7 +362,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b91beaeb26c3d254fb32da4457413b2a
+      spriteID: 6e69e81e75e539746901d0021fd56694
       internalID: -7067889491378204957
       vertices: []
       indices: 
@@ -372,10 +372,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_9
       rect:
         serializedVersion: 2
-        x: 7553
-        y: 3158
-        width: 299
-        height: 755
+        x: 6759
+        y: 2737
+        width: 263
+        height: 672
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,7 +383,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 567ba5c7f2eb6a84bb488b1dd8d486ee
+      spriteID: 3ac7ecd3f8b68c6448880122871a6d9f
       internalID: 169394161079471997
       vertices: []
       indices: 
@@ -393,10 +393,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_10
       rect:
         serializedVersion: 2
-        x: 171
-        y: 2161
-        width: 299
-        height: 754
+        x: 188
+        y: 1851
+        width: 264
+        height: 668
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,7 +404,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fdbb742d72f14941a251373442bded5
+      spriteID: a4b1b51b093725443add1b43bc672ee3
       internalID: -4323383760718261359
       vertices: []
       indices: 
@@ -414,10 +414,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_11
       rect:
         serializedVersion: 2
-        x: 996
-        y: 2161
-        width: 296
-        height: 755
+        x: 919
+        y: 1851
+        width: 264
+        height: 673
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,7 +425,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e055d5602d5d612498051156981b0fbd
+      spriteID: a59d92115ae6b90428e8743879a97528
       internalID: -8160822161275310523
       vertices: []
       indices: 
@@ -435,10 +435,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_12
       rect:
         serializedVersion: 2
-        x: 1819
-        y: 2161
-        width: 299
-        height: 755
+        x: 1654
+        y: 1851
+        width: 264
+        height: 672
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,7 +446,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22f09bf1fc20f0f48bc0dd80a03c74a9
+      spriteID: 1d9681511f7ae894b8c28f29154393f0
       internalID: 6445499082209269945
       vertices: []
       indices: 
@@ -456,10 +456,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_13
       rect:
         serializedVersion: 2
-        x: 2643
-        y: 2161
-        width: 296
-        height: 758
+        x: 2385
+        y: 1851
+        width: 264
+        height: 672
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,7 +467,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7fb653236b4e344990f35006e72de7c
+      spriteID: d35a81e962c9a364984313d2646f226c
       internalID: -8030002895474701103
       vertices: []
       indices: 
@@ -477,10 +477,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_14
       rect:
         serializedVersion: 2
-        x: 3464
-        y: 2165
-        width: 299
-        height: 755
+        x: 3117
+        y: 1852
+        width: 267
+        height: 671
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -488,7 +488,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41ae495af9a97174c99924134ea5bf3c
+      spriteID: ae79fcdbe43b5d244828caa09ebb0820
       internalID: -4855026542340304737
       vertices: []
       indices: 
@@ -498,10 +498,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_15
       rect:
         serializedVersion: 2
-        x: 4288
-        y: 2165
-        width: 303
-        height: 755
+        x: 3849
+        y: 1855
+        width: 270
+        height: 671
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -509,7 +509,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a22ef85379968504ab3979d4aa7317e5
+      spriteID: af07f421a1c7113468dc68f8acde40c5
       internalID: 3404797326710558732
       vertices: []
       indices: 
@@ -519,10 +519,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_16
       rect:
         serializedVersion: 2
-        x: 5109
-        y: 2165
-        width: 307
-        height: 755
+        x: 4583
+        y: 1855
+        width: 270
+        height: 671
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -530,7 +530,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b72febf81d6b18549bf8069e13f0c740
+      spriteID: 2201689ce2dbbf041b7bd544807a6af5
       internalID: -4773180217560717028
       vertices: []
       indices: 
@@ -540,10 +540,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_17
       rect:
         serializedVersion: 2
-        x: 5927
-        y: 2165
-        width: 301
-        height: 755
+        x: 5310
+        y: 1855
+        width: 268
+        height: 671
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -551,7 +551,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5835349429513f2439e0106e8dc71c81
+      spriteID: d8708264296c8cb429288eb582a76c7f
       internalID: -3403741703959681743
       vertices: []
       indices: 
@@ -561,10 +561,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_18
       rect:
         serializedVersion: 2
-        x: 6745
-        y: 2165
-        width: 299
-        height: 755
+        x: 6038
+        y: 1852
+        width: 267
+        height: 671
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -572,7 +572,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87565d4248e801c4488cb5c087839197
+      spriteID: 6cfc05d70c257b1428db10824bb6255a
       internalID: -1092409178202045046
       vertices: []
       indices: 
@@ -582,10 +582,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_19
       rect:
         serializedVersion: 2
-        x: 7561
-        y: 2161
-        width: 300
-        height: 758
+        x: 6766
+        y: 1851
+        width: 263
+        height: 672
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -593,7 +593,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85375864b51e6ec4b9d3a3742027f4da
+      spriteID: 7e0a4aeea68e8f644a7d3b39d2dba8b7
       internalID: 1257524737506077532
       vertices: []
       indices: 
@@ -603,10 +603,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_20
       rect:
         serializedVersion: 2
-        x: 174
-        y: 1131
-        width: 300
-        height: 755
+        x: 192
+        y: 934
+        width: 263
+        height: 671
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -614,7 +614,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcc2a66acd65efc4187304e0aa0208b6
+      spriteID: 26b0359d2eccedd4cbfd39424bc3c548
       internalID: 7453116675794943743
       vertices: []
       indices: 
@@ -624,10 +624,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_21
       rect:
         serializedVersion: 2
-        x: 991
-        y: 1131
-        width: 299
-        height: 754
+        x: 916
+        y: 934
+        width: 263
+        height: 671
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -635,7 +635,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1dce7022cd04ab46989747ef108013a
+      spriteID: b435694186c7b8c4b8992e8f3b990739
       internalID: 8297062990702573524
       vertices: []
       indices: 
@@ -645,10 +645,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_22
       rect:
         serializedVersion: 2
-        x: 1811
-        y: 1127
-        width: 295
-        height: 754
+        x: 1644
+        y: 934
+        width: 263
+        height: 668
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -656,7 +656,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9e0f629d016cd840a0ac0d26cef9a1b
+      spriteID: 1d22d3125eab28c4b87b396fbb00f038
       internalID: -4350026728736707409
       vertices: []
       indices: 
@@ -666,10 +666,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_23
       rect:
         serializedVersion: 2
-        x: 2627
-        y: 1127
-        width: 299
-        height: 754
+        x: 2371
+        y: 934
+        width: 267
+        height: 668
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -677,7 +677,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a06e049b318fc94ebedc8a775f88749
+      spriteID: 3a632ea8042cad3429c1391e7305d2ad
       internalID: 3554247454586628001
       vertices: []
       indices: 
@@ -687,10 +687,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_24
       rect:
         serializedVersion: 2
-        x: 3443
-        y: 1127
-        width: 304
-        height: 754
+        x: 3099
+        y: 934
+        width: 271
+        height: 668
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -698,7 +698,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0847147bf7cc91041a68a9471b208bce
+      spriteID: 38aef8b06f8da12448a3dd712f12ad7c
       internalID: -7806143683817828164
       vertices: []
       indices: 
@@ -708,10 +708,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_25
       rect:
         serializedVersion: 2
-        x: 4264
-        y: 1126
-        width: 303
-        height: 755
+        x: 3830
+        y: 930
+        width: 267
+        height: 672
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -719,7 +719,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b0b7bd7070ec7c49aebc105c9419371
+      spriteID: a69481adfaec373429e2d65de2cd9db4
       internalID: -2009829255833703089
       vertices: []
       indices: 
@@ -729,10 +729,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_26
       rect:
         serializedVersion: 2
-        x: 5088
-        y: 1126
-        width: 295
-        height: 755
+        x: 4562
+        y: 930
+        width: 266
+        height: 668
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -740,7 +740,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a93a722f3b9987746bddf034d5cceab3
+      spriteID: 1d64a0e9253d99144acc79b952dad8e7
       internalID: -729508106281137692
       vertices: []
       indices: 
@@ -750,10 +750,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_27
       rect:
         serializedVersion: 2
-        x: 5912
-        y: 1123
-        width: 296
-        height: 754
+        x: 5296
+        y: 930
+        width: 264
+        height: 668
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -761,7 +761,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25632f106b22a75479152fc44033d1ef
+      spriteID: ddfdc9ebb70ecb54a922b00aa1e87f34
       internalID: 6669033269364447798
       vertices: []
       indices: 
@@ -771,10 +771,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_28
       rect:
         serializedVersion: 2
-        x: 6733
-        y: 1122
-        width: 299
-        height: 755
+        x: 6028
+        y: 927
+        width: 263
+        height: 671
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -782,7 +782,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 878c3f97c230b784aa371873c8f65b62
+      spriteID: 5f84c3a407e3cde43a02011a129c111b
       internalID: -4397506889188141583
       vertices: []
       indices: 
@@ -792,10 +792,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_29
       rect:
         serializedVersion: 2
-        x: 7554
-        y: 1122
-        width: 302
-        height: 755
+        x: 6759
+        y: 927
+        width: 267
+        height: 671
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -803,7 +803,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89a264327c601994a9d6a5368538f996
+      spriteID: 324656ac7618e604eadcc539cc2de44c
       internalID: -4658918483848662121
       vertices: []
       indices: 
@@ -813,10 +813,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_30
       rect:
         serializedVersion: 2
-        x: 171
-        y: 174
-        width: 306
-        height: 751
+        x: 188
+        y: 83
+        width: 267
+        height: 668
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -824,7 +824,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 107c00c9de63a774794c9391597a8890
+      spriteID: ed8a77972894d2741bd71a843641fa38
       internalID: 2019144827097943626
       vertices: []
       indices: 
@@ -834,10 +834,10 @@ TextureImporter:
       name: Spritesheet_Skye_Up_31
       rect:
         serializedVersion: 2
-        x: 991
-        y: 170
-        width: 310
-        height: 755
+        x: 916
+        y: 79
+        width: 274
+        height: 672
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -845,7 +845,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ca53453312ab90428640596ef7b8318
+      spriteID: 8034f1ce4308fea4c935b0c4d34095aa
       internalID: -7740853084126136470
       vertices: []
       indices: 
@@ -854,7 +854,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 684511d067a693e4bb6de05325c1220f
+    spriteID: 6cc029d9b7e50994692206fc5459be4b
     internalID: 0
     vertices: []
     indices: 
