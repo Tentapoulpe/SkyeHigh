@@ -161,7 +161,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 5e50da24f056fa34790a58b0139d329a, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.17131329, y: 0.39871407}
@@ -555,7 +555,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.8161707, y: 0.37413025}
@@ -866,7 +866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765588623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.15, y: 5.96, z: 0}
+  m_LocalPosition: {x: 24.15, y: 4.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1088,7 +1088,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.8161707, y: 0.37413025}
@@ -1209,7 +1209,7 @@ PrefabInstance:
     - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
         type: 3}
       propertyPath: i_numberOfCloudMax
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
         type: 3}
