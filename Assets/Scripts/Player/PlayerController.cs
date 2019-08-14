@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
         m_dashStun = m_character_info.m_dashStun;
         m_cloudSlow = m_character_info.m_cloudSlow;
         m_maxHealth = m_character_info.m_maxHealth;
-}
+    }
 
     private void FixedUpdate()
     {

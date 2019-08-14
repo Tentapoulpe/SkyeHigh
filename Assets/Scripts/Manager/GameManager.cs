@@ -56,9 +56,9 @@ public class GameManager : MonoBehaviour
         {
             m_Camera.orthographicSize -= Time.deltaTime * 40;
             m_Camera.transform.position = Vector3.MoveTowards(m_Camera.transform.position, v_winerPos, Time.deltaTime * 80 );
-            if (m_Camera.orthographicSize <= 5f)
+            if (m_Camera.orthographicSize <= 4f)
             {
-                m_Camera.orthographicSize = 5f;
+                m_Camera.orthographicSize = 4f;
                 if (m_Camera.transform.position == v_winerPos)
                 {
                     if (m_debugMode)
@@ -292,6 +292,7 @@ public class GameManager : MonoBehaviour
                 GameObject player = Instantiate(m_character[m_PlayersCharacter[i]], m_mySpawn[l_Players[i]-1].transform.position, Quaternion.identity);
                 player.GetComponent<PlayerController>().SetPlayerNumber(i + 1);
                 l_playersPlaying.Add(player.GetComponent<PlayerController>());
+                CameraManager.Instance.m_Targets.Add(player.transform);
             }
         }
         playerAlive = playerConnected;
