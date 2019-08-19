@@ -69,6 +69,8 @@ public class PlayerController : MonoBehaviour
     private string s_fireInput = "";
     private bool b_mustFall = false;
 
+    private float f_currentStun = 0;
+
     void Start()
     {
         SetUpPlayer();
@@ -357,6 +359,36 @@ public class PlayerController : MonoBehaviour
     {
         cloud = Cloud;
     }
+
+    public void SetStun(float stunValue)
+    {
+        f_currentStun = stunValue;
+        b_canMove = false;
+        b_canDash = false;
+        rigidbodyPlayer.gravityScale = m_gravityFall;
+    }
+
+    public void EndStun()
+    {
+        f_currentStun = 0;
+        b_canMove = true;
+        b_canDash = true;
+        rigidbodyPlayer.gravityScale = 0;
+    }
+
+    public void StunCountdown(float deltaTime)
+    {
+        if(f_currentStun > 0)
+        {
+            f_currentStun -= deltaTime;
+            if(f_currentStun <= 0)
+            {
+                EndStun();
+            }
+        }
+    }
+
+
 
     public void Fall()
     {
