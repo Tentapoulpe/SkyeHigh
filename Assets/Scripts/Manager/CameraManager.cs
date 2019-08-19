@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
@@ -10,9 +9,9 @@ public class CameraManager : MonoBehaviour
     public float m_ScreenEdgeBuffer = 4f;           // Space between the top/bottom most target and the screen edge.
     public float m_MinSize = 6.5f;                  // The smallest orthographic size the camera can be.
     public float m_MaxSize = 6.5f;
-    [HideInInspector] public List<Transform> m_Targets;  //All the targets the camera needs to encompass.
+    public List<Transform> m_Targets;  //All the targets the camera needs to encompass.
 
-
+    private Vector3 m_averagePos;
     private Camera m_Camera;                        // Used for referencing the camera.
     private float m_ZoomSpeed;                      // Reference speed for the smooth damping of the orthographic size.
     private Vector3 m_MoveVelocity;                 // Reference velocity for the smooth damping of the position.
@@ -40,11 +39,11 @@ public class CameraManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Change the size of the camera based.
+        Zoom();
         // Move the camera towards a desired position.
         Move();
 
-        // Change the size of the camera based.
-        Zoom();
     }
 
 
@@ -53,7 +52,6 @@ public class CameraManager : MonoBehaviour
         // Find the average position of the targets.
         FindAveragePosition();
 
-        
         // Smoothly transition to that position.
         transform.position = Vector3.SmoothDamp(transform.position, m_DesiredPosition, ref m_MoveVelocity, m_DampTime);
     }
@@ -80,9 +78,7 @@ public class CameraManager : MonoBehaviour
         if (numTargets > 0)
             averagePos /= numTargets;
 
-        // Keep the same y value.
-        averagePos.y = transform.position.y;
-
+        m_averagePos = averagePos;
         // The desired position is the average position;
         m_DesiredPosition = averagePos;
         LeftBotCorner.x = m_DesiredPosition.x - (m_Camera.orthographicSize * 1.7777f);
@@ -122,13 +118,13 @@ public class CameraManager : MonoBehaviour
     private float FindRequiredSize()
     {
         // Find the position the camera rig is moving towards in its local space.
-        Vector3 desiredLocalPos = transform.InverseTransformPoint(m_DesiredPosition);
+        Vector3 desiredLocalPos = transform.InverseTransformPoint(m_averagePos);
 
         // Start the camera's size calculation at zero.
         float size = 0f;
 
         // Go through all the targets...
-        for (int i = 0; i < m_Targets.Count ; i++)
+        for (int i = 0; i < m_Targets.Count; i++)
         {
             // ... and if they aren't active continue on to the next target.
             if (!m_Targets[i].gameObject.activeSelf)

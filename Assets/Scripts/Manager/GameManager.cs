@@ -426,6 +426,7 @@ public class GameManager : MonoBehaviour
             WinScreen(Vector3.zero);
             return;
         }
+        CameraManager.Instance.m_Targets.Remove(l_playersPlaying[player - 1].transform);
         l_playersPlaying.Remove(l_playersPlaying[player-1]);
         if (playerAlive == 1)
         {
