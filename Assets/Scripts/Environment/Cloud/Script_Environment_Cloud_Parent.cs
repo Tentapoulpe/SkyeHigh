@@ -81,94 +81,99 @@ public class Script_Environment_Cloud_Parent : MonoBehaviour
     public void CreateCloudParent()
     {
         int i_numberOfCloud = Random.Range(2,m_numberOfCloudMax);
+        myCloud = m_spawnPoint;
 
         for (int i = 0; i < i_numberOfCloud; i++)
         {
-            if (i == 0)
+            int i_myDirection = Random.Range(0, 3);
+            switch (i_myDirection)
             {
-                myCloud = Instantiate(m_prefabCloud, m_spawnPoint.transform);
-            }
-            else if(i > 0)
-            {
-                RaycastHit hit;
-                int i_myDirection = Random.Range(0, 3);
-                switch (i_myDirection)
-                {
                     case 0:
-                        if(Physics.Raycast(g_cloudChild[i - 1].transform.position, Vector2.up, out hit, 10f))
+                        RaycastHit2D hitUp = Physics2D.Raycast(myCloud.transform.position, Vector2.up, 10f);
+                        if (hitUp)
                         {
-                            if (hit.transform.gameObject.tag == "CloudEnvironment")
+                            if (hitUp.collider.CompareTag("CloudEnvironment"))
                             {
-                                Debug.Log("HEY");
+                                Debug.Log("DONTSPAWN");
                                 return;
                             }
                             else
                             {
+                                Debug.Log("TOUCHEBUTSPAWN");
                                 myCloud = Instantiate(m_prefabCloud, m_spawnPoint.transform.position + Vector3.up, Quaternion.identity, gameObject.transform);
                             }
                         }
                         else
                         {
+                            Debug.Log("PASTOUCHESPAWN");
                             myCloud = Instantiate(m_prefabCloud, m_spawnPoint.transform.position + Vector3.up, Quaternion.identity,gameObject.transform);
                         }
                         break;
                     case 1:
-                        if (Physics.Raycast(g_cloudChild[i - 1].transform.position, -Vector2.up, out hit, 10f))
+                        RaycastHit2D hitDown = Physics2D.Raycast(myCloud.transform.position, -Vector2.up, 10f);
+                        if (hitDown)
                         {
-                            if (hit.transform.gameObject.tag == "CloudEnvironment")
+                            if (hitDown.collider.CompareTag("CloudEnvironment"))
                             {
-                                Debug.Log("HEY");
+                                Debug.Log("DONTSPAWN");
                                 return;
                             }
                             else
                             {
+                                Debug.Log("TOUCHEBUTSPAWN");
                                 myCloud = Instantiate(m_prefabCloud, m_spawnPoint.transform.position + -Vector3.up, Quaternion.identity, gameObject.transform);
                             }
                         }
                         else
                         {
+                            Debug.Log("PASTOUCHESPAWN");
                             myCloud = Instantiate(m_prefabCloud, m_spawnPoint.transform.position + -Vector3.up, Quaternion.identity, gameObject.transform);
                         }
                         break;
                     case 2:
-                        if (Physics.Raycast(g_cloudChild[i - 1].transform.position, -Vector2.right, out hit, 10f))
+                        RaycastHit2D hitLeft = Physics2D.Raycast(myCloud.transform.position, -Vector2.right, 10f);
+                        if (hitLeft)
                         {
-                            if (hit.transform.gameObject.tag == "CloudEnvironment")
+                            if (hitLeft.collider.CompareTag("CloudEnvironment"))
                             {
-                                Debug.Log("HEY");
+                                Debug.Log("DONTSPAWN");
                                 return;
                             }
                             else
                             {
+                                Debug.Log("TOUCHEBUTSPAWN");
                                 myCloud = Instantiate(m_prefabCloud, m_spawnPoint.transform.position + -Vector3.right, Quaternion.identity, gameObject.transform);
                             }
                         }
                         else
                         {
+                            Debug.Log("PASTOUCHESPAWN");
                             myCloud = Instantiate(m_prefabCloud, m_spawnPoint.transform.position + -Vector3.right, Quaternion.identity, gameObject.transform);
                         }
                         break;
                     case 3:
-                        if (Physics.Raycast(g_cloudChild[i - 1].transform.position, Vector2.right, out hit, 10f))
+                        RaycastHit2D hitRight = Physics2D.Raycast(myCloud.transform.position, Vector2.right, 10f);
+                        if (hitRight)
                         {
-                            if (hit.transform.gameObject.tag == "CloudEnvironment")
+                            if (hitRight.collider.CompareTag("CloudEnvironment"))
                             {
-                                Debug.Log("HEY");
+                                Debug.Log("DONTSPAWN");
                                 return;
                             }
                             else
                             {
+                                Debug.Log("TOUCHEBUTSPAWN");
                                 myCloud = Instantiate(m_prefabCloud, m_spawnPoint.transform.position + Vector3.right, Quaternion.identity, gameObject.transform);
                             }
                         }
                         else
                         {
+                            Debug.Log("PASTOUCHESPAWN");
                             myCloud = Instantiate(m_prefabCloud, m_spawnPoint.transform.position + Vector3.right, Quaternion.identity, gameObject.transform);
                         }
                         break;
                     default:
                         break;
-                }
             }
             g_cloudChild.Add(myCloud);
             g_cloudChild[i].gameObject.tag = "CloudEnvironment";
