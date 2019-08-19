@@ -1,0 +1,869 @@
+fileFormatVersion: 2
+guid: e278225eea089e04f8717a52b5e62c82
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7676677361888686128
+    second: Spritesheet_Dawn_Idle_0
+  - first:
+      213: -3101661041137550223
+    second: Spritesheet_Dawn_Idle_1
+  - first:
+      213: 3000860053356510590
+    second: Spritesheet_Dawn_Idle_2
+  - first:
+      213: -8796926649910344445
+    second: Spritesheet_Dawn_Idle_3
+  - first:
+      213: 6497910083832242332
+    second: Spritesheet_Dawn_Idle_4
+  - first:
+      213: 6801121530784395661
+    second: Spritesheet_Dawn_Idle_5
+  - first:
+      213: -7392836139469701193
+    second: Spritesheet_Dawn_Idle_6
+  - first:
+      213: 1995884690006846193
+    second: Spritesheet_Dawn_Idle_7
+  - first:
+      213: 3824656385629091818
+    second: Spritesheet_Dawn_Idle_8
+  - first:
+      213: 5039149418282408466
+    second: Spritesheet_Dawn_Idle_9
+  - first:
+      213: -4437764769573938667
+    second: Spritesheet_Dawn_Idle_10
+  - first:
+      213: -8666103589163800295
+    second: Spritesheet_Dawn_Idle_11
+  - first:
+      213: 4933155294206877097
+    second: Spritesheet_Dawn_Idle_12
+  - first:
+      213: -8401897198419115917
+    second: Spritesheet_Dawn_Idle_13
+  - first:
+      213: -3659406724393458395
+    second: Spritesheet_Dawn_Idle_14
+  - first:
+      213: 1675566168657980840
+    second: Spritesheet_Dawn_Idle_15
+  - first:
+      213: -4957940183452976221
+    second: Spritesheet_Dawn_Idle_16
+  - first:
+      213: -1129839757336622426
+    second: Spritesheet_Dawn_Idle_17
+  - first:
+      213: 7138474538719151681
+    second: Spritesheet_Dawn_Idle_18
+  - first:
+      213: 1916797267752190467
+    second: Spritesheet_Dawn_Idle_19
+  - first:
+      213: 2104366785608734396
+    second: Spritesheet_Dawn_Idle_20
+  - first:
+      213: 9012239540622261578
+    second: Spritesheet_Dawn_Idle_21
+  - first:
+      213: -5578840896259647533
+    second: Spritesheet_Dawn_Idle_22
+  - first:
+      213: 6927775924749600371
+    second: Spritesheet_Dawn_Idle_23
+  - first:
+      213: 8117858037688735982
+    second: Spritesheet_Dawn_Idle_24
+  - first:
+      213: 902868236570373365
+    second: Spritesheet_Dawn_Idle_25
+  - first:
+      213: 7470494732848501719
+    second: Spritesheet_Dawn_Idle_26
+  - first:
+      213: 5848323437973224734
+    second: Spritesheet_Dawn_Idle_27
+  - first:
+      213: 8439725515344256176
+    second: Spritesheet_Dawn_Idle_28
+  - first:
+      213: -5059040098274843360
+    second: Spritesheet_Dawn_Idle_29
+  - first:
+      213: -6604237928801056420
+    second: Spritesheet_Dawn_Idle_30
+  - first:
+      213: 285664775724255625
+    second: Spritesheet_Dawn_Idle_31
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 3439
+        width: 353
+        height: 723
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0794a9be630864f89ce6c37256d7af
+      internalID: 7676677361888686128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 3439
+        width: 357
+        height: 723
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4a6f70b93b45349805c5d7635335f5
+      internalID: -3101661041137550223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 2081
+        y: 3440
+        width: 354
+        height: 722
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19dd36fc835910b448c78c9a204dffca
+      internalID: 3000860053356510590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 2980
+        y: 3442
+        width: 357
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef8976e5d9a6c84e8c747b7f86c0686
+      internalID: -8796926649910344445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 3881
+        y: 3442
+        width: 354
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe00f291e7d0ca46a7d3bdeac7b7897
+      internalID: 6497910083832242332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 4783
+        y: 3442
+        width: 353
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d918cdc32e809114392c4beae3289dc0
+      internalID: 6801121530784395661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 5680
+        y: 3442
+        width: 354
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb282b11ae8cb64b8d608f76ace71af
+      internalID: -7392836139469701193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 6582
+        y: 3442
+        width: 353
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553b48b688ebedf43a119b4f1c390fc3
+      internalID: 1995884690006846193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 7480
+        y: 3443
+        width: 354
+        height: 719
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b39e6fc6d184443b05abed20b7e76a
+      internalID: 3824656385629091818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 2401
+        width: 353
+        height: 719
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0503869c2e1863e478b7e676658ecca1
+      internalID: 5039149418282408466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 2404
+        width: 353
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a577c331fef046f4fb91feaf1b916c4f
+      internalID: -4437764769573938667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 2404
+        width: 353
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5efa528e7b27308458989dc5ed7d8a09
+      internalID: -8666103589163800295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 2995
+        y: 2404
+        width: 349
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 091b841a0f73a0d44a933a8ecc63d295
+      internalID: 4933155294206877097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 3896
+        y: 2404
+        width: 350
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85286dffaeb8254d9a01f9e76f61032
+      internalID: -8401897198419115917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 4794
+        y: 2404
+        width: 350
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c41eb80cbcd0b4796f691c10c35e3f
+      internalID: -3659406724393458395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 5696
+        y: 2405
+        width: 350
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22102c181df97a8489b39f20c42f0370
+      internalID: 1675566168657980840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 6594
+        y: 2405
+        width: 353
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a8185b5920fc044895b1921d8a3ac4
+      internalID: -4957940183452976221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 7496
+        y: 2405
+        width: 353
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1f7d6a74ad67f48935b8054f380a19
+      internalID: -1129839757336622426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_18
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 1371
+        width: 354
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ae045edad3dff4a8726eda7bc0b955
+      internalID: 7138474538719151681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_19
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 1370
+        width: 357
+        height: 723
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223e2a72b6942084495742f25815e9db
+      internalID: 1916797267752190467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_20
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 1370
+        width: 358
+        height: 723
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1175711e29fc104480e407a8157037a
+      internalID: 2104366785608734396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_21
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 1370
+        width: 361
+        height: 723
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca24ec506fa418348a519d3bdf2b82ab
+      internalID: 9012239540622261578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_22
+      rect:
+        serializedVersion: 2
+        x: 3877
+        y: 1370
+        width: 361
+        height: 723
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963e4e6f4b707e844aec46f100c76c45
+      internalID: -5578840896259647533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_23
+      rect:
+        serializedVersion: 2
+        x: 4779
+        y: 1370
+        width: 357
+        height: 723
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c355ffebf88a749a1bfc72dc856205
+      internalID: 6927775924749600371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_24
+      rect:
+        serializedVersion: 2
+        x: 5677
+        y: 1369
+        width: 359
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e017939d952654e97be295153a9c24
+      internalID: 8117858037688735982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_25
+      rect:
+        serializedVersion: 2
+        x: 6578
+        y: 1367
+        width: 358
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df79d267f8e2334392a67eef1083085
+      internalID: 902868236570373365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_26
+      rect:
+        serializedVersion: 2
+        x: 7476
+        y: 1367
+        width: 358
+        height: 723
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca5231f2d77849429eeef6f7ceeb5a1
+      internalID: 7470494732848501719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_27
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 371
+        width: 357
+        height: 723
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556e3c5f99a9ce448a16efc6f1a0137c
+      internalID: 5848323437973224734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_28
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 370
+        width: 357
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fbf21686cae3b4484800d81ce802a6
+      internalID: 8439725515344256176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_29
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 368
+        width: 357
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c74fdc6071fab4db8856022c7c9e6d
+      internalID: -5059040098274843360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_30
+      rect:
+        serializedVersion: 2
+        x: 2979
+        y: 367
+        width: 354
+        height: 723
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f65eade06d1f5468d71ffa1eb28959
+      internalID: -6604237928801056420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Idle_31
+      rect:
+        serializedVersion: 2
+        x: 3877
+        y: 367
+        width: 357
+        height: 723
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1babbcd326ddc6449b26341e737ec1f0
+      internalID: 285664775724255625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 87cc7aff541e60943b96da12fe794c3b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
