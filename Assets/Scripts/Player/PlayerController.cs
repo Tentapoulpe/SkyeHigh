@@ -65,11 +65,14 @@ public class PlayerController : MonoBehaviour
     private bool b_canRegenerate = true;
     private float f_currentHealth;
     public Text m_textHealth;
+    [Space]
 
     private string s_fireInput = "";
     private bool b_mustFall = false;
 
+    [Header("Stun")]
     private float f_currentStun = 0;
+    public float f_collisionStunTime = 2f;
 
     void Start()
     {
@@ -232,6 +235,24 @@ public class PlayerController : MonoBehaviour
         {
             b_canRegenerate = true;
         }
+
+        if(f_currentStun > 0)
+            StunCountdown(Time.deltaTime);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        PlayerController otherPlayer = collision.gameObject.GetComponent<PlayerController>();
+        if(otherPlayer != null && ReturnDashState())
+        {
+            Debug.Log("collisionisé");
+            if (otherPlayer.ReturnDashState())
+            {
+                SetStun(f_collisionStunTime);
+            }
+            if(otherPlayer.f_currentStun <= 0)
+                otherPlayer.SetStun(f_collisionStunTime);
+        }
     }
 
     public bool ReturnDashState()
@@ -365,6 +386,7 @@ public class PlayerController : MonoBehaviour
         f_currentStun = stunValue;
         b_canMove = false;
         b_canDash = false;
+        StopDash();
         rigidbodyPlayer.gravityScale = m_gravityFall;
     }
 
