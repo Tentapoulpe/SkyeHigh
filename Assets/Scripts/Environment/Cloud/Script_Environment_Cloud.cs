@@ -22,8 +22,31 @@ public class Script_Environment_Cloud : MonoBehaviour
 
     private void Start()
     {
-        my_rigidbody = GetComponent<Rigidbody2D>();    
+        my_rigidbody = GetComponent<Rigidbody2D>();
     }
+
+    //private void Update()
+    //{
+    //    RaycastHit2D hitRight = Physics2D.Raycast(gameObject.transform.position, Vector2.right, 10);
+    //    Debug.DrawRay(gameObject.transform.position, Vector2.right * 10f);
+    //    if (hitRight)
+    //    {
+    //        Debug.Log("HEY" + hitRight.collider.gameObject.name);
+    //        //if (hitRight.collider.gameObject.CompareTag("Untagged"))
+    //        //{
+    //        //    Debug.Log("HEY");
+    //        //    return;
+    //        //}
+    //        //else
+    //        //{
+    //        //    Debug.Log("TOUCHE");
+    //        //}
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("PASTOUCHE");
+    //    }
+    //}
 
     private void OnTriggerExit2D(Collider2D collision)
     {
