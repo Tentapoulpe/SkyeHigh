@@ -352,6 +352,12 @@ PrefabInstance:
       propertyPath: m_debugMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
+        type: 3}
+      propertyPath: m_character.Array.data[1]
+      value: 
+      objectReference: {fileID: 8615222593070687827, guid: f0dc7e1d644979749a18cff8f5d7faeb,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1edeab713865b6f439ed540150985bd1, type: 3}
 --- !u!1 &2037467536

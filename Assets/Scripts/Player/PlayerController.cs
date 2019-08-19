@@ -14,31 +14,11 @@ public class PlayerController : MonoBehaviour
     private bool b_canMove = true;
     [Space]
 
-    [Header("MovementHorizontal")]
-    private float m_maxHorizontalSpeed;
-    private float m_maxHorizontalDrag;
-    private float m_horizontalAcceleration;
-    [Space]
-
-    [Header("MovementVertical")]
-    private float m_maxVerticalUpSpeed;
-    private float m_maxVerticalDownSpeed;
-    private float m_VerticalUpAcceleration;
-    private float m_VerticalDownAcceleration;
-    private float m_maxVerticalDrag;
-    [Space]
-
     [Header("Gravity")]
-    private float m_gravityMultiplier;
     public float m_gravityFall;
     [Space]
 
     [Header("Dash")]
-    private float m_dashPower;
-    private float m_maxDashCooldown;
-    private float m_dashCost;
-    private float m_dashPostStun;
-    private float m_dashStun;
     private float m_dashMinimalSpeed = 20f;
 
     private bool b_playerIsDashing;
@@ -49,7 +29,6 @@ public class PlayerController : MonoBehaviour
     [Space]
 
     [Header("Environment")]
-    private float m_cloudSlow;
     private float m_delayToRegenerate;
     [Space]
 
@@ -60,7 +39,6 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer m_cloudSprite;
     public List<SpriteRenderer> m_cloudSpriteList = new List<SpriteRenderer>();
     private PlayerCloud cloud = null;
-    private float m_maxHealth = 100;
     private bool b_isInCloud;
     private bool b_canRegenerate = true;
     private float f_currentHealth;
@@ -71,73 +49,54 @@ public class PlayerController : MonoBehaviour
 
     private float f_currentStun = 0;
 
+
     void Start()
     {
-        SetUpPlayer();
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
         a_Animator = GetComponent<Animator>();
-        f_currentHealth = m_maxHealth;
+        f_currentHealth = m_character_info.m_maxHealth;
         m_textHealth.text = f_currentHealth.ToString();
     }
     
-    private void SetUpPlayer()
-    {
-        m_maxVerticalUpSpeed = m_character_info.m_maxVerticalUpSpeed;
-        m_maxHorizontalSpeed = m_character_info.m_maxHorizontalSpeed;
-        m_horizontalAcceleration = m_character_info.m_horizontalAcceleration;
-        m_maxHorizontalDrag = m_character_info.m_maxHorizontalDrag;
-        m_maxVerticalDownSpeed = m_character_info.m_maxVerticalDownSpeed;
-        m_VerticalUpAcceleration = m_character_info.m_VerticalUpAcceleration;
-        m_VerticalDownAcceleration = m_character_info.m_VerticalDownAcceleration;
-        m_maxVerticalDrag = m_character_info.m_maxVerticalDrag;
-        m_gravityMultiplier = m_character_info.m_gravityMultiplier;
-        m_dashPower = m_character_info.m_dashPower;
-        m_maxDashCooldown = m_character_info.m_maxDashCooldown;
-        m_dashCost = m_character_info.m_dashCost;
-        m_dashPostStun = m_character_info.m_dashPostStun;
-        m_dashStun = m_character_info.m_dashStun;
-        m_cloudSlow = m_character_info.m_cloudSlow;
-        m_maxHealth = m_character_info.m_maxHealth;
-    }
 
     private void FixedUpdate()
     {
         if (!b_canMove)
             return;
-        float horizontal = Input.GetAxis("Horizontal_P" + playerNumber) * m_horizontalAcceleration * Time.deltaTime;
+        float horizontal = Input.GetAxis("Horizontal_P" + playerNumber) * m_character_info.m_horizontalAcceleration * Time.deltaTime;
         if (horizontal >= 0)
         {
-            if (horizontal > m_maxHorizontalSpeed)
-            horizontal = m_maxHorizontalSpeed;
+            if (horizontal > m_character_info.m_maxHorizontalSpeed)
+            horizontal = m_character_info.m_maxHorizontalSpeed;
         }
         else
         {
-            if (horizontal < -m_maxHorizontalSpeed)
-                horizontal = -m_maxHorizontalSpeed;
+            if (horizontal < -m_character_info.m_maxHorizontalSpeed)
+                horizontal = -m_character_info.m_maxHorizontalSpeed;
         }
             
         float vertical = Input.GetAxis("Vertical_P" + playerNumber) * Time.deltaTime;
         if (vertical > 0)
         {
-            vertical *= m_VerticalUpAcceleration;
-            vertical /= m_gravityMultiplier;
-                if (vertical > m_maxVerticalUpSpeed)
-                    vertical = m_maxVerticalUpSpeed;
+            vertical *= m_character_info.m_VerticalUpAcceleration;
+            vertical /= m_character_info.m_gravityMultiplier;
+                if (vertical > m_character_info.m_maxVerticalUpSpeed)
+                    vertical = m_character_info.m_maxVerticalUpSpeed;
 
             
         }
         else if (vertical < 0)
         {
-            vertical *= m_VerticalDownAcceleration;
-            vertical *= m_gravityMultiplier;
-                if (vertical < -m_maxVerticalDownSpeed)
-                    vertical = -m_maxVerticalDownSpeed;
+            vertical *= m_character_info.m_VerticalDownAcceleration;
+            vertical *= m_character_info.m_gravityMultiplier;
+                if (vertical < -m_character_info.m_maxVerticalDownSpeed)
+                    vertical = -m_character_info.m_maxVerticalDownSpeed;
             
         }
 
         if (b_isInCloud)
         {
-            rigidbodyPlayer.AddForce(new Vector2(horizontal, vertical) / m_cloudSlow, ForceMode2D.Impulse);
+            rigidbodyPlayer.AddForce(new Vector2(horizontal, vertical) / m_character_info.m_cloudSlow, ForceMode2D.Impulse);
         }
         else
             rigidbodyPlayer.AddForce(new Vector2(horizontal, vertical), ForceMode2D.Impulse);
@@ -152,14 +111,6 @@ public class PlayerController : MonoBehaviour
         else if (horizontal < 0)
         {
             GetComponent<SpriteRenderer>().flipX = false;
-        }
-        if (vertical > 0)
-        {
-            GetComponent<SpriteRenderer>().flipY = false;
-        }
-        else if (vertical < 0)
-        {
-            GetComponent<SpriteRenderer>().flipY = true;
         }
 
     }
@@ -224,7 +175,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (f_currentHealth >= m_maxHealth)
+        if (f_currentHealth >= m_character_info.m_maxHealth)
         {
             b_canRegenerate = false;
         }
@@ -260,8 +211,8 @@ public class PlayerController : MonoBehaviour
         b_canDash = false;
         b_playerIsDashing = true;
         f_currentTimerDashing = m_timerDashing;
-        f_dashCooldown = m_maxDashCooldown;
-        rigidbodyPlayer.AddForce(new Vector2(Input.GetAxis("Horizontal_P" + playerNumber), Input.GetAxis("Vertical_P" + playerNumber)) * m_dashPower, ForceMode2D.Impulse);
+        f_dashCooldown = m_character_info.m_maxDashCooldown;
+        rigidbodyPlayer.AddForce(new Vector2(Input.GetAxis("Horizontal_P" + playerNumber), Input.GetAxis("Vertical_P" + playerNumber)) * m_character_info.m_dashPower, ForceMode2D.Impulse);
         DecreaseCloud();
     }
 
@@ -275,7 +226,7 @@ public class PlayerController : MonoBehaviour
     {
         if (f_currentHealth != 0)
         {
-            f_currentHealth -= m_dashCost;
+            f_currentHealth -= m_character_info.m_dashCost;
             if (f_currentHealth <= 0)
             {
                 if (!b_playerIsDashing)
@@ -294,12 +245,12 @@ public class PlayerController : MonoBehaviour
 
     public void IncreaseCloud(float f_health)
     {
-        if (f_currentHealth <= m_maxHealth)
+        if (f_currentHealth <= m_character_info.m_maxHealth)
         {
             f_currentHealth += f_health;
-            if (f_currentHealth >= m_maxHealth)
+            if (f_currentHealth >= m_character_info.m_maxHealth)
             {
-                f_currentHealth = m_maxHealth;
+                f_currentHealth = m_character_info.m_maxHealth;
                 return;
             }
             UpdateCloudSprite();
@@ -309,7 +260,7 @@ public class PlayerController : MonoBehaviour
     public void SetCloudHealth(float f_health)
     {
         f_currentHealth = f_health;
-        Mathf.Clamp(f_currentHealth,0f, m_maxHealth);
+        Mathf.Clamp(f_currentHealth,0f, m_character_info.m_maxHealth);
         if (f_currentHealth > 0 && b_mustFall)
             b_mustFall = false;
         UpdateCloudSprite();
