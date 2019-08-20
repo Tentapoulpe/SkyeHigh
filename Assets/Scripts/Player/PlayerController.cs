@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("Environment")]
     private float m_delayToRegenerate;
+    private bool b_isTopLimit;
+    public float m_timerBeforeTakeDamage;
+    private float f_currentTimerBeforeTakeDamage;
+    public float m_amountDamage;
     [Space]
 
     private Rigidbody2D rigidbodyPlayer = null;
@@ -190,6 +194,17 @@ public class PlayerController : MonoBehaviour
 
         if(f_currentStun > 0)
             StunCountdown(Time.deltaTime);
+
+        if(b_isTopLimit)
+        {
+            f_currentTimerBeforeTakeDamage -= 0.1f;
+            if (f_currentTimerBeforeTakeDamage <= 0)
+            {
+                Debug.Log("CHINT");
+                DecreaseCloud(m_amountDamage);
+                f_currentTimerBeforeTakeDamage = m_timerBeforeTakeDamage;
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -235,7 +250,7 @@ public class PlayerController : MonoBehaviour
         f_currentTimerDashing = m_timerDashing;
         f_dashCooldown = m_character_info.m_maxDashCooldown;
         rigidbodyPlayer.AddForce(new Vector2(Input.GetAxis("Horizontal_P" + playerNumber), Input.GetAxis("Vertical_P" + playerNumber)) * m_character_info.m_dashPower, ForceMode2D.Impulse);
-        DecreaseCloud();
+        DecreaseCloud(m_character_info.m_dashCost);
     }
 
     public void StopDash()
@@ -244,11 +259,12 @@ public class PlayerController : MonoBehaviour
         rigidbodyPlayer.velocity = Vector2.zero;
     }
 
-    public void DecreaseCloud()
+    public void DecreaseCloud(float f_health)
     {
         if (f_currentHealth != 0)
         {
-            f_currentHealth -= m_character_info.m_dashCost;
+            Debug.Log("Decrease");
+            f_currentHealth -= f_health;
             if (f_currentHealth <= 0)
             {
                 if (!b_playerIsDashing)
@@ -323,6 +339,17 @@ public class PlayerController : MonoBehaviour
         b_isInCloud = false;
     }
 
+    public void PlayerIsTopScreen()
+    {
+        f_currentTimerBeforeTakeDamage = m_timerBeforeTakeDamage;
+        b_isTopLimit = true;
+    }
+
+    public void PlayerIsNotTopScreen()
+    {
+        b_isTopLimit = false;
+    }
+
     public float ReturnTimeBeforeRegenerate()
     {
         return m_delayToRegenerate;
@@ -363,6 +390,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void CountDown()
+    {
+        if(b_isTopLimit)
+        {
+            f_currentTimerBeforeTakeDamage -= Time.deltaTime;
+            if(f_currentTimerBeforeTakeDamage <= 0)
+            {
+                Debug.Log("COUNTDOWN");
+                DecreaseCloud(m_amountDamage);
+                f_currentTimerBeforeTakeDamage = m_timerBeforeTakeDamage;
+            }
+        }
+    }
 
 
     public void Fall()

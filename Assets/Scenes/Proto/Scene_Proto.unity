@@ -642,6 +642,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18f11bb75aa8b5a4098c72c2149f9ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &849918242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 849918243}
+  m_Layer: 0
+  m_Name: TopBordel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &849918243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849918242}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.1780164, y: 0.43261838, z: 224.73438}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1890307733}
+  - {fileID: 1611537153}
+  m_Father: {fileID: 1105194765}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &856707241
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,7 +812,7 @@ Transform:
   m_Children:
   - {fileID: 23410454}
   - {fileID: 1979823852}
-  - {fileID: 1890307733}
+  - {fileID: 849918243}
   - {fileID: 519430371}
   - {fileID: 1696575370}
   - {fileID: 1824391020}
@@ -847,6 +879,76 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1611537152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1611537153}
+  - component: {fileID: 1611537154}
+  - component: {fileID: 1611537155}
+  m_Layer: 9
+  m_Name: TopBorder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1611537153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611537152}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.138016, y: 11.83, z: -224.73438}
+  m_LocalScale: {x: 1.2, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 849918243}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1611537154
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611537152}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -15.318863, y: -1.4287882}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 37.47812, y: 4.550005}
+  m_EdgeRadius: 0
+--- !u!114 &1611537155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611537152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eecff2d284dd8943a9387d9c5fbe502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1696575369
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,7 +1292,7 @@ GameObject:
   - component: {fileID: 1890307733}
   - component: {fileID: 1890307734}
   m_Layer: 9
-  m_Name: TopBorder
+  m_Name: TopBorderBounce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1203,12 +1305,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890307732}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.96, y: 13.76, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.138016, y: 13.327382, z: -224.73438}
   m_LocalScale: {x: 1.2, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1105194765}
-  m_RootOrder: 2
+  m_Father: {fileID: 849918243}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1890307734
 BoxCollider2D:
@@ -1650,6 +1752,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
         type: 3}
+      propertyPath: m_prefabCloudParent.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
+        type: 3}
       propertyPath: m_character.Array.data[1]
       value: 
       objectReference: {fileID: 8615222593070687827, guid: f0dc7e1d644979749a18cff8f5d7faeb,
@@ -1658,8 +1765,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_prefabCloudParent
       value: 
-      objectReference: {fileID: 6420859606255504867, guid: 7d6b2e3805468804ca40b26405cfd80a,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
         type: 3}
       propertyPath: i_numberOfCloudMax
@@ -1675,6 +1781,18 @@ PrefabInstance:
       propertyPath: m_spawnPointCloud.Array.data[1]
       value: 
       objectReference: {fileID: 856707241}
+    - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
+        type: 3}
+      propertyPath: m_prefabCloudParent.Array.data[0]
+      value: 
+      objectReference: {fileID: 6420859606255504867, guid: 7d6b2e3805468804ca40b26405cfd80a,
+        type: 3}
+    - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
+        type: 3}
+      propertyPath: m_prefabCloudParent.Array.data[1]
+      value: 
+      objectReference: {fileID: 6420859606255504867, guid: f94236a6ff65b744c97ada5892c57d3e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1edeab713865b6f439ed540150985bd1, type: 3}
 --- !u!1001 &6022014901822856121
