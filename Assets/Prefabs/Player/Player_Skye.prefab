@@ -236,10 +236,10 @@ MonoBehaviour:
   m_amountDamage: 5
   m_cloudSprite: {fileID: 8615222594659535738}
   m_cloudSpriteList:
-  - {fileID: 8615222594659535738}
-  - {fileID: 8615222594659535738}
-  - {fileID: 8615222594659535738}
-  - {fileID: 0}
+  - {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 21300000, guid: a3da6508649efb34191d3b1f0615c0f6, type: 3}
   m_textHealth: {fileID: 1698198768}
 --- !u!50 &8615222593070687820
 Rigidbody2D:

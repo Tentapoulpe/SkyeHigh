@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Cloud")]
     public SpriteRenderer m_cloudSprite;
-    public List<SpriteRenderer> m_cloudSpriteList = new List<SpriteRenderer>();
+    public List<Sprite> m_cloudSpriteList;
     private PlayerCloud cloud = null;
     private bool b_isInCloud;
     private bool b_canRegenerate = true;
@@ -200,7 +200,6 @@ public class PlayerController : MonoBehaviour
             f_currentTimerBeforeTakeDamage -= 0.1f;
             if (f_currentTimerBeforeTakeDamage <= 0)
             {
-                Debug.Log("CHINT");
                 DecreaseCloud(m_amountDamage);
                 f_currentTimerBeforeTakeDamage = m_timerBeforeTakeDamage;
             }
@@ -311,6 +310,7 @@ public class PlayerController : MonoBehaviour
 
     public void UpdateCloudSprite()
     {
+        Debug.Log("UpdateCloud");
         if (f_currentHealth < 100)
         {
             if(f_currentHealth < 75)
@@ -319,13 +319,13 @@ public class PlayerController : MonoBehaviour
                 {
                     if (f_currentHealth < 25)
                     {
-                        m_cloudSprite = m_cloudSpriteList[0];
+                        m_cloudSprite.sprite =  m_cloudSpriteList[0];
                     }
-                    m_cloudSprite = m_cloudSpriteList[1];
+                    m_cloudSprite.sprite = m_cloudSpriteList[1];
                 }
-                m_cloudSprite = m_cloudSpriteList[2];
+                m_cloudSprite.sprite = m_cloudSpriteList[2];
             }
-            m_cloudSprite = m_cloudSpriteList[3];
+            m_cloudSprite.sprite = m_cloudSpriteList[3];
         }
     }
 
@@ -347,6 +347,7 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerIsNotTopScreen()
     {
+        f_currentTimerBeforeTakeDamage = m_timerBeforeTakeDamage;
         b_isTopLimit = false;
     }
 
