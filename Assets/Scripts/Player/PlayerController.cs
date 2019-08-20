@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
         a_Animator = GetComponent<Animator>();
         f_currentHealth = m_character_info.m_maxHealth;
         m_textHealth.text = f_currentHealth.ToString();
+        UpdateCloudSprite();
     }
     
 
@@ -125,6 +126,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(f_currentHealth);
         m_textHealth.text = f_currentHealth.ToString();
 
         string[] names = Input.GetJoystickNames();
@@ -311,21 +313,30 @@ public class PlayerController : MonoBehaviour
     public void UpdateCloudSprite()
     {
         Debug.Log("UpdateCloud");
-        if (f_currentHealth < 100)
+        if (f_currentHealth <= 100)
         {
-            if(f_currentHealth < 75)
+            m_cloudSprite.sprite = m_cloudSpriteList[0];
+            Debug.Log("Nuage = 100%");
+            if(f_currentHealth < 100)
             {
-                if (f_currentHealth < 50)
+                Debug.Log("Nuage100%");
+                m_cloudSprite.sprite = m_cloudSpriteList[1];
+                if (f_currentHealth < 75)
                 {
-                    if (f_currentHealth < 25)
+                    Debug.Log("Nuage75%");
+                    m_cloudSprite.sprite = m_cloudSpriteList[2];
+                    if (f_currentHealth < 50)
                     {
-                        m_cloudSprite.sprite =  m_cloudSpriteList[0];
+                        Debug.Log("Nuage50%");
+                        m_cloudSprite.sprite = m_cloudSpriteList[3];
+                        if (f_currentHealth < 25)
+                        {
+                            m_cloudSprite.sprite = m_cloudSpriteList[4];
+                            Debug.Log("Nuage25%");
+                        }
                     }
-                    m_cloudSprite.sprite = m_cloudSpriteList[1];
                 }
-                m_cloudSprite.sprite = m_cloudSpriteList[2];
-            }
-            m_cloudSprite.sprite = m_cloudSpriteList[3];
+            }   
         }
     }
 
