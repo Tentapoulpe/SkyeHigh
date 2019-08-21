@@ -400,7 +400,10 @@ public class GameManager : MonoBehaviour
                 player.GetComponent<PlayerController>().SetPlayerNumber(i + 1);
                 l_playersPlaying.Add(player.GetComponent<PlayerController>());
                 CameraManager.Instance.m_Targets.Add(player.transform);
-                Scores.Add(0);
+                if (roundState == 1)
+                {
+                    Scores.Add(0);
+                }
             }
         }
         playerAlive = playerConnected;
@@ -415,6 +418,7 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.RestartRound();
         l_playersPlaying.Clear();
         g_cloudParentIdx.Clear();
+        m_spawnPointCloud.Clear();
         roundState++;
         RestartGame();
     }
