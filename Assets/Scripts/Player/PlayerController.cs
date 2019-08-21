@@ -50,12 +50,16 @@ public class PlayerController : MonoBehaviour
     [Space]
 
     private string s_fireInput = "";
+    private string s_cancelInput = "";
     private bool b_mustFall = false;
 
     [Header("Stun")]
     private float f_currentStun = 0;
     private float f_collisionStunTime = 1f;
     private float f_stunGravity = 3f;
+    [Range(1f, 2f)]
+    public float m_timeReduceStun;
+    private float f_currenttimeReduceStun;
 
 
     void Start()
@@ -131,17 +135,20 @@ public class PlayerController : MonoBehaviour
         if (names[playerNumber - 1].Length == 19)
         {
             s_fireInput = "F1_PS4_P" + playerNumber;
+            s_cancelInput = "F2_PS4_P" + playerNumber;
         }
         else if (names[playerNumber - 1].Length == 33)
         {
             s_fireInput = "F1_XBOX_P" + playerNumber;
+            s_cancelInput = "F2_XBOX_P" + playerNumber;
         }
         else
         {
             s_fireInput = "F1_PC_P" + playerNumber;
+            s_cancelInput = "F2_PC_P" + playerNumber;
         }
 
-        if(!b_playerIsDashing && b_mustFall)
+        if (!b_playerIsDashing && b_mustFall)
         {
             Fall();
             b_mustFall = false;
@@ -205,6 +212,12 @@ public class PlayerController : MonoBehaviour
                 DecreaseCloud(m_amountDamage);
                 f_currentTimerBeforeTakeDamage = m_timerBeforeTakeDamage;
             }
+        }
+
+        if(Input.GetButtonUp(s_cancelInput))
+        {
+            f_currenttimeReduceStun = m_timeReduceStun;
+            f_currenttimeReduceStun = 1f;
         }
     }
 

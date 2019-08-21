@@ -18,7 +18,8 @@ public class Script_Environment_Cloud : MonoBehaviour
     public List<SpriteRenderer> m_spriteList = new List<SpriteRenderer>();
     private RaycastHit2D hit;
     private int i_amountSprite;
-    private bool b_bonsoir;
+    public List<Script_Environment_Cloud> m_cloudNeighbor;
+    private bool b_isElectrocuted;
 
     private void Start()
     {
@@ -27,9 +28,10 @@ public class Script_Environment_Cloud : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        PlayerController player = collision.GetComponent<PlayerController>();
+        if (player)
         {
-            if (collision.GetComponentInParent<PlayerController>().CanRegenerate() == true)
+            if (player.CanRegenerate() == true)
             {
                 collision.GetComponentInParent<PlayerController>().IncreaseCloud(f_healthToRegenerate);
                 //GetComponentInParent<Script_Environment_Cloud_Parent>().UpdateCloudSprite();
@@ -37,18 +39,40 @@ public class Script_Environment_Cloud : MonoBehaviour
             }
             else
             {
-                collision.gameObject.GetComponentInParent<PlayerController>().CloudUnSlow();
+                player.CloudUnSlow();
             }
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        PlayerController player = collision.GetComponent<PlayerController>();
+        if (player)
         {
+            if (b_isElectrocuted)
+            {
+                player.Fall();
+            }
             Debug.Log("InCloud");
             collision.gameObject.GetComponentInParent<PlayerController>().CloudSlow();
         }
+
+        if(player && player)
+        {
+            foreach (Script_Environment_Cloud cloud in m_cloudNeighbor)
+            {
+                if(cloud.enabled)
+                {
+                    cloud.Thunder();
+                }
+            }
+        }
+    }
+
+    public void Thunder()
+    {
+        b_isElectrocuted = true;
     }
 
     //public void CheckUpCloud()
