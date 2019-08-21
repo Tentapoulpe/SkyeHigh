@@ -187,6 +187,11 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 6.5868855
       objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228878, guid: 67fa115986a86254f88d2b5e809c5dff,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3544790046733228875, guid: 67fa115986a86254f88d2b5e809c5dff,
         type: 3}
       propertyPath: m_cloudNeighbor.Array.size
@@ -314,6 +319,11 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 6.6209946
       objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228878, guid: 67fa115986a86254f88d2b5e809c5dff,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3544790046733228875, guid: 67fa115986a86254f88d2b5e809c5dff,
         type: 3}
       propertyPath: m_cloudNeighbor.Array.size
@@ -440,6 +450,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 5.937232
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228878, guid: 67fa115986a86254f88d2b5e809c5dff,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3544790046733228875, guid: 67fa115986a86254f88d2b5e809c5dff,
         type: 3}

@@ -413,34 +413,10 @@ public class GameManager : MonoBehaviour
     public void RestartRound()
     {
         UIManager.Instance.RestartRound();
-        foreach (PlayerController item in l_playersPlaying)
-        {
-            item.GMDeath();
-        }
-        foreach (GameObject item in g_cloudParentIdx)
-        {
-            Destroy(item.gameObject);
-        }
         l_playersPlaying.Clear();
         g_cloudParentIdx.Clear();
-        CameraManager.Instance.m_Targets.Clear();
-        for (int i = 0; i < l_Players.Length; i++)
-        {
-            if (l_Players[i] != 0)
-            {
-                GameObject player = Instantiate(m_character[m_PlayersCharacter[i]], m_mySpawn[l_Players[i] - 1].transform.position, Quaternion.identity);
-                player.GetComponent<PlayerController>().SetPlayerNumber(i + 1);
-                l_playersPlaying.Add(player.GetComponent<PlayerController>());
-                CameraManager.Instance.m_Targets.Add(player.transform);
-            }
-        }
-        CameraManager.Instance.canMove = true;
-        playerAlive = playerConnected;
-        for (int i = 0; i < i_numberOfCloudMax; i++)
-        {
-            SpawnCloudParent();
-        }
         roundState++;
+        RestartGame();
     }
 
     public void Quit()

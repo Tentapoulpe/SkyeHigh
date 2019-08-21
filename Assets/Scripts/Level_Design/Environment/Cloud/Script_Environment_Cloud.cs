@@ -33,7 +33,7 @@ public class Script_Environment_Cloud : MonoBehaviour
         {
             if (player.CanRegenerate() == true)
             {
-                collision.GetComponentInParent<PlayerController>().IncreaseCloud(f_healthToRegenerate);
+                player.IncreaseCloud(f_healthToRegenerate);
                 //GetComponentInParent<Script_Environment_Cloud_Parent>().UpdateCloudSprite();
                 Destroy(gameObject);
             }
@@ -55,7 +55,7 @@ public class Script_Environment_Cloud : MonoBehaviour
                 player.Fall();
             }
             Debug.Log("InCloud");
-            collision.gameObject.GetComponentInParent<PlayerController>().CloudSlow();
+            player.CloudSlow();
         }
 
         if(player && player)
