@@ -33,7 +33,7 @@ public class Script_Environment_Cloud : MonoBehaviour
             {
                 collision.GetComponentInParent<PlayerController>().IncreaseCloud(f_healthToRegenerate);
                 //GetComponentInParent<Script_Environment_Cloud_Parent>().UpdateCloudSprite();
-                Destroy(this);
+                Destroy(gameObject);
             }
             else
             {

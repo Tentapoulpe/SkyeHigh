@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     bool[] lockedPlayer = new bool[4];
 
     [Header("Cloud")]
-    public GameObject m_prefabCloudParent;
+    public List<GameObject> m_prefabCloudParent;
     private List<GameObject> g_cloudParentIdx = new List<GameObject>();
     public List<GameObject> m_spawnPointCloud = new List<GameObject>();
     private bool b_spawnIdx;
@@ -350,18 +350,19 @@ public class GameManager : MonoBehaviour
 
     public void SpawnCloudParent()
     {
+        int i_numerCloudParentToSpawn = UnityEngine.Random.Range(0, m_prefabCloudParent.Count);
         if(g_cloudParentIdx.Count < i_numberOfCloudMax)
         {
             int i_mySpawnIdx = Convert.ToInt32(b_spawnIdx);
             if(i_mySpawnIdx == 0)
             {
-                GameObject my_cloud = Instantiate(m_prefabCloudParent, m_spawnPointCloud[i_mySpawnIdx].transform);
+                GameObject my_cloud = Instantiate(m_prefabCloudParent[i_numerCloudParentToSpawn], m_spawnPointCloud[i_mySpawnIdx].transform);
                 g_cloudParentIdx.Add(my_cloud);
                 b_spawnIdx = true;
             }
             else
             {
-                GameObject my_cloud = Instantiate(m_prefabCloudParent, m_spawnPointCloud[i_mySpawnIdx].transform);
+                GameObject my_cloud = Instantiate(m_prefabCloudParent[i_numerCloudParentToSpawn], m_spawnPointCloud[i_mySpawnIdx].transform);
                 g_cloudParentIdx.Add(my_cloud);
                 b_spawnIdx = false;
             }

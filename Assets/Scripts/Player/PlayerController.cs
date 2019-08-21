@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("Environment")]
     private float m_delayToRegenerate;
+    private bool b_isTopLimit;
+    public float m_timerBeforeTakeDamage;
+    private float f_currentTimerBeforeTakeDamage;
+    public float m_amountDamage;
     [Space]
 
     private Rigidbody2D rigidbodyPlayer = null;
@@ -37,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Cloud")]
     public SpriteRenderer m_cloudSprite;
-    public List<SpriteRenderer> m_cloudSpriteList = new List<SpriteRenderer>();
+    public List<Sprite> m_cloudSpriteList;
     private PlayerCloud cloud = null;
     private bool b_isInCloud;
     private bool b_canRegenerate = true;
@@ -60,6 +64,7 @@ public class PlayerController : MonoBehaviour
         a_Animator = GetComponent<Animator>();
         f_currentHealth = m_character_info.m_maxHealth;
         m_textHealth.text = f_currentHealth.ToString();
+        UpdateCloudSprite();
     }
     
 
@@ -121,6 +126,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(f_currentHealth);
         m_textHealth.text = f_currentHealth.ToString();
 
         string[] names = Input.GetJoystickNames();
@@ -165,7 +171,9 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(b_playerIsDashing)
+        b_canRegenerate = true;
+
+        if (b_playerIsDashing)
         {
             f_currentTimerDashing -= Time.deltaTime;
             if (f_currentTimerDashing <= 0)
@@ -177,19 +185,29 @@ public class PlayerController : MonoBehaviour
             {
                 DashApplyMinimalSpeed();
             }
+            b_canRegenerate = false;
         }
 
-        if (f_currentHealth >= m_character_info.m_maxHealth)
+        if (f_currentHealth >= m_character_info.m_maxHealth || !b_canMove)
         {
             b_canRegenerate = false;
         }
-        else
+
+        if (f_currentStun > 0)
         {
-            b_canRegenerate = true;
+            StunCountdown(Time.deltaTime);
+            b_canRegenerate = false;
         }
 
-        if(f_currentStun > 0)
-            StunCountdown(Time.deltaTime);
+        if(b_isTopLimit)
+        {
+            f_currentTimerBeforeTakeDamage -= 0.1f;
+            if (f_currentTimerBeforeTakeDamage <= 0)
+            {
+                DecreaseCloud(m_amountDamage);
+                f_currentTimerBeforeTakeDamage = m_timerBeforeTakeDamage;
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -235,7 +253,7 @@ public class PlayerController : MonoBehaviour
         f_currentTimerDashing = m_timerDashing;
         f_dashCooldown = m_character_info.m_maxDashCooldown;
         rigidbodyPlayer.AddForce(new Vector2(Input.GetAxis("Horizontal_P" + playerNumber), Input.GetAxis("Vertical_P" + playerNumber)) * m_character_info.m_dashPower, ForceMode2D.Impulse);
-        DecreaseCloud();
+        DecreaseCloud(m_character_info.m_dashCost);
     }
 
     public void StopDash()
@@ -244,11 +262,12 @@ public class PlayerController : MonoBehaviour
         rigidbodyPlayer.velocity = Vector2.zero;
     }
 
-    public void DecreaseCloud()
+    public void DecreaseCloud(float f_health)
     {
         if (f_currentHealth != 0)
         {
-            f_currentHealth -= m_character_info.m_dashCost;
+            Debug.Log("Decrease");
+            f_currentHealth -= f_health;
             if (f_currentHealth <= 0)
             {
                 if (!b_playerIsDashing)
@@ -295,21 +314,31 @@ public class PlayerController : MonoBehaviour
 
     public void UpdateCloudSprite()
     {
-        if (f_currentHealth < 100)
+        Debug.Log("UpdateCloud");
+        if (f_currentHealth <= 100)
         {
-            if(f_currentHealth < 75)
+            m_cloudSprite.sprite = m_cloudSpriteList[0];
+            Debug.Log("Nuage = 100%");
+            if(f_currentHealth < 100)
             {
-                if (f_currentHealth < 50)
+                Debug.Log("Nuage100%");
+                m_cloudSprite.sprite = m_cloudSpriteList[1];
+                if (f_currentHealth < 75)
                 {
-                    if (f_currentHealth < 25)
+                    Debug.Log("Nuage75%");
+                    m_cloudSprite.sprite = m_cloudSpriteList[2];
+                    if (f_currentHealth < 50)
                     {
-                        m_cloudSprite = m_cloudSpriteList[0];
+                        Debug.Log("Nuage50%");
+                        m_cloudSprite.sprite = m_cloudSpriteList[3];
+                        if (f_currentHealth < 25)
+                        {
+                            m_cloudSprite.sprite = m_cloudSpriteList[4];
+                            Debug.Log("Nuage25%");
+                        }
                     }
-                    m_cloudSprite = m_cloudSpriteList[1];
                 }
-                m_cloudSprite = m_cloudSpriteList[2];
-            }
-            m_cloudSprite = m_cloudSpriteList[3];
+            }   
         }
     }
 
@@ -321,6 +350,18 @@ public class PlayerController : MonoBehaviour
     public void CloudUnSlow()
     {
         b_isInCloud = false;
+    }
+
+    public void PlayerIsTopScreen()
+    {
+        f_currentTimerBeforeTakeDamage = m_timerBeforeTakeDamage;
+        b_isTopLimit = true;
+    }
+
+    public void PlayerIsNotTopScreen()
+    {
+        f_currentTimerBeforeTakeDamage = m_timerBeforeTakeDamage;
+        b_isTopLimit = false;
     }
 
     public float ReturnTimeBeforeRegenerate()
@@ -363,6 +404,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void CountDown()
+    {
+        if(b_isTopLimit)
+        {
+            f_currentTimerBeforeTakeDamage -= Time.deltaTime;
+            if(f_currentTimerBeforeTakeDamage <= 0)
+            {
+                Debug.Log("COUNTDOWN");
+                DecreaseCloud(m_amountDamage);
+                f_currentTimerBeforeTakeDamage = m_timerBeforeTakeDamage;
+            }
+        }
+    }
 
 
     public void Fall()
