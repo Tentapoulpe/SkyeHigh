@@ -171,7 +171,9 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(b_playerIsDashing)
+        b_canRegenerate = true;
+
+        if (b_playerIsDashing)
         {
             f_currentTimerDashing -= Time.deltaTime;
             if (f_currentTimerDashing <= 0)
@@ -183,19 +185,19 @@ public class PlayerController : MonoBehaviour
             {
                 DashApplyMinimalSpeed();
             }
+            b_canRegenerate = false;
         }
 
-        if (f_currentHealth >= m_character_info.m_maxHealth)
+        if (f_currentHealth >= m_character_info.m_maxHealth || !b_canMove)
         {
             b_canRegenerate = false;
         }
-        else
-        {
-            b_canRegenerate = true;
-        }
 
-        if(f_currentStun > 0)
+        if (f_currentStun > 0)
+        {
             StunCountdown(Time.deltaTime);
+            b_canRegenerate = false;
+        }
 
         if(b_isTopLimit)
         {
