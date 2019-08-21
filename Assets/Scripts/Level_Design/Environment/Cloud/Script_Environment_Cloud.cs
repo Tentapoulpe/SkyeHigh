@@ -28,7 +28,7 @@ public class Script_Environment_Cloud : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        PlayerController player = collision.GetComponent<PlayerController>();
+        PlayerController player = collision.GetComponentInParent<PlayerController>();
         if (player)
         {
             if (player.CanRegenerate() == true)
@@ -47,7 +47,7 @@ public class Script_Environment_Cloud : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerController player = collision.GetComponent<PlayerController>();
+        PlayerController player = collision.GetComponentInParent<PlayerController>();
         if (player)
         {
             if (b_isElectrocuted)

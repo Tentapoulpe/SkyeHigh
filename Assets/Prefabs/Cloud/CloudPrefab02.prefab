@@ -107,6 +107,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cloud02
       objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228879, guid: 67fa115986a86254f88d2b5e809c5dff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3544790046733228872, guid: 67fa115986a86254f88d2b5e809c5dff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -229,6 +234,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cloud02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228879, guid: 67fa115986a86254f88d2b5e809c5dff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3544790046733228872, guid: 67fa115986a86254f88d2b5e809c5dff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -350,6 +360,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cloud02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228879, guid: 67fa115986a86254f88d2b5e809c5dff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3544790046733228872, guid: 67fa115986a86254f88d2b5e809c5dff,
         type: 3}
