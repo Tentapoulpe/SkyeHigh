@@ -9,6 +9,8 @@ public class UltraPolygonCollider2D: MonoBehaviour
     private PolygonCollider2D Collider { get { return GetComponent<PolygonCollider2D>(); } }
     private Sprite UpdatedSprite { get { return GetComponent<SpriteRenderer>().sprite; } }
     private Sprite RegisteredSprite = null;
+    [HideInInspector]
+    public bool isTrigger;
 
     private void Awake()
     {
@@ -21,6 +23,10 @@ public class UltraPolygonCollider2D: MonoBehaviour
         {
             Destroy(Collider);
             gameObject.AddComponent<PolygonCollider2D>();
+            if (isTrigger)
+            {
+                Collider.isTrigger = true;
+            }
         }
 
         UpdateSprite();
@@ -31,8 +37,4 @@ public class UltraPolygonCollider2D: MonoBehaviour
         RegisteredSprite = UpdatedSprite;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-    }
 }

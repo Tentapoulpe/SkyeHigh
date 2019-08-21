@@ -642,6 +642,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18f11bb75aa8b5a4098c72c2149f9ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CloudSpawn:
+  - {fileID: 1564625177}
+  - {fileID: 856707241}
 --- !u!1 &856707241
 GameObject:
   m_ObjectHideFlags: 0

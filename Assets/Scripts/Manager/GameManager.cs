@@ -40,6 +40,10 @@ public class GameManager : MonoBehaviour
     private int i_numberOfCloud;
     public int i_numberOfCloudMax;
 
+    private int roundState = 1;
+    public int m_MaxRound;
+    private List<int> Scores = new List<int>();
+
 
     private void Awake()
     {
@@ -56,12 +60,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        if(b_spawnPlayer)
-        StartGame();
-        for (int i = 0; i < i_numberOfCloudMax; i++)
-        {
-            SpawnCloudParent();
-        }
+        
 
     }
 
@@ -73,17 +72,80 @@ public class GameManager : MonoBehaviour
             m_Camera.transform.position = Vector3.MoveTowards(m_Camera.transform.position, v_winerPos, Time.deltaTime * 80 );
             if (m_Camera.orthographicSize <= 4f)
             {
-                m_Camera.orthographicSize = 4f;
-                if (m_Camera.transform.position == v_winerPos)
+                if (roundState < m_MaxRound)
                 {
-                    if (m_debugMode)
+                    m_Camera.orthographicSize = 4f;
+                    if (m_Camera.transform.position == v_winerPos)
                     {
-                        UIManager.Instance.DisplayEndGame(0);
+                        
+                        if (m_debugMode)
+                        {
+                            UIManager.Instance.DisplayEndRound(0, Scores);
+                        }
+                        else if (v_winerPos != Vector3.zero)
+                        {
+                            Scores[l_playersPlaying[0].playerNumber - 1]++;
+                            UIManager.Instance.DisplayEndRound(l_playersPlaying[0].playerNumber, Scores);
+                        }
+                        else
+                            UIManager.Instance.DisplayEndRound(0, Scores);
+
+                        Invoke("RestartRound", 2f);
+                        winState = false;
                     }
-                    else if(v_winerPos != Vector3.zero)
-                    UIManager.Instance.DisplayEndGame(l_playersPlaying[0].playerNumber);
-                    else
-                    UIManager.Instance.DisplayEndGame(0);
+                }
+                else
+                {
+                    m_Camera.orthographicSize = 4f;
+                    if (m_Camera.transform.position == v_winerPos)
+                    {
+                        if (m_debugMode)
+                        {
+                            UIManager.Instance.DisplayEndGame();
+                        }
+                        else if (v_winerPos != Vector3.zero)
+                        {
+                            Scores[l_playersPlaying[0].playerNumber - 1]++;
+                            List<int> winnerNumber = new List<int>();
+                            int bestScore = 0;
+                            for (int i = 0; i < Scores.Count; i++)
+                            {
+                                    if (bestScore < Scores[i])
+                                    {
+                                        bestScore = Scores[i];
+                                        winnerNumber.Clear();
+                                        winnerNumber.Add(l_playersPlaying[i].playerNumber);
+                                    }
+                                    else if (bestScore == Scores[i])
+                                    {
+                                        winnerNumber.Add(l_playersPlaying[i].playerNumber);
+                                    }
+                            }
+                            UIManager.Instance.DisplayEndGame(winnerNumber, Scores);
+                        }
+                        else
+                        {
+                            List<int> winnerNumber = new List<int>();
+                            int bestScore = 0;
+                            for (int i = 0; i < Scores.Count; i++)
+                            {
+                                if (bestScore < Scores[i])
+                                {
+                                    bestScore = Scores[i];
+                                    winnerNumber.Clear();
+                                    winnerNumber.Add(l_playersPlaying[i].playerNumber);
+                                }
+                                else if (bestScore == Scores[i])
+                                {
+                                    winnerNumber.Add(l_playersPlaying[i].playerNumber);
+                                }
+                            }
+                            UIManager.Instance.DisplayEndGame(winnerNumber, Scores);
+
+                        }
+
+                        winState = false;
+                    }
                 }
             }
         }
@@ -335,9 +397,46 @@ public class GameManager : MonoBehaviour
                 player.GetComponent<PlayerController>().SetPlayerNumber(i + 1);
                 l_playersPlaying.Add(player.GetComponent<PlayerController>());
                 CameraManager.Instance.m_Targets.Add(player.transform);
+                Scores.Add(0);
             }
         }
         playerAlive = playerConnected;
+        for (int i = 0; i < i_numberOfCloudMax; i++)
+        {
+            SpawnCloudParent();
+        }
+    }
+
+    public void RestartRound()
+    {
+        UIManager.Instance.RestartRound();
+        foreach (PlayerController item in l_playersPlaying)
+        {
+            Destroy(item.gameObject);
+        }
+        foreach (GameObject item in g_cloudParentIdx)
+        {
+            Destroy(item.gameObject);
+        }
+        l_playersPlaying.Clear();
+        g_cloudParentIdx.Clear();
+        CameraManager.Instance.m_Targets.Clear();
+        for (int i = 0; i < l_Players.Length; i++)
+        {
+            if (l_Players[i] != 0)
+            {
+                GameObject player = Instantiate(m_character[m_PlayersCharacter[i]], m_mySpawn[l_Players[i] - 1].transform.position, Quaternion.identity);
+                player.GetComponent<PlayerController>().SetPlayerNumber(i + 1);
+                l_playersPlaying.Add(player.GetComponent<PlayerController>());
+                CameraManager.Instance.m_Targets.Add(player.transform);
+            }
+        }
+        playerAlive = playerConnected;
+        for (int i = 0; i < i_numberOfCloudMax; i++)
+        {
+            SpawnCloudParent();
+        }
+        roundState++;
     }
 
     public void Quit()

@@ -183,6 +183,16 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 5.3027706
       objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228878, guid: 67fa115986a86254f88d2b5e809c5dff,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228873, guid: 67fa115986a86254f88d2b5e809c5dff,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67fa115986a86254f88d2b5e809c5dff, type: 3}
 --- !u!4 &7506064679552727247 stripped
@@ -283,6 +293,16 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 4.3421364
       objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228878, guid: 587a1e9d34896dc4a97b23087f55a7aa,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228873, guid: 587a1e9d34896dc4a97b23087f55a7aa,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 587a1e9d34896dc4a97b23087f55a7aa, type: 3}
 --- !u!4 &7506064679137175711 stripped
@@ -378,6 +398,16 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 6.4434414
       objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228878, guid: 587a1e9d34896dc4a97b23087f55a7aa,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228873, guid: 587a1e9d34896dc4a97b23087f55a7aa,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 587a1e9d34896dc4a97b23087f55a7aa, type: 3}
 --- !u!4 &7506064680468772387 stripped
@@ -472,6 +502,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 5.518132
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228878, guid: 67fa115986a86254f88d2b5e809c5dff,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228873, guid: 67fa115986a86254f88d2b5e809c5dff,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67fa115986a86254f88d2b5e809c5dff, type: 3}

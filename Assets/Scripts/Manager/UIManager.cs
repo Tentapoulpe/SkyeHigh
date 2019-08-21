@@ -10,10 +10,14 @@ public class UIManager : MonoBehaviour
     public GameObject m_MainMenu;
     public GameObject m_CharacterSelection;
     public GameObject m_EndGame;
+    public GameObject m_EndRound;
     public TextMeshProUGUI m_EndGameText;
+    public TextMeshProUGUI m_EndRoundText;
     public List<GameObject> m_Players;
     public List<GameObject> m_PlayersDisplay;
     public List<Sprite> m_Characters;
+    public List<TextMeshProUGUI> m_EndRoundScore;
+    public List<TextMeshProUGUI> m_EndGameScore;
 
     private void Awake()
     {
@@ -91,15 +95,62 @@ public class UIManager : MonoBehaviour
         m_CharacterSelection.SetActive(false);
     }
 
-    public void DisplayEndGame(int player)
+    public void DisplayEndGame(List<int> player, List<int> score)
+    {
+        if (player.Count == 1)
+        {
+            m_EndGameText.text = "Player " + player[0] + " wins";
+        }
+        else if (player.Count > 1)
+        {
+            m_EndGameText.text = "Draw ! ";
+            for (int i = 0; i < player.Count; i++)
+            {
+                if (i != (player.Count - 1))
+                {
+                    m_EndGameText.text += "Player " + player[i] + ", ";
+                }
+                else
+                {
+                    m_EndGameText.text += "and Player " + player[i] + " win";
+                }
+            }
+        }
+        else if (player.Count == 0)
+        {
+            m_EndGameText.text = "Draw !! no one wins";
+        }
+
+        for (int i = 0; i < score.Count; i++)
+        {
+
+            m_EndGameScore[i].gameObject.SetActive(true);
+            m_EndGameScore[i].text = score[i].ToString();
+        }
+        m_EndGame.SetActive(true);
+    }
+
+    public void DisplayEndGame()
+    {
+        m_EndGameText.text = "Draw Debug";
+        m_EndGame.SetActive(true);
+    }
+
+    public void DisplayEndRound(int player, List<int> score)
     {
         if (player != 0)
         {
-            m_EndGameText.text = "Player " + player + " wins";
+            m_EndRoundText.text = "Player " + player + " wins";
         }
         else
-            m_EndGameText.text = "Draw !!";
-        m_EndGame.SetActive(true);
+            m_EndRoundText.text = "Draw !!";
+
+        for (int i = 0; i < score.Count; i++)
+        {
+            m_EndGameScore[i].gameObject.SetActive(true);
+            m_EndGameScore[i].text = score[i].ToString();
+        }
+        m_EndRound.SetActive(true);
     }
 
     public void RestartGame()
@@ -113,5 +164,10 @@ public class UIManager : MonoBehaviour
         m_EndGame.SetActive(false);
         GameManager.Instance.ReturnMenu();
         m_MainMenu.SetActive(true);
+    }
+
+    public void RestartRound()
+    {
+        m_EndRound.SetActive(false);
     }
 }

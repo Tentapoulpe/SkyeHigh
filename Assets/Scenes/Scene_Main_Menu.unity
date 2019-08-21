@@ -270,13 +270,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 264684835, guid: 8c38fc274764fca4aa65b34f270734ac, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReturnToMenu
+    - target: {fileID: 474255338, guid: 8c38fc274764fca4aa65b34f270734ac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1771701632, guid: 8c38fc274764fca4aa65b34f270734ac, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartGame
+    - target: {fileID: 1675723219, guid: 8c38fc274764fca4aa65b34f270734ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 593009207, guid: 8c38fc274764fca4aa65b34f270734ac, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644206916, guid: 8c38fc274764fca4aa65b34f270734ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401491635, guid: 8c38fc274764fca4aa65b34f270734ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 653498459, guid: 8c38fc274764fca4aa65b34f270734ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016635531, guid: 8c38fc274764fca4aa65b34f270734ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c38fc274764fca4aa65b34f270734ac, type: 3}
@@ -358,6 +378,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8615222593070687827, guid: f0dc7e1d644979749a18cff8f5d7faeb,
         type: 3}
+    - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
+        type: 3}
+      propertyPath: i_numberOfCloudMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
+        type: 3}
+      propertyPath: m_prefabCloudParent
+      value: 
+      objectReference: {fileID: 6420859606255504867, guid: 7d6b2e3805468804ca40b26405cfd80a,
+        type: 3}
+    - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
+        type: 3}
+      propertyPath: m_MaxRound
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1edeab713865b6f439ed540150985bd1, type: 3}
 --- !u!1 &2037467536

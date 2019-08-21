@@ -374,9 +374,15 @@ public class PlayerController : MonoBehaviour
             cloud.DestroyCloud();
         }
         b_playerIsDashing = false;
-        rigidbodyPlayer.gravityScale = m_gravityFall;
-        gameObject.GetComponent<Collider2D>().isTrigger = true;
+        gameObject.GetComponent<UltraPolygonCollider2D>().isTrigger = true;
+        Invoke("Falling", 1f);
     }
+
+    public void Falling()
+    {
+        rigidbodyPlayer.gravityScale = m_gravityFall;
+    }
+
 
     public void Death()
     {
@@ -400,4 +406,5 @@ public class PlayerController : MonoBehaviour
     {
         b_canMove = true;
     }
+
 }
