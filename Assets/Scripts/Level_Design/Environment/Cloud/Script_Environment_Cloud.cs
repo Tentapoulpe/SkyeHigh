@@ -58,16 +58,16 @@ public class Script_Environment_Cloud : MonoBehaviour
             player.CloudSlow();
         }
 
-        if(player && player)
-        {
-            foreach (Script_Environment_Cloud cloud in m_cloudNeighbor)
-            {
-                if(cloud.enabled)
-                {
-                    cloud.Thunder();
-                }
-            }
-        }
+        //if(player && player)
+        //{
+        //    foreach (Script_Environment_Cloud cloud in m_cloudNeighbor)
+        //    {
+        //        if(cloud.enabled)
+        //        {
+        //            cloud.Thunder();
+        //        }
+        //    }
+        //}
     }
 
     public void Thunder()
