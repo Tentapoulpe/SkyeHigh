@@ -369,8 +369,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
         type: 3}
+      propertyPath: m_prefabCloudParent.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
+        type: 3}
       propertyPath: m_debugMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
         type: 3}
@@ -387,13 +392,24 @@ PrefabInstance:
         type: 3}
       propertyPath: m_prefabCloudParent
       value: 
-      objectReference: {fileID: 6420859606255504867, guid: 7d6b2e3805468804ca40b26405cfd80a,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
         type: 3}
       propertyPath: m_MaxRound
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
+        type: 3}
+      propertyPath: m_prefabCloudParent.Array.data[0]
+      value: 
+      objectReference: {fileID: 6420859606255504867, guid: 7d6b2e3805468804ca40b26405cfd80a,
+        type: 3}
+    - target: {fileID: 4818631455090802206, guid: 1edeab713865b6f439ed540150985bd1,
+        type: 3}
+      propertyPath: m_prefabCloudParent.Array.data[1]
+      value: 
+      objectReference: {fileID: 6420859606255504867, guid: f94236a6ff65b744c97ada5892c57d3e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1edeab713865b6f439ed540150985bd1, type: 3}
 --- !u!1 &2037467536

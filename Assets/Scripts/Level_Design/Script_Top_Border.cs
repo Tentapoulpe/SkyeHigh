@@ -6,19 +6,21 @@ public class Script_Top_Border : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        PlayerController player = collision.GetComponentInParent<PlayerController>();
+        if (player)
         {
             Debug.Log("DETECT");
-            collision.GetComponent<PlayerController>().PlayerIsTopScreen();
+            player.PlayerIsTopScreen();
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        PlayerController player = collision.GetComponentInParent<PlayerController>();
+        if (player)
         {
             Debug.Log("!DETECT");
-            collision.GetComponent<PlayerController>().PlayerIsNotTopScreen();
+            player.PlayerIsNotTopScreen();
         }
     }
 }

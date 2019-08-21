@@ -23,6 +23,8 @@ public class CameraManager : MonoBehaviour
     public Transform RightTop;
     public Transform LeftBot;
 
+    [HideInInspector] public bool canMove = true;
+
     private void Awake()
     {
         if (Instance == null)
@@ -39,6 +41,8 @@ public class CameraManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!canMove)
+            return;
         // Change the size of the camera based.
         Zoom();
         // Move the camera towards a desired position.

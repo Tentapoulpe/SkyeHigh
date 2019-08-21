@@ -126,8 +126,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(f_currentHealth);
-        m_textHealth.text = f_currentHealth.ToString();
 
         string[] names = Input.GetJoystickNames();
         if (names[playerNumber - 1].Length == 19)
@@ -201,7 +199,7 @@ public class PlayerController : MonoBehaviour
 
         if(b_isTopLimit)
         {
-            f_currentTimerBeforeTakeDamage -= 0.1f;
+            f_currentTimerBeforeTakeDamage -= Time.deltaTime;
             if (f_currentTimerBeforeTakeDamage <= 0)
             {
                 DecreaseCloud(m_amountDamage);
@@ -289,9 +287,11 @@ public class PlayerController : MonoBehaviour
         if (f_currentHealth <= m_character_info.m_maxHealth)
         {
             f_currentHealth += f_health;
+            
             if (f_currentHealth >= m_character_info.m_maxHealth)
             {
                 f_currentHealth = m_character_info.m_maxHealth;
+                UpdateCloudSprite();
                 return;
             }
             UpdateCloudSprite();
@@ -314,32 +314,37 @@ public class PlayerController : MonoBehaviour
 
     public void UpdateCloudSprite()
     {
-        Debug.Log("UpdateCloud");
-        if (f_currentHealth <= 100)
+        if (cloud)
         {
-            m_cloudSprite.sprite = m_cloudSpriteList[0];
-            Debug.Log("Nuage = 100%");
-            if(f_currentHealth < 100)
+            Debug.Log("UpdateCloud");
+            if (f_currentHealth <= 100)
             {
-                Debug.Log("Nuage100%");
-                m_cloudSprite.sprite = m_cloudSpriteList[1];
-                if (f_currentHealth < 75)
+                m_cloudSprite.sprite = m_cloudSpriteList[0];
+                Debug.Log("Nuage = 100%");
+                if (f_currentHealth < 100)
                 {
-                    Debug.Log("Nuage75%");
-                    m_cloudSprite.sprite = m_cloudSpriteList[2];
-                    if (f_currentHealth < 50)
+                    Debug.Log("Nuage100%");
+                    m_cloudSprite.sprite = m_cloudSpriteList[1];
+                    if (f_currentHealth < 75)
                     {
-                        Debug.Log("Nuage50%");
-                        m_cloudSprite.sprite = m_cloudSpriteList[3];
-                        if (f_currentHealth < 25)
+                        Debug.Log("Nuage75%");
+                        m_cloudSprite.sprite = m_cloudSpriteList[2];
+                        if (f_currentHealth < 50)
                         {
-                            m_cloudSprite.sprite = m_cloudSpriteList[4];
-                            Debug.Log("Nuage25%");
+                            Debug.Log("Nuage50%");
+                            m_cloudSprite.sprite = m_cloudSpriteList[3];
+                            if (f_currentHealth < 25)
+                            {
+                                m_cloudSprite.sprite = m_cloudSpriteList[4];
+                                Debug.Log("Nuage25%");
+                            }
                         }
                     }
                 }
-            }   
+            }
+            m_textHealth.text = f_currentHealth.ToString();
         }
+        
     }
 
     public void CloudSlow()
@@ -428,7 +433,7 @@ public class PlayerController : MonoBehaviour
             cloud.DestroyCloud();
         }
         b_playerIsDashing = false;
-        gameObject.GetComponent<UltraPolygonCollider2D>().isTrigger = true;
+        GetComponent<UltraPolygonCollider2D>().Destroy();
         Invoke("Falling", 1f);
     }
 
@@ -443,7 +448,14 @@ public class PlayerController : MonoBehaviour
         if (cloud)
             cloud.DestroyCloud();
         GameManager.Instance.PlayerDied(playerNumber);
-        Destroy(transform.gameObject);
+        Destroy(gameObject);
+    }
+
+    public void GMDeath()
+    {
+        if (cloud)
+            cloud.DestroyCloud();
+        Destroy(gameObject);
     }
 
     public void SetPlayerNumber(int i)

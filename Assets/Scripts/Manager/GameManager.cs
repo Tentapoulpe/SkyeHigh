@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
 
                         Invoke("RestartRound", 2f);
                         winState = false;
+                        CameraManager.Instance.canMove = false;
                     }
                 }
                 else
@@ -145,6 +146,7 @@ public class GameManager : MonoBehaviour
                         }
 
                         winState = false;
+                        CameraManager.Instance.canMove = false;
                     }
                 }
             }
@@ -413,7 +415,7 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.RestartRound();
         foreach (PlayerController item in l_playersPlaying)
         {
-            Destroy(item.gameObject);
+            item.GMDeath();
         }
         foreach (GameObject item in g_cloudParentIdx)
         {
@@ -432,6 +434,7 @@ public class GameManager : MonoBehaviour
                 CameraManager.Instance.m_Targets.Add(player.transform);
             }
         }
+        CameraManager.Instance.canMove = true;
         playerAlive = playerConnected;
         for (int i = 0; i < i_numberOfCloudMax; i++)
         {

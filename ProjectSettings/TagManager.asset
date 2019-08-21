@@ -19,8 +19,8 @@ TagManager:
   - 
   - CloudEnvironment
   - MapBorders
-  - 
-  - 
+  - SpecialTrigger
+  - PlayerTrigger
   - 
   - 
   - 
