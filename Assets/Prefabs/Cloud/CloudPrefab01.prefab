@@ -188,6 +188,21 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228875, guid: 67fa115986a86254f88d2b5e809c5dff,
+        type: 3}
+      propertyPath: m_cloudNeighbor.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228875, guid: 67fa115986a86254f88d2b5e809c5dff,
+        type: 3}
+      propertyPath: m_cloudNeighbor.Array.data[0]
+      value: 
+      objectReference: {fileID: 7506064679137175708}
+    - target: {fileID: 3544790046733228875, guid: 67fa115986a86254f88d2b5e809c5dff,
+        type: 3}
+      propertyPath: m_cloudNeighbor.Array.data[1]
+      value: 
+      objectReference: {fileID: 7506064680468772384}
     - target: {fileID: 3544790046733228873, guid: 67fa115986a86254f88d2b5e809c5dff,
         type: 3}
       propertyPath: m_SortingOrder
@@ -201,6 +216,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6420859604770972551}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7506064679552727244 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3544790046733228875, guid: 67fa115986a86254f88d2b5e809c5dff,
+    type: 3}
+  m_PrefabInstance: {fileID: 6420859604770972551}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3f2b6fcae131f4bbb52b960fab4c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6420859605454959575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -298,6 +325,21 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228875, guid: 587a1e9d34896dc4a97b23087f55a7aa,
+        type: 3}
+      propertyPath: m_cloudNeighbor.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228875, guid: 587a1e9d34896dc4a97b23087f55a7aa,
+        type: 3}
+      propertyPath: m_cloudNeighbor.Array.data[0]
+      value: 
+      objectReference: {fileID: 7506064680163083875}
+    - target: {fileID: 3544790046733228875, guid: 587a1e9d34896dc4a97b23087f55a7aa,
+        type: 3}
+      propertyPath: m_cloudNeighbor.Array.data[1]
+      value: 
+      objectReference: {fileID: 7506064679552727244}
     - target: {fileID: 3544790046733228873, guid: 587a1e9d34896dc4a97b23087f55a7aa,
         type: 3}
       propertyPath: m_SortingOrder
@@ -311,6 +353,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6420859605454959575}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7506064679137175708 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3544790046733228875, guid: 587a1e9d34896dc4a97b23087f55a7aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 6420859605454959575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3f2b6fcae131f4bbb52b960fab4c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6420859606241488235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -403,6 +457,21 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228875, guid: 587a1e9d34896dc4a97b23087f55a7aa,
+        type: 3}
+      propertyPath: m_cloudNeighbor.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228875, guid: 587a1e9d34896dc4a97b23087f55a7aa,
+        type: 3}
+      propertyPath: m_cloudNeighbor.Array.data[0]
+      value: 
+      objectReference: {fileID: 7506064680163083875}
+    - target: {fileID: 3544790046733228875, guid: 587a1e9d34896dc4a97b23087f55a7aa,
+        type: 3}
+      propertyPath: m_cloudNeighbor.Array.data[1]
+      value: 
+      objectReference: {fileID: 7506064679552727244}
     - target: {fileID: 3544790046733228873, guid: 587a1e9d34896dc4a97b23087f55a7aa,
         type: 3}
       propertyPath: m_SortingOrder
@@ -416,6 +485,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6420859606241488235}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7506064680468772384 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3544790046733228875, guid: 587a1e9d34896dc4a97b23087f55a7aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 6420859606241488235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3f2b6fcae131f4bbb52b960fab4c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6420859606412942632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -508,6 +589,21 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228875, guid: 67fa115986a86254f88d2b5e809c5dff,
+        type: 3}
+      propertyPath: m_cloudNeighbor.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544790046733228875, guid: 67fa115986a86254f88d2b5e809c5dff,
+        type: 3}
+      propertyPath: m_cloudNeighbor.Array.data[0]
+      value: 
+      objectReference: {fileID: 7506064680468772384}
+    - target: {fileID: 3544790046733228875, guid: 67fa115986a86254f88d2b5e809c5dff,
+        type: 3}
+      propertyPath: m_cloudNeighbor.Array.data[1]
+      value: 
+      objectReference: {fileID: 7506064679137175708}
     - target: {fileID: 3544790046733228873, guid: 67fa115986a86254f88d2b5e809c5dff,
         type: 3}
       propertyPath: m_SortingOrder
@@ -521,3 +617,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6420859606412942632}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7506064680163083875 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3544790046733228875, guid: 67fa115986a86254f88d2b5e809c5dff,
+    type: 3}
+  m_PrefabInstance: {fileID: 6420859606412942632}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3f2b6fcae131f4bbb52b960fab4c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
