@@ -228,11 +228,11 @@ public class PlayerController : MonoBehaviour
         {
             if (otherPlayer.ReturnDashState())
             {
-                SetStun(f_collisionStunTime);
+                SetStun(f_collisionStunTime, otherPlayer.transform.position);
             }
             StopDash();
             if(otherPlayer.f_currentStun <= 0)
-                otherPlayer.SetStun(f_collisionStunTime);
+                otherPlayer.SetStun(f_collisionStunTime, otherPlayer.transform.position);
         }
     }
 
@@ -329,27 +329,21 @@ public class PlayerController : MonoBehaviour
     {
         if (cloud)
         {
-            Debug.Log("UpdateCloud");
             if (f_currentHealth <= 100)
             {
                 m_cloudSprite.sprite = m_cloudSpriteList[0];
-                Debug.Log("Nuage = 100%");
                 if (f_currentHealth < 100)
                 {
-                    Debug.Log("Nuage100%");
                     m_cloudSprite.sprite = m_cloudSpriteList[1];
                     if (f_currentHealth < 75)
                     {
-                        Debug.Log("Nuage75%");
                         m_cloudSprite.sprite = m_cloudSpriteList[2];
                         if (f_currentHealth < 50)
                         {
-                            Debug.Log("Nuage50%");
                             m_cloudSprite.sprite = m_cloudSpriteList[3];
                             if (f_currentHealth < 25)
                             {
                                 m_cloudSprite.sprite = m_cloudSpriteList[4];
-                                Debug.Log("Nuage25%");
                             }
                         }
                     }
@@ -392,12 +386,13 @@ public class PlayerController : MonoBehaviour
         cloud = Cloud;
     }
 
-    public void SetStun(float stunValue)
+    public void SetStun(float stunValue,Vector3 ennemypos)
     {
         f_currentStun = stunValue;
         b_canMove = false;
         b_canDash = false;
         StopDash();
+        rigidbodyPlayer.AddForce((ennemypos - transform.position).normalized  * 8000f, ForceMode2D.Impulse);
         rigidbodyPlayer.gravityScale = f_stunGravity;
     }
 
@@ -493,9 +488,17 @@ public class PlayerController : MonoBehaviour
         b_canMove = false;
         rigidbodyPlayer.velocity = Vector3.zero;
     }
+
+    public void LockControlsEG()
+    {
+        b_canMove = false;
+        rigidbodyPlayer.velocity = Vector3.zero;
+        rigidbodyPlayer.gravityScale = 0;
+    }
     public void UnlockControls()
     {
         b_canMove = true;
     }
+
 
 }

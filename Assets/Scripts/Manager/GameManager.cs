@@ -524,7 +524,7 @@ public class GameManager : MonoBehaviour
         l_playersPlaying.Remove(l_playersPlaying[player-1]);
         if (playerAlive == 1)
         {
-            l_playersPlaying[0].LockControls();
+            l_playersPlaying[0].LockControlsEG();
             WinScreen(l_playersPlaying[0].transform.position);
         }
         if (playerAlive <= 0)
