@@ -31,15 +31,12 @@ public class Script_Environment_Cloud : MonoBehaviour
         PlayerController player = collision.GetComponentInParent<PlayerController>();
         if (player)
         {
+            player.CloudUnSlow();
             if (player.CanRegenerate() == true)
             {
                 player.IncreaseCloud(f_healthToRegenerate);
                 //GetComponentInParent<Script_Environment_Cloud_Parent>().UpdateCloudSprite();
                 Destroy(gameObject);
-            }
-            else
-            {
-                player.CloudUnSlow();
             }
         }
 
