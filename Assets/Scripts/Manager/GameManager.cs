@@ -72,9 +72,9 @@ public class GameManager : MonoBehaviour
             m_Camera.transform.position = Vector3.MoveTowards(m_Camera.transform.position, v_winerPos, Time.deltaTime * 80 );
             if (m_Camera.orthographicSize <= 4f)
             {
+                m_Camera.orthographicSize = 4f;
                 if (roundState < m_MaxRound)
                 {
-                    m_Camera.orthographicSize = 4f;
                     if (m_Camera.transform.position == v_winerPos)
                     {
                         
@@ -97,7 +97,6 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    m_Camera.orthographicSize = 4f;
                     if (m_Camera.transform.position == v_winerPos)
                     {
                         if (m_debugMode)
@@ -115,11 +114,11 @@ public class GameManager : MonoBehaviour
                                     {
                                         bestScore = Scores[i];
                                         winnerNumber.Clear();
-                                        winnerNumber.Add(l_playersPlaying[i].playerNumber);
+                                        winnerNumber.Add(i+1);
                                     }
                                     else if (bestScore == Scores[i])
                                     {
-                                        winnerNumber.Add(l_playersPlaying[i].playerNumber);
+                                        winnerNumber.Add(i + 1);
                                     }
                             }
                             UIManager.Instance.DisplayEndGame(winnerNumber, Scores);
@@ -134,11 +133,11 @@ public class GameManager : MonoBehaviour
                                 {
                                     bestScore = Scores[i];
                                     winnerNumber.Clear();
-                                    winnerNumber.Add(l_playersPlaying[i].playerNumber);
+                                    winnerNumber.Add(i + 1);
                                 }
                                 else if (bestScore == Scores[i])
                                 {
-                                    winnerNumber.Add(l_playersPlaying[i].playerNumber);
+                                    winnerNumber.Add(i + 1);
                                 }
                             }
                             UIManager.Instance.DisplayEndGame(winnerNumber, Scores);
@@ -384,6 +383,18 @@ public class GameManager : MonoBehaviour
     {
         winState = false;
         Scene loadedLevel = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(loadedLevel.buildIndex);
+    }
+
+    public void RestartNewGame()
+    {
+        winState = false;
+        Scene loadedLevel = SceneManager.GetActiveScene();
+        l_playersPlaying.Clear();
+        g_cloudParentIdx.Clear();
+        m_spawnPointCloud.Clear();
+        roundState = 1;
+        Scores.Clear();
         SceneManager.LoadScene(loadedLevel.buildIndex);
     }
 

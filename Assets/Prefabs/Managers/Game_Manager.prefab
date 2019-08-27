@@ -168,16 +168,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 418a817b89be9e24cb22a9b997afaa5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_debugMode: 0
   m_sceneToLoad: 
   m_character:
   - {fileID: 8615222593070687827, guid: 287e468c80a7c5e4799f9566f67f0831, type: 3}
-  - {fileID: 8615222593070687827, guid: c40916920086cd74c91e6ea8c87e7114, type: 3}
+  - {fileID: 8615222593070687827, guid: f0dc7e1d644979749a18cff8f5d7faeb, type: 3}
   m_mySpawn:
   - {fileID: 8133645349817674715}
   - {fileID: 943791614675356210}
   - {fileID: 2409491687642809322}
   - {fileID: 3037779559251894614}
   b_spawnPlayer: 0
+  m_prefabCloudParent:
+  - {fileID: 6420859606255504867, guid: 7d6b2e3805468804ca40b26405cfd80a, type: 3}
+  - {fileID: 6420859606255504867, guid: f94236a6ff65b744c97ada5892c57d3e, type: 3}
+  m_spawnPointCloud: []
+  i_numberOfCloudMax: 2
+  m_MaxRound: 5
 --- !u!1 &8133645349817674715
 GameObject:
   m_ObjectHideFlags: 0

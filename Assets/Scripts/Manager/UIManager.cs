@@ -143,20 +143,23 @@ public class UIManager : MonoBehaviour
             m_EndRoundText.text = "Player " + player + " wins";
         }
         else
-            m_EndRoundText.text = "Draw !!";
+        {
 
+            m_EndRoundText.text = "Draw !!";
+        }
+
+        m_EndRound.SetActive(true);
         for (int i = 0; i < score.Count; i++)
         {
-            m_EndGameScore[i].gameObject.SetActive(true);
-            m_EndGameScore[i].text = score[i].ToString();
+            m_EndRoundScore[i].text = score[i].ToString();
+            m_EndRoundScore[i].gameObject.SetActive(true);
         }
-        m_EndRound.SetActive(true);
     }
 
     public void RestartGame()
     {
         m_EndGame.SetActive(false);
-        GameManager.Instance.RestartGame();
+        GameManager.Instance.RestartNewGame();
     }
 
     public void ReturnToMenu()
