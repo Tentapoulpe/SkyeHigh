@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
     private float f_stunGravity = 3f;
     [Range(1f, 2f)]
     public float m_timeReduceStun;
-    private float f_currenttimeReduceStun;
+    private float f_currenttimeReduceStun = 1;
 
 
     void Start()
@@ -226,13 +226,17 @@ public class PlayerController : MonoBehaviour
         PlayerController otherPlayer = collision.gameObject.GetComponent<PlayerController>();
         if(otherPlayer != null && ReturnDashState())
         {
-            if (otherPlayer.ReturnDashState())
+            if (otherPlayer != this)
             {
-                SetStun(f_collisionStunTime, otherPlayer.transform.position);
+                if (otherPlayer.ReturnDashState())
+                {
+                    SetStun(f_collisionStunTime, otherPlayer.rigidbodyPlayer.velocity);
+                }
+                StopDash();
+                if (otherPlayer.f_currentStun <= 0)
+                    otherPlayer.SetStun(f_collisionStunTime, otherPlayer.rigidbodyPlayer.velocity);
             }
-            StopDash();
-            if(otherPlayer.f_currentStun <= 0)
-                otherPlayer.SetStun(f_collisionStunTime, otherPlayer.transform.position);
+            
         }
     }
 
@@ -392,7 +396,7 @@ public class PlayerController : MonoBehaviour
         b_canMove = false;
         b_canDash = false;
         StopDash();
-        rigidbodyPlayer.AddForce((ennemypos - transform.position).normalized  * 8000f, ForceMode2D.Impulse);
+        rigidbodyPlayer.AddForce((ennemypos).normalized  * 20f, ForceMode2D.Impulse);
         rigidbodyPlayer.gravityScale = f_stunGravity;
     }
 
