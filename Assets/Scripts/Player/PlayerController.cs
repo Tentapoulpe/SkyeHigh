@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
 
         if (!b_playerIsDashing && b_mustFall)
         {
-            Fall();
+            FallWithDelay();
             b_mustFall = false;
         }
 
@@ -438,6 +438,18 @@ public class PlayerController : MonoBehaviour
 
 
     public void Fall()
+    {
+        a_Animator.SetTrigger("Fall");
+        LockControls();
+        if (cloud)
+        {
+            cloud.DestroyCloud();
+        }
+        b_playerIsDashing = false;
+        GetComponent<UltraPolygonCollider2D>().Destroy();
+        Falling();
+    }
+    public void FallWithDelay()
     {
         a_Animator.SetTrigger("Fall");
         LockControls();

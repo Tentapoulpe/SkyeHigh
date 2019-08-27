@@ -1,0 +1,965 @@
+fileFormatVersion: 2
+guid: 9e416f033fd5a6c4e8d7d022100dfcfe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2090738935061514840
+    second: Spritesheet_Dawn_Up_0
+  - first:
+      213: -3533871449190581532
+    second: Spritesheet_Dawn_Up_1
+  - first:
+      213: -4482145977826200158
+    second: Spritesheet_Dawn_Up_2
+  - first:
+      213: -584567757882100576
+    second: Spritesheet_Dawn_Up_3
+  - first:
+      213: -8773657518445118795
+    second: Spritesheet_Dawn_Up_4
+  - first:
+      213: 1995183841720628430
+    second: Spritesheet_Dawn_Up_5
+  - first:
+      213: -1762132756109173502
+    second: Spritesheet_Dawn_Up_6
+  - first:
+      213: -3342820638879051926
+    second: Spritesheet_Dawn_Up_7
+  - first:
+      213: -2651852588708360731
+    second: Spritesheet_Dawn_Up_8
+  - first:
+      213: -2165949834612427112
+    second: Spritesheet_Dawn_Up_9
+  - first:
+      213: 3683352225554030257
+    second: Spritesheet_Dawn_Up_10
+  - first:
+      213: -3785663457606674550
+    second: Spritesheet_Dawn_Up_11
+  - first:
+      213: 5936056076967971927
+    second: Spritesheet_Dawn_Up_12
+  - first:
+      213: 512942789815587811
+    second: Spritesheet_Dawn_Up_13
+  - first:
+      213: -4281258374668979742
+    second: Spritesheet_Dawn_Up_14
+  - first:
+      213: 4088872479358164481
+    second: Spritesheet_Dawn_Up_15
+  - first:
+      213: 5783452822768382920
+    second: Spritesheet_Dawn_Up_16
+  - first:
+      213: 5115385334103682560
+    second: Spritesheet_Dawn_Up_17
+  - first:
+      213: 509844040184210716
+    second: Spritesheet_Dawn_Up_18
+  - first:
+      213: -9043239168666522865
+    second: Spritesheet_Dawn_Up_19
+  - first:
+      213: -8752449085023685874
+    second: Spritesheet_Dawn_Up_20
+  - first:
+      213: 1602395345651797544
+    second: Spritesheet_Dawn_Up_21
+  - first:
+      213: -5476816036567761779
+    second: Spritesheet_Dawn_Up_22
+  - first:
+      213: -8978022735102903429
+    second: Spritesheet_Dawn_Up_23
+  - first:
+      213: -2847473510174792497
+    second: Spritesheet_Dawn_Up_24
+  - first:
+      213: -2499011464604218731
+    second: Spritesheet_Dawn_Up_25
+  - first:
+      213: -1234673346097743187
+    second: Spritesheet_Dawn_Up_26
+  - first:
+      213: -871924154595845633
+    second: Spritesheet_Dawn_Up_27
+  - first:
+      213: 8570071886947758144
+    second: Spritesheet_Dawn_Up_28
+  - first:
+      213: -207370677683038701
+    second: Spritesheet_Dawn_Up_29
+  - first:
+      213: -1294935798737804250
+    second: Spritesheet_Dawn_Up_30
+  - first:
+      213: -3135043504347429696
+    second: Spritesheet_Dawn_Up_31
+  - first:
+      213: 8040394251907488623
+    second: Spritesheet_Dawn_Down_0
+  - first:
+      213: -9022830547685835291
+    second: Spritesheet_Dawn_Down_1
+  - first:
+      213: -1081492499833577685
+    second: Spritesheet_Dawn_Down_2
+  - first:
+      213: -4087018975189576528
+    second: Spritesheet_Dawn_Down_3
+  - first:
+      213: -6625095061917287470
+    second: Spritesheet_Dawn_Down_4
+  - first:
+      213: 681979371128655955
+    second: Spritesheet_Dawn_Down_5
+  - first:
+      213: 8251277633697880161
+    second: Spritesheet_Dawn_Down_6
+  - first:
+      213: 4046032728608272741
+    second: Spritesheet_Dawn_Down_7
+  - first:
+      213: -77108917257589190
+    second: Spritesheet_Dawn_Down_8
+  - first:
+      213: -4773972662804800674
+    second: Spritesheet_Dawn_Down_9
+  - first:
+      213: 2690182283102968239
+    second: Spritesheet_Dawn_Down_10
+  - first:
+      213: -5249381081992001566
+    second: Spritesheet_Dawn_Down_11
+  - first:
+      213: 8751505904142027008
+    second: Spritesheet_Dawn_Down_12
+  - first:
+      213: -9123971188544902633
+    second: Spritesheet_Dawn_Down_13
+  - first:
+      213: 958048642744729928
+    second: Spritesheet_Dawn_Down_14
+  - first:
+      213: 1610305553955463161
+    second: Spritesheet_Dawn_Down_15
+  - first:
+      213: -5784535200025104105
+    second: Spritesheet_Dawn_Down_16
+  - first:
+      213: -6870574970967009976
+    second: Spritesheet_Dawn_Down_17
+  - first:
+      213: 1178280295064628219
+    second: Spritesheet_Dawn_Down_18
+  - first:
+      213: 825165793930595402
+    second: Spritesheet_Dawn_Down_19
+  - first:
+      213: -2657337258065588944
+    second: Spritesheet_Dawn_Down_20
+  - first:
+      213: -8639148587715811003
+    second: Spritesheet_Dawn_Down_21
+  - first:
+      213: -8859340838476035264
+    second: Spritesheet_Dawn_Down_22
+  - first:
+      213: 5262896611303318650
+    second: Spritesheet_Dawn_Down_23
+  - first:
+      213: -7987402425728095902
+    second: Spritesheet_Dawn_Down_24
+  - first:
+      213: 7221657584342337180
+    second: Spritesheet_Dawn_Down_25
+  - first:
+      213: 4723401759940479200
+    second: Spritesheet_Dawn_Down_26
+  - first:
+      213: -8873579379100745375
+    second: Spritesheet_Dawn_Down_27
+  - first:
+      213: -2302960129881449
+    second: Spritesheet_Dawn_Down_28
+  - first:
+      213: -5301565728072987939
+    second: Spritesheet_Dawn_Down_29
+  - first:
+      213: -4661542834047945746
+    second: Spritesheet_Dawn_Down_30
+  - first:
+      213: -450435848416644503
+    second: Spritesheet_Dawn_Down_31
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_0
+      rect:
+        serializedVersion: 2
+        x: 3070
+        y: 2980
+        width: 366
+        height: 721
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d146837aa9701824bbf6ac51d36b0dc0
+      internalID: 8040394251907488623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_1
+      rect:
+        serializedVersion: 2
+        x: 3967
+        y: 2980
+        width: 370
+        height: 721
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5896a507699aed4992ab65a3818218b
+      internalID: -9022830547685835291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_2
+      rect:
+        serializedVersion: 2
+        x: 4867
+        y: 2980
+        width: 366
+        height: 721
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f6c26828f48fe4aa8257c78be8ed94
+      internalID: -1081492499833577685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_3
+      rect:
+        serializedVersion: 2
+        x: 5765
+        y: 2977
+        width: 369
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29ab487a3ab81d47b49cbd7d9588bfd
+      internalID: -4087018975189576528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_4
+      rect:
+        serializedVersion: 2
+        x: 6664
+        y: 2976
+        width: 370
+        height: 721
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38265e5865e345488add9349aceacd3
+      internalID: -6625095061917287470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_5
+      rect:
+        serializedVersion: 2
+        x: 7564
+        y: 2976
+        width: 370
+        height: 721
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655fd64b8aaa5724388cfeac97684a04
+      internalID: 681979371128655955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_6
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1963
+        width: 370
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ebc4edaf7c6694887f52bf0800d41d
+      internalID: 8251277633697880161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_7
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 1963
+        width: 371
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362aeb7040676de4a89fd8248c82b263
+      internalID: 4046032728608272741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_8
+      rect:
+        serializedVersion: 2
+        x: 2095
+        y: 1963
+        width: 373
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23bc8207d8d4a3c41ad4144748d9bdda
+      internalID: -77108917257589190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_9
+      rect:
+        serializedVersion: 2
+        x: 2994
+        y: 1963
+        width: 371
+        height: 714
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981b3bb882b20ea42875d895a97fdb14
+      internalID: -4773972662804800674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_10
+      rect:
+        serializedVersion: 2
+        x: 3895
+        y: 1963
+        width: 370
+        height: 714
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e087c8bd12fbbd941a64365282ed0e6b
+      internalID: 2690182283102968239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_11
+      rect:
+        serializedVersion: 2
+        x: 4793
+        y: 1963
+        width: 373
+        height: 713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5f3936d116118429966fcbcff6533b
+      internalID: -5249381081992001566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_12
+      rect:
+        serializedVersion: 2
+        x: 5692
+        y: 1963
+        width: 373
+        height: 710
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4243d1ee45e3064429962de3d4c67132
+      internalID: 8751505904142027008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_13
+      rect:
+        serializedVersion: 2
+        x: 6592
+        y: 1966
+        width: 371
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1277a175e2e624fa63ff05932ba832
+      internalID: -9123971188544902633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_14
+      rect:
+        serializedVersion: 2
+        x: 7493
+        y: 1967
+        width: 370
+        height: 702
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb3200ef02d66c48804fc6767176c8a
+      internalID: 958048642744729928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_15
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 1031
+        width: 375
+        height: 701
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f446657d2eb7fb84ba25804c2c923ab0
+      internalID: 1610305553955463161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_16
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 1031
+        width: 374
+        height: 701
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b802b6980713bbf41b1aa9789404fd99
+      internalID: -5784535200025104105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_17
+      rect:
+        serializedVersion: 2
+        x: 3023
+        y: 1031
+        width: 374
+        height: 705
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a115a5f5533c84686c89777dee5427
+      internalID: -6870574970967009976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_18
+      rect:
+        serializedVersion: 2
+        x: 3923
+        y: 1031
+        width: 374
+        height: 705
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4f1584400aede4c9f4427f05d77735
+      internalID: 1178280295064628219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_19
+      rect:
+        serializedVersion: 2
+        x: 4827
+        y: 1031
+        width: 371
+        height: 708
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c900b6fd07f91d4e8ed7b89034a50b1
+      internalID: 825165793930595402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_20
+      rect:
+        serializedVersion: 2
+        x: 5728
+        y: 1031
+        width: 370
+        height: 709
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74823a62b39de064198ac2231b205c57
+      internalID: -2657337258065588944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_21
+      rect:
+        serializedVersion: 2
+        x: 6628
+        y: 1031
+        width: 370
+        height: 709
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b419c28f0765f94985369ee396bb22a
+      internalID: -8639148587715811003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_22
+      rect:
+        serializedVersion: 2
+        x: 7529
+        y: 1031
+        width: 370
+        height: 713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec114f1577c473479bcaf19cb1aacc2
+      internalID: -8859340838476035264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_23
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 86
+        width: 370
+        height: 713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f402d31e51f593542bf2dff71c6ffc20
+      internalID: 5262896611303318650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_24
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 86
+        width: 371
+        height: 713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce810346f32a8847bd1d2f809e4a5ac
+      internalID: -7987402425728095902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_25
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 86
+        width: 370
+        height: 717
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef9be56f47591264997687cdbd1aab06
+      internalID: 7221657584342337180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_26
+      rect:
+        serializedVersion: 2
+        x: 3006
+        y: 86
+        width: 371
+        height: 717
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ad9c753aac1ac469917b0f20153125
+      internalID: 4723401759940479200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_27
+      rect:
+        serializedVersion: 2
+        x: 3907
+        y: 86
+        width: 370
+        height: 717
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2dc1a016a1d50546bdfcc8ae627cfea
+      internalID: -8873579379100745375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_28
+      rect:
+        serializedVersion: 2
+        x: 4811
+        y: 86
+        width: 367
+        height: 721
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445aac33a80b0f342ac735ed8613cbfe
+      internalID: -2302960129881449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_29
+      rect:
+        serializedVersion: 2
+        x: 5712
+        y: 86
+        width: 366
+        height: 721
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658e6af57c2748f48a44c173f88589e5
+      internalID: -5301565728072987939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_30
+      rect:
+        serializedVersion: 2
+        x: 6612
+        y: 86
+        width: 367
+        height: 721
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e6c4ee4cf33c8409cbd5b80974ef42
+      internalID: -4661542834047945746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Dawn_Down_31
+      rect:
+        serializedVersion: 2
+        x: 7513
+        y: 86
+        width: 366
+        height: 725
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cef7b356686f0c44ac1daf8ec68271d
+      internalID: -450435848416644503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 0f6fc9c3833957e45acf6b0f85f0c2df
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

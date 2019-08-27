@@ -98,6 +98,102 @@ TextureImporter:
   - first:
       213: -7740853084126136470
     second: Spritesheet_Skye_Up_31
+  - first:
+      213: -2618371947653731975
+    second: Spritesheet_Skye_Down_0
+  - first:
+      213: 1943993533303173885
+    second: Spritesheet_Skye_Down_1
+  - first:
+      213: 5340814714136451687
+    second: Spritesheet_Skye_Down_2
+  - first:
+      213: 6778137998053838820
+    second: Spritesheet_Skye_Down_3
+  - first:
+      213: 1145399062122546008
+    second: Spritesheet_Skye_Down_4
+  - first:
+      213: 1643651039718626421
+    second: Spritesheet_Skye_Down_5
+  - first:
+      213: 1735992509050455740
+    second: Spritesheet_Skye_Down_6
+  - first:
+      213: 1787384875800718626
+    second: Spritesheet_Skye_Down_7
+  - first:
+      213: 6365826675566644697
+    second: Spritesheet_Skye_Down_8
+  - first:
+      213: -6949764617168658959
+    second: Spritesheet_Skye_Down_9
+  - first:
+      213: -8083837567811559104
+    second: Spritesheet_Skye_Down_10
+  - first:
+      213: 5431023510995126494
+    second: Spritesheet_Skye_Down_11
+  - first:
+      213: -2407311458272174832
+    second: Spritesheet_Skye_Down_12
+  - first:
+      213: 5967083084789789151
+    second: Spritesheet_Skye_Down_13
+  - first:
+      213: 5148080992946714317
+    second: Spritesheet_Skye_Down_14
+  - first:
+      213: 362363987219757153
+    second: Spritesheet_Skye_Down_15
+  - first:
+      213: 7397634103904233037
+    second: Spritesheet_Skye_Down_16
+  - first:
+      213: 5092528701268981016
+    second: Spritesheet_Skye_Down_17
+  - first:
+      213: -5379326191447977853
+    second: Spritesheet_Skye_Down_18
+  - first:
+      213: 6019191372334559773
+    second: Spritesheet_Skye_Down_19
+  - first:
+      213: -2735124772891757436
+    second: Spritesheet_Skye_Down_20
+  - first:
+      213: -7413906748301266172
+    second: Spritesheet_Skye_Down_21
+  - first:
+      213: -2690976592729221753
+    second: Spritesheet_Skye_Down_22
+  - first:
+      213: 3846914158454261903
+    second: Spritesheet_Skye_Down_23
+  - first:
+      213: -3095642698745274210
+    second: Spritesheet_Skye_Down_24
+  - first:
+      213: -4944855242237635650
+    second: Spritesheet_Skye_Down_25
+  - first:
+      213: -7135915576708604358
+    second: Spritesheet_Skye_Down_26
+  - first:
+      213: 1307279271210250467
+    second: Spritesheet_Skye_Down_27
+  - first:
+      213: -2898616854834317949
+    second: Spritesheet_Skye_Down_28
+  - first:
+      213: 57009336602883930
+    second: Spritesheet_Skye_Down_29
+  - first:
+      213: 6441568784628517265
+    second: Spritesheet_Skye_Down_30
+  - first:
+      213: 7752898848126410189
+    second: Spritesheet_Skye_Down_31
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -180,662 +276,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet_Skye_Up_0
+      name: Spritesheet_Skye_Down_0
       rect:
         serializedVersion: 2
-        x: 195
-        y: 2730
-        width: 278
-        height: 672
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 461e7dacf1c13dc498062b0d8828a621
-      internalID: 5397412804443258258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_1
-      rect:
-        serializedVersion: 2
-        x: 926
-        y: 2734
-        width: 275
-        height: 668
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9fac060bd3ce61e45ab12d1498072a61
-      internalID: 5474280775276230778
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_2
-      rect:
-        serializedVersion: 2
-        x: 1658
-        y: 2734
-        width: 267
-        height: 668
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 042d62a7a84d5494ebd62931b8eac9a0
-      internalID: 2541700955401517211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_3
-      rect:
-        serializedVersion: 2
-        x: 2386
-        y: 2734
-        width: 267
-        height: 668
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 384b857ba5536be40a1305ee74fee932
-      internalID: 4567590812546535758
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_4
-      rect:
-        serializedVersion: 2
-        x: 3117
-        y: 2734
-        width: 263
-        height: 668
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d3102fab712c854f96dcf97b24b710f
-      internalID: 926246377444444100
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_5
-      rect:
-        serializedVersion: 2
-        x: 3841
-        y: 2734
-        width: 263
-        height: 671
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7349fae431a7f0b48865e069c074ad85
-      internalID: 782950198253848487
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_6
-      rect:
-        serializedVersion: 2
-        x: 4569
-        y: 2737
-        width: 263
-        height: 668
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd9cd2166761ea04d8933b13474fe765
-      internalID: -5114904423387238279
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_7
-      rect:
-        serializedVersion: 2
-        x: 5297
-        y: 2737
-        width: 263
-        height: 668
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be7824b8ce49970448bc0f5b09432851
-      internalID: -5761671608150115530
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_8
-      rect:
-        serializedVersion: 2
-        x: 6024
-        y: 2737
-        width: 267
-        height: 672
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e69e81e75e539746901d0021fd56694
-      internalID: -7067889491378204957
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_9
-      rect:
-        serializedVersion: 2
-        x: 6759
-        y: 2737
-        width: 263
-        height: 672
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ac7ecd3f8b68c6448880122871a6d9f
-      internalID: 169394161079471997
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_10
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 1851
-        width: 264
-        height: 668
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4b1b51b093725443add1b43bc672ee3
-      internalID: -4323383760718261359
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_11
-      rect:
-        serializedVersion: 2
-        x: 919
-        y: 1851
-        width: 264
-        height: 673
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a59d92115ae6b90428e8743879a97528
-      internalID: -8160822161275310523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_12
-      rect:
-        serializedVersion: 2
-        x: 1654
-        y: 1851
-        width: 264
-        height: 672
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d9681511f7ae894b8c28f29154393f0
-      internalID: 6445499082209269945
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_13
-      rect:
-        serializedVersion: 2
-        x: 2385
-        y: 1851
-        width: 264
-        height: 672
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d35a81e962c9a364984313d2646f226c
-      internalID: -8030002895474701103
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_14
-      rect:
-        serializedVersion: 2
-        x: 3117
-        y: 1852
-        width: 267
-        height: 671
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae79fcdbe43b5d244828caa09ebb0820
-      internalID: -4855026542340304737
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_15
-      rect:
-        serializedVersion: 2
-        x: 3849
-        y: 1855
-        width: 270
-        height: 671
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af07f421a1c7113468dc68f8acde40c5
-      internalID: 3404797326710558732
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_16
-      rect:
-        serializedVersion: 2
-        x: 4583
-        y: 1855
-        width: 270
-        height: 671
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2201689ce2dbbf041b7bd544807a6af5
-      internalID: -4773180217560717028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_17
-      rect:
-        serializedVersion: 2
-        x: 5310
-        y: 1855
-        width: 268
-        height: 671
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d8708264296c8cb429288eb582a76c7f
-      internalID: -3403741703959681743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_18
-      rect:
-        serializedVersion: 2
-        x: 6038
-        y: 1852
-        width: 267
-        height: 671
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6cfc05d70c257b1428db10824bb6255a
-      internalID: -1092409178202045046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_19
-      rect:
-        serializedVersion: 2
-        x: 6766
-        y: 1851
-        width: 263
-        height: 672
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e0a4aeea68e8f644a7d3b39d2dba8b7
-      internalID: 1257524737506077532
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_20
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 934
-        width: 263
-        height: 671
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26b0359d2eccedd4cbfd39424bc3c548
-      internalID: 7453116675794943743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_21
-      rect:
-        serializedVersion: 2
-        x: 916
-        y: 934
-        width: 263
-        height: 671
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b435694186c7b8c4b8992e8f3b990739
-      internalID: 8297062990702573524
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_22
-      rect:
-        serializedVersion: 2
-        x: 1644
-        y: 934
-        width: 263
-        height: 668
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d22d3125eab28c4b87b396fbb00f038
-      internalID: -4350026728736707409
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_23
-      rect:
-        serializedVersion: 2
-        x: 2371
-        y: 934
-        width: 267
-        height: 668
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a632ea8042cad3429c1391e7305d2ad
-      internalID: 3554247454586628001
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_24
-      rect:
-        serializedVersion: 2
-        x: 3099
-        y: 934
-        width: 271
-        height: 668
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38aef8b06f8da12448a3dd712f12ad7c
-      internalID: -7806143683817828164
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_25
-      rect:
-        serializedVersion: 2
-        x: 3830
-        y: 930
-        width: 267
-        height: 672
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a69481adfaec373429e2d65de2cd9db4
-      internalID: -2009829255833703089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_26
-      rect:
-        serializedVersion: 2
-        x: 4562
-        y: 930
-        width: 266
-        height: 668
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d64a0e9253d99144acc79b952dad8e7
-      internalID: -729508106281137692
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_27
-      rect:
-        serializedVersion: 2
-        x: 5296
-        y: 930
-        width: 264
-        height: 668
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddfdc9ebb70ecb54a922b00aa1e87f34
-      internalID: 6669033269364447798
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_28
-      rect:
-        serializedVersion: 2
-        x: 6028
-        y: 927
-        width: 263
-        height: 671
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f84c3a407e3cde43a02011a129c111b
-      internalID: -4397506889188141583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_29
-      rect:
-        serializedVersion: 2
-        x: 6759
-        y: 927
-        width: 267
-        height: 671
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 324656ac7618e604eadcc539cc2de44c
-      internalID: -4658918483848662121
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_30
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 83
-        width: 267
-        height: 668
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed8a77972894d2741bd71a843641fa38
-      internalID: 2019144827097943626
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Skye_Up_31
-      rect:
-        serializedVersion: 2
-        x: 916
-        y: 79
+        x: 6010
+        y: 2723
         width: 274
         height: 672
       alignment: 0
@@ -845,8 +290,659 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8034f1ce4308fea4c935b0c4d34095aa
-      internalID: -7740853084126136470
+      spriteID: 4e3c85da8f722214983f5b5907350c3e
+      internalID: -2618371947653731975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_1
+      rect:
+        serializedVersion: 2
+        x: 6745
+        y: 2723
+        width: 267
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a7f119d44e12d2498328cc0a5e88f37
+      internalID: 1943993533303173885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_2
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1876
+        width: 267
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb8ce3b0e292e048a782701d9fabff3
+      internalID: 5340814714136451687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_3
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 1876
+        width: 263
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e7a89c63b65794f816eb3fae94d14f
+      internalID: 6778137998053838820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_4
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 1876
+        width: 264
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 506bec7032cf1ba4782e810c7f7b0f2d
+      internalID: 1145399062122546008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_5
+      rect:
+        serializedVersion: 2
+        x: 2372
+        y: 1876
+        width: 266
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52dc4b2aa6aa7a44baba9dfdfe81d11a
+      internalID: 1643651039718626421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_6
+      rect:
+        serializedVersion: 2
+        x: 3103
+        y: 1872
+        width: 267
+        height: 672
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d124892331b97f84c9e7c9d8d683cb6a
+      internalID: 1735992509050455740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_7
+      rect:
+        serializedVersion: 2
+        x: 3830
+        y: 1872
+        width: 271
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1b8050bb0ca204c94970e05638d560
+      internalID: 1787384875800718626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_8
+      rect:
+        serializedVersion: 2
+        x: 4562
+        y: 1872
+        width: 267
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3740f5624f156da448a0407975ab4f9d
+      internalID: 6365826675566644697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_9
+      rect:
+        serializedVersion: 2
+        x: 5293
+        y: 1872
+        width: 263
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491cb4b910646834b9cc9f9f1bc4ac88
+      internalID: -6949764617168658959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_10
+      rect:
+        serializedVersion: 2
+        x: 6021
+        y: 1869
+        width: 263
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ffe974b1f104246b1523e3cc8473e5
+      internalID: -8083837567811559104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_11
+      rect:
+        serializedVersion: 2
+        x: 6745
+        y: 1869
+        width: 263
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544173130dfb8b847b9bd57b72b6f268
+      internalID: 5431023510995126494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_12
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 951
+        width: 263
+        height: 672
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed514c68afa1c1644890965c21f35b91
+      internalID: -2407311458272174832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_13
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 951
+        width: 267
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e82e1893859ec40878bf734134f2b0
+      internalID: 5967083084789789151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_14
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 948
+        width: 268
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b674cec5c011b4389aedf419f1addb
+      internalID: 5148080992946714317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_15
+      rect:
+        serializedVersion: 2
+        x: 2347
+        y: 948
+        width: 270
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 207e85c401c006d47b93b9fd02368f3f
+      internalID: 362363987219757153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_16
+      rect:
+        serializedVersion: 2
+        x: 3081
+        y: 948
+        width: 270
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8922e33ec5bf2ff43978d3430bae76d4
+      internalID: 7397634103904233037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_17
+      rect:
+        serializedVersion: 2
+        x: 3816
+        y: 951
+        width: 267
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 356748e516b0c1a49b63e25bde7be15c
+      internalID: 5092528701268981016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_18
+      rect:
+        serializedVersion: 2
+        x: 4551
+        y: 951
+        width: 264
+        height: 672
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0676c70b8573dca4c9f23358e3ad5688
+      internalID: -5379326191447977853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_19
+      rect:
+        serializedVersion: 2
+        x: 5282
+        y: 951
+        width: 264
+        height: 672
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984e2f910d6aa1a4681e2cf619f3db3f
+      internalID: 6019191372334559773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_20
+      rect:
+        serializedVersion: 2
+        x: 6017
+        y: 950
+        width: 264
+        height: 673
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5072dc7357115a24a81ada5c6e611316
+      internalID: -2735124772891757436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_21
+      rect:
+        serializedVersion: 2
+        x: 6748
+        y: 955
+        width: 264
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7438c32f0cd2f744eb9c34db1f105016
+      internalID: -7413906748301266172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_22
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 65
+        width: 263
+        height: 672
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6e3364dffe1ff41bca82a3afd84616
+      internalID: -2690976592729221753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_23
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 65
+        width: 267
+        height: 672
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007594ae4624b0d4a996414c60f85157
+      internalID: 3846914158454261903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_24
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 69
+        width: 263
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a652d79cefc3e84cad143eab7f9d282
+      internalID: -3095642698745274210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_25
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 69
+        width: 263
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e4e70d2bad3924595701a70f479a78
+      internalID: -4944855242237635650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_26
+      rect:
+        serializedVersion: 2
+        x: 3096
+        y: 69
+        width: 263
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50cbd8d81305d1d4684d3c7867c3e05a
+      internalID: -7135915576708604358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_27
+      rect:
+        serializedVersion: 2
+        x: 3820
+        y: 72
+        width: 263
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb56607bc6a77a442823e9de1cf74ca4
+      internalID: 1307279271210250467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_28
+      rect:
+        serializedVersion: 2
+        x: 4547
+        y: 72
+        width: 267
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96a1cb7fd08b5a4da09f6ef8187910d
+      internalID: -2898616854834317949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_29
+      rect:
+        serializedVersion: 2
+        x: 5275
+        y: 72
+        width: 267
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1939930c8929dad47afcb721728d71f4
+      internalID: 57009336602883930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_30
+      rect:
+        serializedVersion: 2
+        x: 5999
+        y: 72
+        width: 275
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0647523f642f74e4591988efecf52cbe
+      internalID: 6441568784628517265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skye_Down_31
+      rect:
+        serializedVersion: 2
+        x: 6727
+        y: 72
+        width: 278
+        height: 672
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ff3613b0e1d344da4bd4648b4e2c45
+      internalID: 7752898848126410189
       vertices: []
       indices: 
       edges: []
