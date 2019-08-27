@@ -414,7 +414,7 @@ public class PlayerController : MonoBehaviour
     {
         if(f_currentStun > 0)
         {
-            f_currentStun -= deltaTime;
+            f_currentStun -= deltaTime * f_currenttimeReduceStun;
             if(f_currentStun <= 0)
             {
                 EndStun();
