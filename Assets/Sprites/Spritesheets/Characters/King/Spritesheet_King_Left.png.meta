@@ -1,0 +1,869 @@
+fileFormatVersion: 2
+guid: 44766e1dcf765124a9b56ea7f9285fcb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5508057796724792888
+    second: Spritesheet_King_Left_0
+  - first:
+      213: 5843973038725016427
+    second: Spritesheet_King_Left_1
+  - first:
+      213: -5918660942419005411
+    second: Spritesheet_King_Left_2
+  - first:
+      213: -4094032910660230070
+    second: Spritesheet_King_Left_3
+  - first:
+      213: -4654719267433143926
+    second: Spritesheet_King_Left_4
+  - first:
+      213: 2660246515261117020
+    second: Spritesheet_King_Left_5
+  - first:
+      213: -3960336469717402644
+    second: Spritesheet_King_Left_6
+  - first:
+      213: -2385429482958149982
+    second: Spritesheet_King_Left_7
+  - first:
+      213: 3908816426413621128
+    second: Spritesheet_King_Left_8
+  - first:
+      213: -7137872195095046327
+    second: Spritesheet_King_Left_9
+  - first:
+      213: 6391159158819656724
+    second: Spritesheet_King_Left_10
+  - first:
+      213: 7009697064482430649
+    second: Spritesheet_King_Left_11
+  - first:
+      213: -2604819766383877695
+    second: Spritesheet_King_Left_12
+  - first:
+      213: 7793132200040935050
+    second: Spritesheet_King_Left_13
+  - first:
+      213: -56508501027091334
+    second: Spritesheet_King_Left_14
+  - first:
+      213: 1118674167693160870
+    second: Spritesheet_King_Left_15
+  - first:
+      213: 5693147439590887099
+    second: Spritesheet_King_Left_16
+  - first:
+      213: 1373957417972941018
+    second: Spritesheet_King_Left_17
+  - first:
+      213: 2805855171799869722
+    second: Spritesheet_King_Left_18
+  - first:
+      213: -3018860159401181910
+    second: Spritesheet_King_Left_19
+  - first:
+      213: -3955729518768383364
+    second: Spritesheet_King_Left_20
+  - first:
+      213: -38010119755143187
+    second: Spritesheet_King_Left_21
+  - first:
+      213: -1852655220854599091
+    second: Spritesheet_King_Left_22
+  - first:
+      213: 4755341793856328873
+    second: Spritesheet_King_Left_23
+  - first:
+      213: 7802988684071859864
+    second: Spritesheet_King_Left_24
+  - first:
+      213: 3787555634212652654
+    second: Spritesheet_King_Left_25
+  - first:
+      213: -5439694605621208867
+    second: Spritesheet_King_Left_26
+  - first:
+      213: -1825586666463308803
+    second: Spritesheet_King_Left_27
+  - first:
+      213: 7558418071530216913
+    second: Spritesheet_King_Left_28
+  - first:
+      213: 1440861213406374350
+    second: Spritesheet_King_Left_29
+  - first:
+      213: 6698473516171890774
+    second: Spritesheet_King_Left_30
+  - first:
+      213: 7267294956453575426
+    second: Spritesheet_King_Left_31
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_0
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 2297
+        width: 474
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ff009f3437be845a927166f0c4992b
+      internalID: -5508057796724792888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_1
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 2297
+        width: 474
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180f3e933860c454bad9911049ae94d2
+      internalID: 5843973038725016427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_2
+      rect:
+        serializedVersion: 2
+        x: 2017
+        y: 2297
+        width: 475
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c6c41c5bbe2d64998cff0da2d4662c
+      internalID: -5918660942419005411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_3
+      rect:
+        serializedVersion: 2
+        x: 2917
+        y: 2297
+        width: 475
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2933001e6ae62d409e3ed14817cf68b
+      internalID: -4094032910660230070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_4
+      rect:
+        serializedVersion: 2
+        x: 3817
+        y: 2297
+        width: 474
+        height: 675
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7251b0da82d8a04f9fbff075004d646
+      internalID: -4654719267433143926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_5
+      rect:
+        serializedVersion: 2
+        x: 4717
+        y: 2292
+        width: 474
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b59271828acf57f458e6075308c2eaea
+      internalID: 2660246515261117020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_6
+      rect:
+        serializedVersion: 2
+        x: 5617
+        y: 2292
+        width: 474
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d676bbd227829144b55f4d2a4b2123c
+      internalID: -3960336469717402644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_7
+      rect:
+        serializedVersion: 2
+        x: 6517
+        y: 2292
+        width: 474
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb8242ed485b014cbdc8a2067c0de09
+      internalID: -2385429482958149982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_8
+      rect:
+        serializedVersion: 2
+        x: 7417
+        y: 2292
+        width: 474
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617c1d5bbd52d5843850fb780ea27919
+      internalID: 3908816426413621128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_9
+      rect:
+        serializedVersion: 2
+        x: 8317
+        y: 2292
+        width: 474
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5459a1e6b8da3b84187c88fa76f6e91b
+      internalID: -7137872195095046327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_10
+      rect:
+        serializedVersion: 2
+        x: 9216
+        y: 2292
+        width: 475
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61267036b75d214ba077e75caba2ca6
+      internalID: 6391159158819656724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_11
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1240
+        width: 475
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23ae7f06179b4047be3efc503253dfa
+      internalID: 7009697064482430649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_12
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 1240
+        width: 475
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbda1c0c82b944c4588e3bcdfd986bd9
+      internalID: -2604819766383877695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_13
+      rect:
+        serializedVersion: 2
+        x: 2071
+        y: 1240
+        width: 479
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5958332823523a47a1e9b5bfd32f28d
+      internalID: 7793132200040935050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_14
+      rect:
+        serializedVersion: 2
+        x: 2971
+        y: 1240
+        width: 479
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12e077471b75402419c2d181a1c6c38e
+      internalID: -56508501027091334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_15
+      rect:
+        serializedVersion: 2
+        x: 3871
+        y: 1236
+        width: 479
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1fa803e7ae2ce4f85ac16207d5d8d1
+      internalID: 1118674167693160870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_16
+      rect:
+        serializedVersion: 2
+        x: 4771
+        y: 1236
+        width: 479
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0bd30dada4f5764bbd58af6e406f913
+      internalID: 5693147439590887099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_17
+      rect:
+        serializedVersion: 2
+        x: 5671
+        y: 1236
+        width: 479
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930930766e605a346be4c6648dc36c5d
+      internalID: 1373957417972941018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_18
+      rect:
+        serializedVersion: 2
+        x: 6571
+        y: 1240
+        width: 479
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb7f30a3a4ac4f4483bb5cf5a708f95
+      internalID: 2805855171799869722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_19
+      rect:
+        serializedVersion: 2
+        x: 7470
+        y: 1240
+        width: 480
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b500b1e0109bf8c49a2e41de0c66477c
+      internalID: -3018860159401181910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_20
+      rect:
+        serializedVersion: 2
+        x: 8370
+        y: 1240
+        width: 479
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0951a861ec6a1ae4d8ee75df1f214cc0
+      internalID: -3955729518768383364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_21
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 262
+        width: 474
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1175307df25ddb54db4dc86ef1e16b44
+      internalID: -38010119755143187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_22
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 262
+        width: 474
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 306d756f63ef677459c3dac5d98fc26f
+      internalID: -1852655220854599091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_23
+      rect:
+        serializedVersion: 2
+        x: 2061
+        y: 262
+        width: 475
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577317cb0ef2685498787d91d793865a
+      internalID: 4755341793856328873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_24
+      rect:
+        serializedVersion: 2
+        x: 2961
+        y: 262
+        width: 475
+        height: 683
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd7636999d33494fa26f2043f051e28
+      internalID: 7802988684071859864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_25
+      rect:
+        serializedVersion: 2
+        x: 3861
+        y: 267
+        width: 475
+        height: 675
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096d4f92619055847be8b489de293018
+      internalID: 3787555634212652654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_26
+      rect:
+        serializedVersion: 2
+        x: 4761
+        y: 267
+        width: 474
+        height: 675
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741515f69feb5dd479c838f663e04f54
+      internalID: -5439694605621208867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_27
+      rect:
+        serializedVersion: 2
+        x: 5661
+        y: 267
+        width: 474
+        height: 675
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812002f342827144498ce44e10639105
+      internalID: -1825586666463308803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_28
+      rect:
+        serializedVersion: 2
+        x: 6566
+        y: 267
+        width: 469
+        height: 675
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8923909d27f88414c8b1727b386300fc
+      internalID: 7558418071530216913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_29
+      rect:
+        serializedVersion: 2
+        x: 7466
+        y: 267
+        width: 469
+        height: 675
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b549514cf035c345bcc58f53eaf2c3c
+      internalID: 1440861213406374350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_30
+      rect:
+        serializedVersion: 2
+        x: 8365
+        y: 267
+        width: 470
+        height: 675
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962a645f4c7178e419b0822f97efd0c0
+      internalID: 6698473516171890774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_King_Left_31
+      rect:
+        serializedVersion: 2
+        x: 9265
+        y: 267
+        width: 470
+        height: 675
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f92c6fe8a0f4ef4f86bd9f0b648bb65
+      internalID: 7267294956453575426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ab7c016e04cca2a4bac223917e5cd2e4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
