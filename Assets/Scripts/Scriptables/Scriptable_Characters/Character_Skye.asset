@@ -26,5 +26,6 @@ MonoBehaviour:
   m_dashCost: 20
   m_dashPostStun: 0.3
   m_dashStun: 1
-  m_cloudSlow: 3
+  m_cloudSlow: 10
   m_maxHealth: 100
+  myChracters: 0
