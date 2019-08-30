@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
+        
         string[] names = Input.GetJoystickNames();
         if (names[playerNumber - 1].Length == 19)
         {
@@ -154,16 +154,6 @@ public class PlayerController : MonoBehaviour
             b_mustFall = false;
         }
 
-
-        if (Input.GetButtonDown(s_fireInput) && b_canDash && b_canMove)
-        {
-            Dash();
-        }
-
-        if (Input.GetKeyDown("m"))
-        {
-            GameManager.Instance.RestartGame();
-        }
 
         if (f_dashCooldown > 0)
         {
@@ -204,20 +194,15 @@ public class PlayerController : MonoBehaviour
             b_canRegenerate = false;
         }
 
-        if(b_isTopLimit)
-        {
-            f_currentTimerBeforeTakeDamage -= Time.deltaTime;
-            if (f_currentTimerBeforeTakeDamage <= 0)
-            {
-                DecreaseCloud(m_amountDamage);
-                f_currentTimerBeforeTakeDamage = m_timerBeforeTakeDamage;
-            }
-        }
+        
+        
 
-        if(Input.GetButtonUp(s_cancelInput))
+        if (!b_canMove)
+            return;
+
+        if (Input.GetButtonDown(s_fireInput) && b_canDash)
         {
-            f_currenttimeReduceStun = m_timeReduceStun;
-            f_currenttimeReduceStun = 1f;
+            Dash();
         }
 
         if (m_character_info.myChracters == Heroes.Bolt && !b_canElectrocuteCloud)
@@ -231,6 +216,23 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+
+        if (b_isTopLimit)
+        {
+            f_currentTimerBeforeTakeDamage -= Time.deltaTime;
+            if (f_currentTimerBeforeTakeDamage <= 0)
+            {
+                DecreaseCloud(m_amountDamage);
+                f_currentTimerBeforeTakeDamage = m_timerBeforeTakeDamage;
+            }
+        }
+
+        if (Input.GetButtonUp(s_cancelInput))
+        {
+            f_currenttimeReduceStun = m_timeReduceStun;
+            f_currenttimeReduceStun = 1f;
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
