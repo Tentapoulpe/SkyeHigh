@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Character", menuName = "Scriptable/Character", order = 1)]
+public enum Heroes {Skye, Dawn, Nimbus, Bolt};
 
+[CreateAssetMenu(fileName = "Character", menuName = "Scriptable/Character", order = 1)]
 public class Script_Scriptable_Characters : ScriptableObject
 {
     [Header ("Movement Horizontal")]
@@ -35,5 +36,5 @@ public class Script_Scriptable_Characters : ScriptableObject
     [Header("Player")]
 
     public int m_maxHealth;
-
+    public Heroes myChracters;
 }

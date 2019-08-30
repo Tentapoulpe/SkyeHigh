@@ -19,7 +19,11 @@ public class Script_Environment_Cloud : MonoBehaviour
     private RaycastHit2D hit;
     private int i_amountSprite;
     public List<Script_Environment_Cloud> m_cloudNeighbor;
+
     private bool b_isElectrocuted;
+    private bool b_canBeElectrocute;
+    public float m_TimeBeforeElectrocute;
+    private float f_currentTimeBeforeElectrocute;
 
     private void Start()
     {
@@ -29,23 +33,28 @@ public class Script_Environment_Cloud : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         PlayerController player = collision.GetComponentInParent<PlayerController>();
+
         if (player)
         {
-            player.CloudUnSlow();
             if (player.CanRegenerate() == true)
             {
                 player.IncreaseCloud(f_healthToRegenerate);
                 //GetComponentInParent<Script_Environment_Cloud_Parent>().UpdateCloudSprite();
                 Destroy(gameObject);
             }
-        }
 
+            if(player.m_character_info.myChracters != Heroes.Nimbus)
+            {
+                player.CloudUnSlow();
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerController player = collision.GetComponentInParent<PlayerController>();
-        if (player)
+
+        if (player && player.m_character_info.myChracters != Heroes.Nimbus)
         {
             if (b_isElectrocuted)
             {
@@ -55,21 +64,64 @@ public class Script_Environment_Cloud : MonoBehaviour
             player.CloudSlow();
         }
 
-        //if(player && player)
-        //{
-        //    foreach (Script_Environment_Cloud cloud in m_cloudNeighbor)
-        //    {
-        //        if(cloud.enabled)
-        //        {
-        //            cloud.Thunder();
-        //        }
-        //    }
-        //}
+        if (player && player.m_character_info.myChracters == Heroes.Bolt && player.BoltPassif())
+        {
+            ActivateThunder();
+            player.DeactiveBoltPassif();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        PlayerController player = collision.GetComponentInParent<PlayerController>();
+
+        if(player && b_isElectrocuted)
+        {
+            player.Fall();
+        }
+    }
+
+    public void ActivateThunder()
+    {
+        foreach (Script_Environment_Cloud cloud in m_cloudNeighbor)
+        {
+            if (cloud.enabled && !b_isElectrocuted)
+            {
+                cloud.ActivateThunder();
+                cloud.Thunder();
+            }
+        }
     }
 
     public void Thunder()
     {
-        b_isElectrocuted = true;
+        if (b_canBeElectrocute)
+        {
+            b_isElectrocuted = true;
+            b_canBeElectrocute = false;
+        }
+    }
+
+    private void CountDownElectrocute()
+    {
+        if (f_currentTimeBeforeElectrocute > 0)
+        {
+            f_currentTimeBeforeElectrocute -= Time.deltaTime;
+
+            if(f_currentTimeBeforeElectrocute <= 0)
+            {
+                b_canBeElectrocute = true;
+                f_currentTimeBeforeElectrocute = m_TimeBeforeElectrocute;
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if(!b_canBeElectrocute)
+        {
+            CountDownElectrocute();
+        }
     }
 
     //public void CheckUpCloud()

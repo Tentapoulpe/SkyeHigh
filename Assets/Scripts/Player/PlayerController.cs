@@ -219,6 +219,18 @@ public class PlayerController : MonoBehaviour
             f_currenttimeReduceStun = m_timeReduceStun;
             f_currenttimeReduceStun = 1f;
         }
+
+        if (m_character_info.myChracters == Heroes.Bolt && !b_canElectrocuteCloud)
+        {
+            if (f_currentTimeBeforeActiveBoltPassive > 0)
+            {
+                f_currentTimeBeforeActiveBoltPassive -= Time.deltaTime;
+                if (f_currentTimeBeforeActiveBoltPassive <= 0)
+                {
+                    b_canElectrocuteCloud = true;
+                }
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -436,14 +448,38 @@ public class PlayerController : MonoBehaviour
     }
 
 
+    #region Powers
+
+    [Header("Character Power")]
+
+    [Header("Bolt")]
+    private bool b_canElectrocuteCloud;
+    private float f_currentTimeBeforeActiveBoltPassive;
+    public float m_TimeBeforeActiveBoltPassive;
+
+    public void DeactiveBoltPassif()
+    {
+        f_currentTimeBeforeActiveBoltPassive = m_TimeBeforeActiveBoltPassive;
+        b_canElectrocuteCloud = false;
+    }
+
+    public bool BoltPassif()
+    {
+        return b_canElectrocuteCloud;
+    }
+
+    #endregion
+
     public void Fall()
     {
         a_Animator.SetTrigger("Fall");
         LockControls();
+
         if (cloud)
         {
             cloud.DestroyCloud();
         }
+
         b_playerIsDashing = false;
         GetComponent<UltraPolygonCollider2D>().Destroy();
         Falling();
