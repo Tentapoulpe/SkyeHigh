@@ -131,7 +131,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
         string[] names = Input.GetJoystickNames();
         if (names[playerNumber - 1].Length == 19)
         {

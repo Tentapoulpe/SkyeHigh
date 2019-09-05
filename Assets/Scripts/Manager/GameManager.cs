@@ -11,9 +11,6 @@ public class GameManager : MonoBehaviour
     public bool m_debugMode;
 
     [Space(20f)]
-
-    public string m_sceneToLoad;
-
     private Camera m_Camera;
     bool winState = false;
     Vector3 v_winerPos = new Vector3();
@@ -22,6 +19,8 @@ public class GameManager : MonoBehaviour
     int playerConnected = 0;
     int playerAlive = 0;
     bool b_isInCharacterSelection = false;
+    bool b_isInMapSelection = false;
+    bool b_canChangeMap = true;
     List<PlayerController> l_playersPlaying = new List<PlayerController>();
 
     [Header("Player")]
@@ -165,8 +164,6 @@ public class GameManager : MonoBehaviour
 
         if (b_isInCharacterSelection)
         {
-            // ADD BUTTON
-
             string[] names = Input.GetJoystickNames();
             if (((Input.GetButtonDown("F1_PS4_P1") && names[0].Length == 19) || (Input.GetButtonDown("F1_XBOX_P1") && names[0].Length == 33)) && l_Players[0] == 0)
             {
@@ -294,6 +291,7 @@ public class GameManager : MonoBehaviour
                 }
             }
 
+
             if (!lockedPlayer[0] && axisCD[0] == 0 && l_Players[0] != 0)
             {
                 if (Input.GetAxis("Horizontal_P1") == 1)
@@ -347,6 +345,40 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+        else if (b_isInMapSelection)
+        {
+            FocusMap();
+            string[] names = Input.GetJoystickNames();
+            float f_controllerSensibility = Input.GetAxis("Vertical_P1");
+            if(f_controllerSensibility == 0)
+            {
+                b_canChangeMap = true;
+            }
+
+            if (b_canChangeMap && f_controllerSensibility == 1 || f_controllerSensibility == -1)
+            {
+                b_canChangeMap = false;
+                UIManager.Instance.ChangeMap(f_controllerSensibility);
+            }
+
+            if (Input.GetButtonDown("F1_PS4_P1")|| Input.GetButtonDown("F1_XBOX_P1"))
+            {
+                LockMap();
+            }
+        }
+    }
+
+    public void LockMap()
+    {
+        b_isInMapSelection = false;
+        SceneManager.LoadScene(1);
+        UIManager.Instance.GameScreen();
+    }
+
+    public void FocusMap()
+    {
+        m_Camera = Camera.main;
+        m_Camera.transform.position = Vector3.MoveTowards(m_Camera.transform.position, UIManager.Instance.GetMapTransformation().transform.position, Time.deltaTime * 80);
     }
 
     public void SpawnCloudParent()
@@ -400,7 +432,6 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        
         m_Camera = Camera.main;
         l_playersPlaying.Clear();
         for (int i = 0; i < l_Players.Length; i++)
@@ -495,8 +526,10 @@ public class GameManager : MonoBehaviour
             if (playerLocked == playerConnected)
             {
                 b_isInCharacterSelection = false;
-                SceneManager.LoadScene(1);
-                UIManager.Instance.GameScreen();
+                UIManager.Instance.ShowMapMenu();
+                b_isInMapSelection = true;
+                //SceneManager.LoadScene(1);
+                //UIManager.Instance.GameScreen();
             }
         }
     }
@@ -546,7 +579,4 @@ public class GameManager : MonoBehaviour
         v_winerPos = WinPos;
         winState = true;
     }
-
-
-
 }

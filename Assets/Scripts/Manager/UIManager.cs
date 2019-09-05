@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public EventSystemTool m_EventSystem;
     public GameObject m_MainMenu;
     public GameObject m_CharacterSelection;
+    public GameObject m_MapSelection;
     public GameObject m_EndGame;
     public GameObject m_EndRound;
     public TextMeshProUGUI m_EndGameText;
@@ -18,6 +19,8 @@ public class UIManager : MonoBehaviour
     public List<Sprite> m_Characters;
     public List<TextMeshProUGUI> m_EndRoundScore;
     public List<TextMeshProUGUI> m_EndGameScore;
+    private int i_mapIdx = 0;
+    public List<GameObject> m_MapStage;
 
     private void Awake()
     {
@@ -43,6 +46,12 @@ public class UIManager : MonoBehaviour
     {
         m_CharacterSelection.SetActive(false);
         m_MainMenu.SetActive(true);
+    }
+
+    public void ShowMapMenu()
+    {
+        m_CharacterSelection.SetActive(false);
+        m_MapSelection.SetActive(true);
     }
 
     public void QuitGame()
@@ -90,9 +99,29 @@ public class UIManager : MonoBehaviour
         GameManager.Instance.GoToCharacterSelection();
     }
 
+    public void ChangeMap(float f_direction)
+    {
+        if(f_direction >= 0 && i_mapIdx < 1)
+        {
+            i_mapIdx++;
+            GameManager.Instance.FocusMap();
+        }
+        else if (i_mapIdx > 0)
+        {
+            i_mapIdx--;
+            GameManager.Instance.FocusMap();
+        }
+    }
+
+    public GameObject GetMapTransformation()
+    {
+        return m_MapStage[i_mapIdx];
+    }
+
     public void GameScreen()
     {
         m_CharacterSelection.SetActive(false);
+        m_MapSelection.SetActive(false);
     }
 
     public void DisplayEndGame(List<int> player, List<int> score)
