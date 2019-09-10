@@ -119,6 +119,13 @@ AnimationClip:
     path: 
     classID: 212
     script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 2800000, guid: 1cfa2d85888999d45b80218f6d9163cb, type: 3}
+    attribute: m_DashTexture
+    path: 
+    classID: 114
+    script: {fileID: 11500000, guid: 5c23f1bb7f8ef74439a29d2d563ca147, type: 3}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -132,6 +139,13 @@ AnimationClip:
       script: {fileID: 0}
       typeID: 212
       customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 0
+      attribute: 1248301938
+      script: {fileID: 11500000, guid: 5c23f1bb7f8ef74439a29d2d563ca147, type: 3}
+      typeID: 114
+      customType: 0
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: -8718072550388643992, guid: 1647c4e9e231da84e941c2c585b6a96a, type: 3}
@@ -166,6 +180,7 @@ AnimationClip:
     - {fileID: -3719769100915468488, guid: 1647c4e9e231da84e941c2c585b6a96a, type: 3}
     - {fileID: -5731240848872581552, guid: 1647c4e9e231da84e941c2c585b6a96a, type: 3}
     - {fileID: 7152778248892903606, guid: 1647c4e9e231da84e941c2c585b6a96a, type: 3}
+    - {fileID: 2800000, guid: 1cfa2d85888999d45b80218f6d9163cb, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

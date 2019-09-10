@@ -279,6 +279,10 @@ Material:
     - _ColorHSV_Saturation_1: 1
     - _ColorMask: 15
     - _Cutoff: 0.5
+    - _DamageIncrustation_blend_1: 1
+    - _DamageIncrustation_posx_1: 0.279
+    - _DamageIncrustation_posy_1: -0.171
+    - _DamageIncrustation_zoom_1: 5.114
     - _Darkness_Fade_1: 0.3
     - _Destroyer_Speed_1: 0.5
     - _Destroyer_Value_1: 0
@@ -896,8 +900,8 @@ Material:
     - _HumanBreatEx_Speed_1: 1.037
     - _HumanBreat_Intensity_1: 0
     - _HumanBreat_Speed_1: 0
-    - _InnerGlowHQ_Intensity_1: 2
-    - _InnerGlowHQ_Size_1: 3
+    - _InnerGlowHQ_Intensity_1: 0
+    - _InnerGlowHQ_Size_1: 0
     - _LerpUV_Fade_1: 1
     - _Lerp_Fade_1: 1
     - _Make3DFX_Dist_1: 0.5
@@ -911,7 +915,8 @@ Material:
     - _Make3DFX_Size_1: 8
     - _Make3DFX_Size_2: 8.512886
     - _Mask2RGBA_Fade_1: 1
-    - _Mask2uv_Fade_13: 0
+    - _Mask2uv_Fade_11: 1
+    - _Mask2uv_Fade_13: 1
     - _Mask2uv_Fade_15: 1
     - _Mask2uv_Fade_17: 0
     - _Mask2uv_Fade_19: 1
@@ -999,6 +1004,7 @@ Material:
     - _TurnBlackToAlpha_Fade_1: 1
     - _TurnCGA_Fade_1: 1
     - _TurnGold_Speed_1: 1
+    - _TurnTransparent_Speed_1: 1
     - _UVSec: 0
     - _ZWrite: 1
     - __CompressionFX_Value_1: 2.314
@@ -1025,7 +1031,7 @@ Material:
     - _Generate_Checker_PosY_1: {r: 1, g: 0, b: 0, a: 1}
     - _Generate_Checker_Size_1: {r: 0, g: 1, b: 0, a: 1}
     - _GrayScale_Fade_1: {r: 0, g: 0, b: 1, a: 1}
-    - _InnerGlowHQ_Color_1: {r: 1, g: 1, b: 0, a: 1}
+    - _InnerGlowHQ_Color_1: {r: 1, g: 1, b: 1, a: 1}
     - _Outline_Color_1: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowLight_Color_1: {r: 0, g: 0.7, b: 1, a: 1}

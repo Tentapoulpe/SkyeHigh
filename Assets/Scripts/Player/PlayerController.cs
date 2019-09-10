@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [Header("Player")]
     public int playerNumber;
     public Script_Scriptable_Characters m_character_info;
+    
 
     [Header("Movement")]
     private bool b_canMove = true;
@@ -26,6 +27,10 @@ public class PlayerController : MonoBehaviour
     private float f_dashCooldown = 0f;
     public float m_timerDashing;
     public float f_currentTimerDashing;
+
+    public ParticleSystem m_DashParticle;
+    public Material m_DashParticleMat;
+    public Texture m_DashTexture;
     [Space]
 
     [Header("Environment")]
@@ -65,6 +70,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        m_DashParticle.GetComponent<ParticleSystemRenderer>().material = new Material(m_DashParticleMat);
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
         a_Animator = GetComponent<Animator>();
         f_currentHealth = m_character_info.m_maxHealth;
@@ -118,14 +124,22 @@ public class PlayerController : MonoBehaviour
         //Animator
         a_Animator.SetFloat("Vertical", Mathf.Clamp(vertical,-1,1));
         a_Animator.SetFloat("Horizontal", Mathf.Clamp(horizontal,-1,1));
+
+        Quaternion rot = transform.rotation;
         if (horizontal > 0)
         {
-            GetComponent<SpriteRenderer>().flipX = true;
+            m_DashParticle.GetComponent<ParticleSystemRenderer>().flip = new Vector3(1, 0, 0);
+            rot.y = 180f;
         }
         else if (horizontal < 0)
         {
-            GetComponent<SpriteRenderer>().flipX = false;
+            m_DashParticle.GetComponent<ParticleSystemRenderer>().flip = new Vector3(0, 0, 0);
+            rot.y = 0f;
         }
+        transform.rotation = rot;
+
+        
+            
 
     }
 
@@ -183,6 +197,7 @@ public class PlayerController : MonoBehaviour
             f_currentTimerDashing -= Time.deltaTime;
             if (f_currentTimerDashing <= 0)
             {
+                m_DashParticle.Stop();
                 b_playerIsDashing = false;
                 rigidbodyPlayer.velocity *= new Vector2(0.25f,0.25f);
             }
@@ -281,12 +296,15 @@ public class PlayerController : MonoBehaviour
         f_dashCooldown = m_character_info.m_maxDashCooldown;
         rigidbodyPlayer.AddForce(new Vector2(Input.GetAxis("Horizontal_P" + playerNumber), Input.GetAxis("Vertical_P" + playerNumber)) * m_character_info.m_dashPower, ForceMode2D.Impulse);
         DecreaseCloud(m_character_info.m_dashCost);
+        m_DashParticle.GetComponent<ParticleSystemRenderer>().material.SetTexture("_NewTex_1", m_DashTexture);
+        m_DashParticle.Play();
     }
 
     public void StopDash()
     {
         b_playerIsDashing = false;
         rigidbodyPlayer.velocity = Vector2.zero;
+        m_DashParticle.Stop();
     }
 
     public void DecreaseCloud(float f_health)
