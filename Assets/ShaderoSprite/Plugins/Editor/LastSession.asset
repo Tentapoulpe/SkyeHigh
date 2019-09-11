@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -79
-    y: -251
+    x: -221.59998
+    y: -140.6
     width: 400
     height: 520
   nodeKnobs:
@@ -39,7 +39,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: -1781291434873870777}
   side: 2
-  sidePosition: 52.5
+  sidePosition: 52
   sideOffset: 0
   connections:
   - {fileID: 4464967883844892748}
@@ -59,8 +59,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -308.8
-    y: -225.6
+    x: -863
+    y: -178.59999
     width: 150
     height: 210
   nodeKnobs:
@@ -70,7 +70,7 @@ MonoBehaviour:
   - {fileID: 5103703554574867307}
   Outputs:
   - {fileID: -2305519297370483632}
-  tex: {fileID: 0}
+  tex: {fileID: 2800000, guid: 1cfa2d85888999d45b80218f6d9163cb, type: 3}
   MemoCount: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -109,8 +109,8 @@ MonoBehaviour:
   LivePreviewShaderPath: Assets/Materials/Shader/New Shadero Sprite Shader.shader
   ShaderName: New Shadero Sprite Shader
   ShaderInMemory: {fileID: 4800000, guid: f8631727f17c5b84e9ad82641e48ddfd, type: 3}
-  panOffset: {x: 329.19998, y: 66.99976}
-  zoom: 1.4
+  panOffset: {x: 566.5994, y: -56.6002}
+  zoom: 2
 --- !u!114 &4464967883844892748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: -5643021421161345622}
   side: 4
-  sidePosition: 52.5
+  sidePosition: 52
   sideOffset: 0
   connection: {fileID: -2305519297370483632}
   typeID: SuperFloat4
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: -1781291434873870777}
   side: 4
-  sidePosition: 52.5
+  sidePosition: 52
   sideOffset: 0
   connection: {fileID: 0}
   typeID: SuperFloat2
