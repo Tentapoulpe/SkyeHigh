@@ -100,7 +100,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NewTex_2:
-        m_Texture: {fileID: 2800000, guid: 2217adebf73932d4abe5314165938fae, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1cfa2d85888999d45b80218f6d9163cb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NewTex_3:
@@ -132,7 +132,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SourceNewTex_1:
-        m_Texture: {fileID: 2800000, guid: 1cfa2d85888999d45b80218f6d9163cb, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7a7fc0cd16766594a8abb6eb38c37afa, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SourceNewTex_2:
@@ -274,8 +274,8 @@ Material:
     - _ColorGradients_Offset_: 0.6256276
     - _ColorGradients_Offset_1: 0
     - _ColorGradients_Offset_2: 0
-    - _ColorHSV_Brightness_1: 1
-    - _ColorHSV_Hue_1: 0
+    - _ColorHSV_Brightness_1: 1.182
+    - _ColorHSV_Hue_1: 360
     - _ColorHSV_Saturation_1: 1
     - _ColorMask: 15
     - _Cutoff: 0.5
@@ -927,7 +927,7 @@ Material:
     - _Mask2uv_Fade_29: 1
     - _Mask2uv_Fade_31: 1
     - _MaskAlpha_Fade_1: 0
-    - _MaskChannel_Fade_1: 1
+    - _MaskChannel_Fade_1: 0
     - _MaskRGBA_Fade_1: 0
     - _MaskRGBA_Fade_2: 0
     - _Metallic: 0
@@ -941,6 +941,7 @@ Material:
     - _OperationBlend_Fade_1: 1
     - _OperationBlend_Fade_2: 0.764
     - _Outline_Size_1: 1
+    - _PaletteSwapping2Texture_1: 1
     - _Parallax: 0.02
     - _PatternMovement_PosX_1: 0.077
     - _PatternMovement_PosX_2: 0
@@ -1002,7 +1003,9 @@ Material:
     - _TurnAlphaToBlack_Fade_8: 1
     - _TurnAlphaToBlack_Fade_9: 1
     - _TurnBlackToAlpha_Fade_1: 1
+    - _TurnC64_Fade_1: 1
     - _TurnCGA_Fade_1: 1
+    - _TurnGB_Fade_1: 1
     - _TurnGold_Speed_1: 1
     - _TurnTransparent_Speed_1: 1
     - _UVSec: 0
@@ -1015,7 +1018,7 @@ Material:
     - _ColorGradients_Color3_1: {r: 0, g: 1, b: 0, a: 1}
     - _ColorGradients_Color4_1: {r: 1, g: 1, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FillColor_Color_1: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+    - _FillColor_Color_1: {r: 0.92549026, g: 0.5254902, b: 0.17254902, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _FourGradients_Color1_1: {r: 0.102941155, g: 1, b: 0, a: 1}
     - _FourGradients_Color1_1222: {r: 1, g: 0, b: 0, a: 1}
@@ -1033,6 +1036,10 @@ Material:
     - _GrayScale_Fade_1: {r: 0, g: 0, b: 1, a: 1}
     - _InnerGlowHQ_Color_1: {r: 1, g: 1, b: 1, a: 1}
     - _Outline_Color_1: {r: 1, g: 1, b: 1, a: 1}
+    - _Palette4Swapping_Color1_1: {r: 0.2, g: 0.11, b: 0.08, a: 1}
+    - _Palette4Swapping_Color2_1: {r: 0.67, g: 0.56, b: 0.36, a: 1}
+    - _Palette4Swapping_Color3_1: {r: 0.23, g: 0.63, b: 0.26, a: 1}
+    - _Palette4Swapping_Color4_1: {r: 1, g: 0.97, b: 0.84, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowLight_Color_1: {r: 0, g: 0.7, b: 1, a: 1}
     - _TintRGBA_Color_1: {r: 1, g: 1, b: 1, a: 1}

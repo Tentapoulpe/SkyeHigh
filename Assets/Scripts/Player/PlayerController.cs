@@ -263,7 +263,6 @@ public class PlayerController : MonoBehaviour
                 if (otherPlayer.f_currentStun <= 0)
                     otherPlayer.SetStun(f_collisionStunTime, otherPlayer.rigidbodyPlayer.velocity);
             }
-            
         }
     }
 
@@ -499,6 +498,7 @@ public class PlayerController : MonoBehaviour
         }
 
         b_playerIsDashing = false;
+        m_DashParticle.Stop();
         GetComponent<UltraPolygonCollider2D>().Destroy();
         Falling();
     }
@@ -511,6 +511,7 @@ public class PlayerController : MonoBehaviour
             cloud.DestroyCloud();
         }
         b_playerIsDashing = false;
+        m_DashParticle.Stop();
         GetComponent<UltraPolygonCollider2D>().Destroy();
         Invoke("Falling", 1f);
     }
