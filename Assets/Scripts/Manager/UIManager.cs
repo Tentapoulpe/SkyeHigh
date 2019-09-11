@@ -19,8 +19,6 @@ public class UIManager : MonoBehaviour
     public List<Sprite> m_Characters;
     public List<TextMeshProUGUI> m_EndRoundScore;
     public List<TextMeshProUGUI> m_EndGameScore;
-    private int i_mapIdx = 0;
-    public List<GameObject> m_MapStage;
 
     private void Awake()
     {
@@ -97,25 +95,6 @@ public class UIManager : MonoBehaviour
     void EnterCharacterSelection()
     {
         GameManager.Instance.GoToCharacterSelection();
-    }
-
-    public void ChangeMap(float f_direction)
-    {
-        if(f_direction >= 0 && i_mapIdx < 1)
-        {
-            i_mapIdx++;
-            GameManager.Instance.FocusMap();
-        }
-        else if (i_mapIdx > 0)
-        {
-            i_mapIdx--;
-            GameManager.Instance.FocusMap();
-        }
-    }
-
-    public GameObject GetMapTransformation()
-    {
-        return m_MapStage[i_mapIdx];
     }
 
     public void GameScreen()
