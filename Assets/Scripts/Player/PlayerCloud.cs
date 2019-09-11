@@ -28,7 +28,7 @@ public class PlayerCloud : MonoBehaviour
             if (collision.CompareTag("Player") && collision.gameObject != player.transform.gameObject && collision.gameObject.GetComponent<PlayerController>().ReturnDashState())
             {
                 player.Fall();
-                collision.gameObject.GetComponent<PlayerController>().StopDash();
+                collision.gameObject.GetComponent<PlayerController>().StopDash(true);
                 if (collision.gameObject.GetComponent<PlayerController>().GetCloudHealth() <= 0)
                     collision.gameObject.GetComponent<PlayerController>().SetCloudHealth(1f);
 
