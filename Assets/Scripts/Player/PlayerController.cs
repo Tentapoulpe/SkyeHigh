@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem m_DashParticle;
     public Material m_DashParticleMat;
     public Texture m_DashTexture;
+    private Vector2 v_dashVelocity = new Vector2(0, 0);
     [Space]
 
     [Header("Environment")]
@@ -258,27 +259,22 @@ public class PlayerController : MonoBehaviour
         {
             if (otherPlayer != this)
             {
-                Vector2 currentSpeed = rigidbodyPlayer.velocity;
                 if (otherPlayer.ReturnDashState())
                 {
                     SetStun(f_collisionStunTime, otherPlayer.rigidbodyPlayer.velocity);
-                    //RatioSpeed(new Vector2(-2, -2));
-                    rigidbodyPlayer.velocity = otherPlayer.rigidbodyPlayer.velocity * new Vector2(2, 2);
+                    //Debug.Log("velocity other: " + otherPlayer.v_dashVelocity);
+                    rigidbodyPlayer.velocity = otherPlayer.v_dashVelocity * new Vector2(0.75f, 0.75f);
                 }
                 if (otherPlayer.f_currentStun <= 0)
                 { 
                     otherPlayer.SetStun(f_collisionStunTime, otherPlayer.rigidbodyPlayer.velocity);
-                    otherPlayer.rigidbodyPlayer.velocity = currentSpeed*new Vector2(2,2);
+                    //Debug.Log("velocity self: " + v_dashVelocity);
+                    otherPlayer.rigidbodyPlayer.velocity = v_dashVelocity*new Vector2(0.75f,0.75f);
                 }
 
                 StopDash(false);
             }
         }
-    }
-
-    public void RatioSpeed(Vector2 speedRatio)
-    {
-        rigidbodyPlayer.velocity *= speedRatio;
     }
 
     public bool ReturnDashState()
@@ -312,6 +308,7 @@ public class PlayerController : MonoBehaviour
         DecreaseCloud(m_character_info.m_dashCost);
         m_DashParticle.GetComponent<ParticleSystemRenderer>().material.SetTexture("_NewTex_1", m_DashTexture);
         m_DashParticle.Play();
+        v_dashVelocity = rigidbodyPlayer.velocity;
     }
 
     public void StopDash(bool stopSpeed)
