@@ -437,6 +437,7 @@ public class PlayerController : MonoBehaviour
 
     public void SetStun(float stunValue,Vector3 ennemypos)
     {
+        m_vfxStun.gameObject.SetActive(true);
         m_vfxStun.Play();
         f_currentStun = stunValue;
         b_canMove = false;
@@ -448,7 +449,7 @@ public class PlayerController : MonoBehaviour
 
     public void EndStun()
     {
-        m_vfxStun.Stop();
+        m_vfxStun.gameObject.SetActive(false);
         f_currentStun = 0;
         b_canMove = true;
         b_canDash = true;
