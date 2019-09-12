@@ -9,12 +9,10 @@ public class Script_Level_Manager : MonoBehaviour
     public void PlayAnimation()
     {
         gameObject.transform.GetComponentInParent<Animator>().enabled = true;
-        //gameObject.transform.GetComponentInParent<Animator>().SetTrigger("Flying");
     }
 
     public void StopAnimation()
     {
         gameObject.transform.GetComponentInParent<Animator>().enabled = false;
-        //gameObject.transform.GetComponentInParent<Animator>().SetTrigger("Idle");
     }
 }

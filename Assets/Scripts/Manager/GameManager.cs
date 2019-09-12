@@ -373,6 +373,7 @@ public class GameManager : MonoBehaviour
 
     public void ChangeMap(float f_direction)
     {
+        FocusMap();
         m_Levels[i_mapIdx].GetComponent<Script_Level_Manager>().StopAnimation();
         if (!b_canChangeMap)
         {

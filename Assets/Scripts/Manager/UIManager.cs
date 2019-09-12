@@ -20,8 +20,6 @@ public class UIManager : MonoBehaviour
     public List<Sprite> m_Characters;
     public List<TextMeshProUGUI> m_EndRoundScore;
     public List<TextMeshProUGUI> m_EndGameScore;
-    private int i_mapIdx = 0;
-    public List<GameObject> m_MapStage;
     public UnityEngine.UI.Image LoadingBar;
 
     private void Awake()

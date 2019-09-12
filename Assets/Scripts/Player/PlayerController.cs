@@ -67,6 +67,9 @@ public class PlayerController : MonoBehaviour
     public float m_timeReduceStun;
     private float f_currenttimeReduceStun = 1;
 
+    [Header("VFX")]
+    public ParticleSystem m_vfxStun;
+
 
     void Start()
     {
@@ -434,6 +437,7 @@ public class PlayerController : MonoBehaviour
 
     public void SetStun(float stunValue,Vector3 ennemypos)
     {
+        m_vfxStun.Play();
         f_currentStun = stunValue;
         b_canMove = false;
         b_canDash = false;
@@ -444,6 +448,7 @@ public class PlayerController : MonoBehaviour
 
     public void EndStun()
     {
+        m_vfxStun.Stop();
         f_currentStun = 0;
         b_canMove = true;
         b_canDash = true;
