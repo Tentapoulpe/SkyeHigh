@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
     private int roundState = 1;
     public int m_MaxRound;
     private List<int> Scores = new List<int>();
+    public List<GameObject> m_Levels;
+    private int i_mapIdx = 0;
 
 
     private void Awake()
@@ -355,10 +357,11 @@ public class GameManager : MonoBehaviour
                 b_canChangeMap = true;
             }
 
-            if (b_canChangeMap && f_controllerSensibility == 1 || f_controllerSensibility == -1)
+            if (b_canChangeMap && (f_controllerSensibility == 1 || f_controllerSensibility == -1))
             {
+                Debug.Log("CHANGE");
                 b_canChangeMap = false;
-                UIManager.Instance.ChangeMap(f_controllerSensibility);
+                ChangeMap(f_controllerSensibility);
             }
 
             if (Input.GetButtonDown("F1_PS4_P1")|| Input.GetButtonDown("F1_XBOX_P1"))
@@ -368,17 +371,38 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ChangeMap(float f_direction)
+    {
+        m_Levels[i_mapIdx].GetComponent<Script_Level_Manager>().StopAnimation();
+        if (!b_canChangeMap)
+        {
+            if (f_direction >= 0 && i_mapIdx < m_Levels.Count - 1)
+            {
+                Debug.Log("Haut");
+                i_mapIdx++;
+                FocusMap();
+            }
+            else if (f_direction < 0 && i_mapIdx > 0)
+            {
+                Debug.Log("BAS");
+                i_mapIdx--;
+                FocusMap();
+            }
+        }
+    }
+
     public void LockMap()
     {
         b_isInMapSelection = false;
-        StartCoroutine(ChangeScene(1));
+        StartCoroutine(ChangeScene(m_Levels[i_mapIdx].GetComponent<Script_Level_Manager>().m_myLevel.m_levelName));
         UIManager.Instance.GameScreen();
     }
 
     public void FocusMap()
     {
         m_Camera = Camera.main;
-        m_Camera.transform.position = Vector3.MoveTowards(m_Camera.transform.position, UIManager.Instance.GetMapTransformation().transform.position, Time.deltaTime * 80);
+        m_Levels[i_mapIdx].GetComponent<Script_Level_Manager>().PlayAnimation();
+        m_Camera.transform.position = Vector3.MoveTowards(m_Camera.transform.position, m_Levels[i_mapIdx].transform.position, Time.deltaTime * 80);
     }
 
     public void SpawnCloudParent()
@@ -581,6 +605,17 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator ChangeScene(int scene)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
+        while (!asyncLoad.isDone)
+        {
+            UIManager.Instance.UpdateLoadingScreen(asyncLoad.progress);
+            yield return null;
+        }
+        UIManager.Instance.StopLoading();
+    }
+
+    IEnumerator ChangeScene(string scene)
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
         while (!asyncLoad.isDone)

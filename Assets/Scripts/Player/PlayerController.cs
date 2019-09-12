@@ -255,15 +255,27 @@ public class PlayerController : MonoBehaviour
         {
             if (otherPlayer != this)
             {
+                Vector2 currentSpeed = rigidbodyPlayer.velocity;
                 if (otherPlayer.ReturnDashState())
                 {
                     SetStun(f_collisionStunTime, otherPlayer.rigidbodyPlayer.velocity);
+                    //RatioSpeed(new Vector2(-2, -2));
+                    rigidbodyPlayer.velocity = otherPlayer.rigidbodyPlayer.velocity * new Vector2(2, 2);
                 }
-                StopDash();
                 if (otherPlayer.f_currentStun <= 0)
+                { 
                     otherPlayer.SetStun(f_collisionStunTime, otherPlayer.rigidbodyPlayer.velocity);
+                    otherPlayer.rigidbodyPlayer.velocity = currentSpeed*new Vector2(2,2);
+                }
+
+                StopDash(false);
             }
         }
+    }
+
+    public void RatioSpeed(Vector2 speedRatio)
+    {
+        rigidbodyPlayer.velocity *= speedRatio;
     }
 
     public bool ReturnDashState()
@@ -299,10 +311,11 @@ public class PlayerController : MonoBehaviour
         m_DashParticle.Play();
     }
 
-    public void StopDash()
+    public void StopDash(bool stopSpeed)
     {
         b_playerIsDashing = false;
-        rigidbodyPlayer.velocity = Vector2.zero;
+        if(stopSpeed)
+            rigidbodyPlayer.velocity = Vector2.zero;
         m_DashParticle.Stop();
     }
 
@@ -424,8 +437,8 @@ public class PlayerController : MonoBehaviour
         f_currentStun = stunValue;
         b_canMove = false;
         b_canDash = false;
-        StopDash();
-        rigidbodyPlayer.AddForce((ennemypos).normalized  * 20f, ForceMode2D.Impulse);
+        StopDash(false);
+        //rigidbodyPlayer.AddForce((ennemypos).normalized  * 20f, ForceMode2D.Impulse);
         rigidbodyPlayer.gravityScale = f_stunGravity;
     }
 

@@ -101,25 +101,6 @@ public class UIManager : MonoBehaviour
         GameManager.Instance.GoToCharacterSelection();
     }
 
-    public void ChangeMap(float f_direction)
-    {
-        if(f_direction >= 0 && i_mapIdx < 1)
-        {
-            i_mapIdx++;
-            GameManager.Instance.FocusMap();
-        }
-        else if (i_mapIdx > 0)
-        {
-            i_mapIdx--;
-            GameManager.Instance.FocusMap();
-        }
-    }
-
-    public GameObject GetMapTransformation()
-    {
-        return m_MapStage[i_mapIdx];
-    }
-
     public void GameScreen()
     {
         m_CharacterSelection.SetActive(false);
