@@ -371,7 +371,7 @@ public class GameManager : MonoBehaviour
     public void LockMap()
     {
         b_isInMapSelection = false;
-        SceneManager.LoadScene(1);
+        StartCoroutine(ChangeScene(1));
         UIManager.Instance.GameScreen();
     }
 
@@ -569,7 +569,7 @@ public class GameManager : MonoBehaviour
     public void ReturnMenu()
     {
         winState = false;
-        SceneManager.LoadScene(0);
+        StartCoroutine(ChangeScene(0));
         Destroy(UIManager.Instance.gameObject);
         Destroy(gameObject);
     }
@@ -578,5 +578,16 @@ public class GameManager : MonoBehaviour
     {
         v_winerPos = WinPos;
         winState = true;
+    }
+
+    IEnumerator ChangeScene(int scene)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
+        while (!asyncLoad.isDone)
+        {
+            UIManager.Instance.UpdateLoadingScreen(asyncLoad.progress);
+            yield return null;
+        }
+        UIManager.Instance.StopLoading();
     }
 }

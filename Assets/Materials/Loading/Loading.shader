@@ -14,11 +14,7 @@ _FillColor_Color_1("_FillColor_Color_1", COLOR) = (0.2794118,1,0,1)
 _PlasmaFX_Fade_1("_PlasmaFX_Fade_1", Range(0, 1)) = 0.151
 _PlasmaFX_Speed_1("_PlasmaFX_Speed_1", Range(0, 1)) = 0.745
 _NewTex_1("NewTex_1(RGB)", 2D) = "white" { }
-_Generate_Donut_PosX_1("_Generate_Donut_PosX_1", Range(-1, 2)) = 0.5
-_Generate_Donut_PosY_1("_Generate_Donut_PosY_1", Range(-1, 2)) = 0.5
-_Generate_Donut_Size_1("_Generate_Donut_Size_1", Range(-2, 2)) = 0.618
-_Generate_Donut_SizeDonut_1("_Generate_Donut_SizeDonut_1", Range(-2, 2)) = -0.582
-_Generate_Donut_SizeSmooth_1("_Generate_Donut_SizeSmooth_1", Range(0, 1)) = 0.159
+_Generate_Line_Size_1("_Generate_Line_Size_1", Range(0, 256)) = 4
 _MaskRGBA_Fade_1("_MaskRGBA_Fade_1", Range(0, 1)) = 0
 _ThresholdSmooth_Value_1("_ThresholdSmooth_Value_1", Range(-1, 2)) = -0.9
 _ThresholdSmooth_Smooth_1("_ThresholdSmooth_Smooth_1", Range(0, 1)) = 0.025
@@ -31,7 +27,6 @@ _DisplacementPack_Size_1("_DisplacementPack_Size_1", Range(-3, 3)) = 1.946
 DisplacementPack_1("DisplacementPack_1(RGB)", 2D) = "white" { }
 _Add_Fade_1("_Add_Fade_1", Range(0, 4)) = 0.465
 _RGBA_Mul_Fade_1("_RGBA_Mul_Fade_1", Range(0, 2)) = 1.275
-_OperationBlend_Fade_1("_OperationBlend_Fade_1", Range(0, 1)) = 1
 _SpriteFade("SpriteFade", Range(0, 1)) = 1.0
 
 // required for UI.Mask
@@ -88,11 +83,7 @@ float4 _FillColor_Color_1;
 float _PlasmaFX_Fade_1;
 float _PlasmaFX_Speed_1;
 sampler2D _NewTex_1;
-float _Generate_Donut_PosX_1;
-float _Generate_Donut_PosY_1;
-float _Generate_Donut_Size_1;
-float _Generate_Donut_SizeDonut_1;
-float _Generate_Donut_SizeSmooth_1;
+float _Generate_Line_Size_1;
 float _MaskRGBA_Fade_1;
 float _ThresholdSmooth_Value_1;
 float _ThresholdSmooth_Smooth_1;
@@ -105,7 +96,6 @@ float _DisplacementPack_Size_1;
 sampler2D DisplacementPack_1;
 float _Add_Fade_1;
 float _RGBA_Mul_Fade_1;
-float _OperationBlend_Fade_1;
 
 v2f vert(appdata_t IN)
 {
@@ -171,15 +161,6 @@ float l = (txt.x + txt.y + txt.z) * 0.33;
 txt.rgb = smoothstep(value, value + smooth, l);
 return txt;
 }
-float4 OperationBlend(float4 origin, float4 overlay, float blend)
-{
-float4 o = origin; 
-o.a = overlay.a + origin.a * (1 - overlay.a);
-o.rgb = (overlay.rgb * overlay.a + origin.rgb * origin.a * (1 - overlay.a)) * (o.a+0.0000001);
-o.a = saturate(o.a);
-o = lerp(origin, o, blend);
-return o;
-}
 
 float4 TurnAlphaToBlack(float4 txt,float fade)
 {
@@ -187,14 +168,11 @@ float3 gs = lerp(txt.rgb,float3(0,0,0), 1-txt.a);
 return lerp(txt,float4(gs, 1), fade);
 }
 
-float4 Generate_Donut(float2 uv, float posx, float posy, float size, float sizedonut, float smooth, float black)
+float4 Generate_Lines(float uvs, float size, float black)
 {
-uv -= float2(posx, posy);
-float l = length(uv*2);
-float4 d = smoothstep(size, size + smooth, l);
-d *= smoothstep(size+sizedonut, size + sizedonut + smooth, 1-l);
-d.a = saturate(d + black);
-return d;
+float4 r = step(0.5 / size, fmod(uvs, 1 / size));
+r.a = saturate(r.a + black);
+return r;
 }
 float4 DisplacementPack(float2 uv,sampler2D source,float x, float y, float value, float motion, float motion2)
 {
@@ -213,9 +191,9 @@ float4 frag (v2f i) : COLOR
 float4 FillColor_1 = UniColor(float4(0,0,0,1),_FillColor_Color_1);
 float4 _PlasmaFX_1 = Plasma(FillColor_1,i.texcoord,_PlasmaFX_Fade_1,_PlasmaFX_Speed_1);
 float4 NewTex_1 = tex2D(_NewTex_1, i.texcoord);
-float4 _Generate_Donut_1 = Generate_Donut(i.texcoord,_Generate_Donut_PosX_1,_Generate_Donut_PosY_1,_Generate_Donut_Size_1,_Generate_Donut_SizeDonut_1,_Generate_Donut_SizeSmooth_1,1);
+float4 _Generate_Line_1 = Generate_Lines(i.texcoord.y,_Generate_Line_Size_1,0);
 float4 MaskRGBA_1=NewTex_1;
-MaskRGBA_1.a = lerp(_Generate_Donut_1.r, 1 - _Generate_Donut_1.r ,_MaskRGBA_Fade_1);
+MaskRGBA_1.a = lerp(_Generate_Line_1.r, 1 - _Generate_Line_1.r ,_MaskRGBA_Fade_1);
 float4 _ThresholdSmooth_1 = ThresholdSmooth(MaskRGBA_1,_ThresholdSmooth_Value_1,_ThresholdSmooth_Smooth_1);
 float4 TurnAlphaToBlack_1 = TurnAlphaToBlack(_ThresholdSmooth_1,_TurnAlphaToBlack_Fade_1);
 float4 MaskRGBA_2=_PlasmaFX_1;
@@ -224,9 +202,7 @@ float2 PolarCoordinatesUV_1 = PolarCoordinatesUV(i.texcoord,PolarCoordinatesUV_S
 float4 _DisplacementPack_1 = DisplacementPack(PolarCoordinatesUV_1,DisplacementPack_1,_DisplacementPack_ValueX_1,_DisplacementPack_ValueY_1,_DisplacementPack_Size_1,1,1);
 MaskRGBA_2 = lerp(MaskRGBA_2,MaskRGBA_2*MaskRGBA_2.a + _DisplacementPack_1*_DisplacementPack_1.a,_Add_Fade_1 * MaskRGBA_2.a);
 MaskRGBA_2.rgba *= _RGBA_Mul_Fade_1;
-float4 _MainTex_1 = tex2D(_MainTex, i.texcoord);
-float4 OperationBlend_1 = OperationBlend(MaskRGBA_2, _MainTex_1, _OperationBlend_Fade_1); 
-float4 FinalResult = OperationBlend_1;
+float4 FinalResult = MaskRGBA_2;
 FinalResult.rgb *= i.color.rgb;
 FinalResult.a = FinalResult.a * _SpriteFade * i.color.a;
 return FinalResult;

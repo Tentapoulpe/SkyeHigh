@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PreviewMaterial
-  m_Shader: {fileID: 4800000, guid: f8631727f17c5b84e9ad82641e48ddfd, type: 3}
+  m_Shader: {fileID: 4800000, guid: bab5d6b81e44dd74ab871d8314e094ce, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -24,7 +24,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - DisplacementPack_1:
-        m_Texture: {fileID: 2800000, guid: 8718585a856e8454eaef570a365d9e3d, type: 3}
+        m_Texture: {fileID: 2800000, guid: d205ea28f3bf2e94ea4597cdb871638b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - DisplacementPack_2:
@@ -96,7 +96,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NewTex_1:
-        m_Texture: {fileID: 2800000, guid: 1cfa2d85888999d45b80218f6d9163cb, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1b4bf356de8cf8d41a22c14637999e8b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NewTex_2:
@@ -214,6 +214,7 @@ Material:
     - PixelUV_Size_1: 32
     - PixelXYUV_SizeX_1: 32
     - PixelXYUV_SizeY_1: 32
+    - PolarCoordinatesUV_Size_1: 0.317
     - PositionUV_X_1: -0.035
     - PositionUV_Y_1: 0.035
     - ResizeUV_X_1: 0
@@ -245,7 +246,7 @@ Material:
     - ZoomUV_PosX_1: 0.5
     - ZoomUV_PosY_1: 0.5
     - ZoomUV_Zoom_1: 1.05
-    - _Add_Fade_1: 0.936
+    - _Add_Fade_1: 0.465
     - _AlphaAsAura_Fade_1: 1
     - _AlphaIntensity_Fade_1: 1
     - _AuraDisplacementPack_Size_1: 1.398
@@ -287,9 +288,9 @@ Material:
     - _Destroyer_Speed_1: 0.5
     - _Destroyer_Value_1: 0
     - _DetailNormalMapScale: 1
-    - _DisplacementPack_Size_1: 1.221
-    - _DisplacementPack_ValueX_1: 0.036
-    - _DisplacementPack_ValueY_1: -0.779
+    - _DisplacementPack_Size_1: 1.946
+    - _DisplacementPack_ValueX_1: -0.051
+    - _DisplacementPack_ValueY_1: 0
     - _Displacement_Plus_Size_1: 1
     - _Displacement_Plus_Size_10: 1
     - _Displacement_Plus_Size_11: 1
@@ -334,17 +335,17 @@ Material:
     - _Generate_Donut_PosY_3: 0.5
     - _Generate_Donut_PosY_4: 0.5
     - _Generate_Donut_PosY_5: 0.5
-    - _Generate_Donut_SizeDonut_1: 0.2
+    - _Generate_Donut_SizeDonut_1: -0.582
     - _Generate_Donut_SizeDonut_2: 0.2
     - _Generate_Donut_SizeDonut_3: 0
     - _Generate_Donut_SizeDonut_4: 0
     - _Generate_Donut_SizeDonut_5: 0
-    - _Generate_Donut_SizeSmooth_1: 0.2
+    - _Generate_Donut_SizeSmooth_1: 0.159
     - _Generate_Donut_SizeSmooth_2: 0.2
     - _Generate_Donut_SizeSmooth_3: 0
     - _Generate_Donut_SizeSmooth_4: 0
     - _Generate_Donut_SizeSmooth_5: 0
-    - _Generate_Donut_Size_1: 0.1
+    - _Generate_Donut_Size_1: 0.618
     - _Generate_Donut_Size_2: 0.1
     - _Generate_Donut_Size_3: 0
     - _Generate_Donut_Size_4: 0
@@ -359,7 +360,7 @@ Material:
     - _Generate_Fire_Smooth_3: 0.34999946
     - _Generate_Fire_Speed_1: 1
     - _Generate_Fire_Speed_3: 1
-    - _Generate_Line_Size_1: 150
+    - _Generate_Line_Size_1: 4
     - _Generate_Line_Size_2: 0.5
     - _Generate_Shape_Dist_1: 0.643
     - _Generate_Shape_Dist_2: 0.01
@@ -949,9 +950,9 @@ Material:
     - _PatternMovement_PosY_2: -0.092
     - _PatternMovement_Speed_1: 0.974
     - _PatternMovement_Speed_2: 0.979
-    - _PlasmaFX_Fade_1: 0.688
+    - _PlasmaFX_Fade_1: 0.151
     - _PlasmaFX_Offset_1: 0.5
-    - _PlasmaFX_Speed_1: 0.759
+    - _PlasmaFX_Speed_1: 0.745
     - _PlasmaLightFX_BW_1: 1
     - _PlasmaLightFX_Fade_1: 0.5
     - _PlasmaLightFX_Speed_1: 0.5
@@ -962,7 +963,7 @@ Material:
     - _PremadeGradients_Speed_1: 0.496
     - _PremadeGradients_Speed_2: 0
     - _RGBA_Add_Fade_1: 1.756
-    - _RGBA_Mul_Fade_1: 1.332
+    - _RGBA_Mul_Fade_1: 1.275
     - _RGBA_Sub_Fade_1: 1
     - _ShadowLight_Intensity_1: 1.5
     - _ShadowLight_NoSprite_1: 1
@@ -996,6 +997,8 @@ Material:
     - _StencilOp: 0
     - _StencilReadMask: 255
     - _StencilWriteMask: 255
+    - _ThresholdSmooth_Smooth_1: 0.025
+    - _ThresholdSmooth_Value_1: -0.9
     - _Threshold_Fade_1: 0.5
     - _TurnAlphaToBlack_Fade_1: 1
     - _TurnAlphaToBlack_Fade_6: 1
@@ -1018,7 +1021,7 @@ Material:
     - _ColorGradients_Color3_1: {r: 0, g: 1, b: 0, a: 1}
     - _ColorGradients_Color4_1: {r: 1, g: 1, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FillColor_Color_1: {r: 0.92549026, g: 0.5254902, b: 0.17254902, a: 1}
+    - _FillColor_Color_1: {r: 0.2794118, g: 1, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _FourGradients_Color1_1: {r: 0.102941155, g: 1, b: 0, a: 1}
     - _FourGradients_Color1_1222: {r: 1, g: 0, b: 0, a: 1}

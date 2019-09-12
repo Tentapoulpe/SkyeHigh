@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     public GameObject m_MapSelection;
     public GameObject m_EndGame;
     public GameObject m_EndRound;
+    public GameObject m_LoadingScreen;
     public TextMeshProUGUI m_EndGameText;
     public TextMeshProUGUI m_EndRoundText;
     public List<GameObject> m_Players;
@@ -21,6 +22,7 @@ public class UIManager : MonoBehaviour
     public List<TextMeshProUGUI> m_EndGameScore;
     private int i_mapIdx = 0;
     public List<GameObject> m_MapStage;
+    public UnityEngine.UI.Image LoadingBar;
 
     private void Awake()
     {
@@ -147,7 +149,7 @@ public class UIManager : MonoBehaviour
         }
         else if (player.Count == 0)
         {
-            m_EndGameText.text = "Draw !! no one wins";
+            m_EndGameText.text = "Draw !! no one win";
         }
 
         for (int i = 0; i < score.Count; i++)
@@ -201,5 +203,20 @@ public class UIManager : MonoBehaviour
     public void RestartRound()
     {
         m_EndRound.SetActive(false);
+    }
+
+    public void UpdateLoadingScreen(float state)
+    {
+        if (!m_LoadingScreen.activeSelf)
+        {
+            m_LoadingScreen.SetActive(true);
+            LoadingBar.fillAmount = 0f;
+        }
+        LoadingBar.fillAmount = state;
+    }
+
+    public void StopLoading()
+    {
+        m_LoadingScreen.SetActive(false);
     }
 }
