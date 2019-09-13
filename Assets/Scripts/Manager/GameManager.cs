@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     private List<int> Scores = new List<int>();
     public List<GameObject> m_Levels;
     private int i_mapIdx = 0;
+    private bool b_isPause = false;
 
 
     private void Awake()
@@ -226,7 +227,7 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            
+
             if (((Input.GetButtonDown("F2_PS4_P2") && names[1].Length == 19) || (Input.GetButtonDown("F2_XBOX_P2") && names[1].Length == 33)))
             {
                 if (l_Players[1] != 0)
@@ -248,7 +249,7 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            
+
             if (((Input.GetButtonDown("F2_PS4_P3") && names[2].Length == 19) || (Input.GetButtonDown("F2_XBOX_P3") && names[2].Length == 33)))
             {
                 if (l_Players[2] != 0)
@@ -269,7 +270,7 @@ public class GameManager : MonoBehaviour
                     }
                 }
             }
-            
+
 
 
             if (((Input.GetButtonDown("F2_PS4_P4") && names[3].Length == 19) || (Input.GetButtonDown("F2_XBOX_P4") && names[3].Length == 33)))
@@ -352,7 +353,7 @@ public class GameManager : MonoBehaviour
             FocusMap();
             string[] names = Input.GetJoystickNames();
             float f_controllerSensibility = Input.GetAxis("Vertical_P1");
-            if(f_controllerSensibility == 0)
+            if (f_controllerSensibility == 0)
             {
                 b_canChangeMap = true;
             }
@@ -364,9 +365,23 @@ public class GameManager : MonoBehaviour
                 ChangeMap(f_controllerSensibility);
             }
 
-            if (Input.GetButtonDown("F1_PS4_P1")|| Input.GetButtonDown("F1_XBOX_P1"))
+            if (Input.GetButtonDown("F1_PS4_P1") || Input.GetButtonDown("F1_XBOX_P1"))
             {
                 LockMap();
+            }
+        }
+        else if (Scores.Count > 0 && winState == false && CameraManager.Instance.canMove)
+        {
+            if (Input.GetButtonDown("START_PS4") || Input.GetButtonDown("START_XBOX"))
+            {
+                if (b_isPause)
+                {
+                    UnPauseGame();
+                }
+                else
+                {
+                    PauseGame();
+                }
             }
         }
     }
@@ -625,5 +640,32 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         UIManager.Instance.StopLoading();
+    }
+
+    public void PauseGame()
+    {
+        foreach(PlayerController player in l_playersPlaying)
+        {
+            player.LockControls();
+        }
+        b_isPause = true;
+        Time.timeScale = 0;
+        UIManager.Instance.DisplayPause();
+    }
+
+    public void UnPauseGame()
+    {
+        foreach (PlayerController player in l_playersPlaying)
+        {
+            player.UnlockControls();
+        }
+        b_isPause = false;
+        Time.timeScale = 1f;
+        UIManager.Instance.HidePause();
+    }
+
+    public void RestartAfterPause()
+    {
+
     }
 }

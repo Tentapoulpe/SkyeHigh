@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public GameObject m_EndGame;
     public GameObject m_EndRound;
     public GameObject m_LoadingScreen;
+    public GameObject m_PauseMenu;
     public TextMeshProUGUI m_EndGameText;
     public TextMeshProUGUI m_EndRoundText;
     public List<GameObject> m_Players;
@@ -175,6 +176,7 @@ public class UIManager : MonoBehaviour
     public void ReturnToMenu()
     {
         m_EndGame.SetActive(false);
+        HidePause();
         GameManager.Instance.ReturnMenu();
         m_MainMenu.SetActive(true);
     }
@@ -197,5 +199,21 @@ public class UIManager : MonoBehaviour
     public void StopLoading()
     {
         m_LoadingScreen.SetActive(false);
+    }
+
+    public void DisplayPause()
+    {
+        m_PauseMenu.SetActive(true);
+    }
+
+    public void HidePause()
+    {
+        m_PauseMenu.SetActive(false);
+    }
+
+    public void PauseToGame()
+    {
+        HidePause();
+        GameManager.Instance.UnPauseGame();
     }
 }
