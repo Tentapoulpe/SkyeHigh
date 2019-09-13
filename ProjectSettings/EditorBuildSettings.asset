@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene_Main_Menu.unity
     guid: 2e967c602c529ff449c73eaf0ab8e493
   - enabled: 1
-    path: Assets/Scenes/Proto/Scene_Proto.unity
-    guid: 904a7b6806fe0904da96237c89c08bbc
+    path: Assets/Scenes/Levels/Scene_Level_01_Skye.unity
+    guid: 6bb05e54b4be8a9438c9d3cc7b2420f3
+  - enabled: 1
+    path: Assets/Scenes/Levels/Scene_Level_02_Dawn.unity
+    guid: ec29c6cf60c85864d856d77ebe00c548
+  - enabled: 1
+    path: Assets/Scenes/Levels/Scene_Level_03_Nimbus.unity
+    guid: 689b0b8af953f2340a9a9f258e36fbb1
   m_configObjects: {}
