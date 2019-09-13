@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("VFX")]
     public ParticleSystem m_vfxStun;
+    public GameObject m_DeathFX;
 
 
     void Start()
@@ -540,6 +541,7 @@ public class PlayerController : MonoBehaviour
 
     public void Death()
     {
+        Instantiate(m_DeathFX,new Vector3( transform.position.x,transform.position.y + 8f, transform.position.z), Quaternion.identity);
         if (cloud)
             cloud.DestroyCloud();
         GameManager.Instance.PlayerDied(playerNumber);

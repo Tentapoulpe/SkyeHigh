@@ -9842,6 +9842,8 @@ MonoBehaviour:
   m_textHealth: {fileID: 1698198768}
   m_timeReduceStun: 2
   m_vfxStun: {fileID: 3029371923998339520}
+  m_DeathFX: {fileID: 9072982941194926806, guid: 03dec49c871529c4eb3e3217177c46b1,
+    type: 3}
   m_TimeBeforeActiveBoltPassive: 0
 --- !u!50 &8615222593070687820
 Rigidbody2D:
