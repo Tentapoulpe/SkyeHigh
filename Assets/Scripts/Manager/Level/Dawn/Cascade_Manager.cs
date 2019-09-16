@@ -18,7 +18,7 @@ public class Cascade_Manager : MonoBehaviour
 
     private void SetTimer()
     {
-        f_currenTimer = Random.RandomRange(5f, m_maxTimer);
+        f_currenTimer = Random.RandomRange(2f, m_maxTimer);
     }
 
     private void Update()
@@ -36,7 +36,7 @@ public class Cascade_Manager : MonoBehaviour
 
     private void DeleteCurrentCascade(GameObject g_currentVFX)
     {
-        Destroy(g_currentVFX, 10f);
+        Destroy(g_currentVFX, 8f);
         SetTimer();
     }
 

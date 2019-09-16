@@ -929,7 +929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96932c23b2ba1af49bab92f522a1b6e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_maxTimer: 5
+  m_maxTimer: 3
   my_Spawn:
   - {fileID: 1588527658}
   - {fileID: 537049560}

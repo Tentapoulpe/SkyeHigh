@@ -8,7 +8,8 @@ public class Script_Cascade : MonoBehaviour
     {
         if(other.GetComponent<PlayerController>())
         {
-            other.GetComponent<Rigidbody2D>().gravityScale = 1.2f;
+            Debug.Log("Touch");
+            //other.GetComponent<Rigidbody2D>().gravityScale = 1.2f;
         }
     }
 }
