@@ -609,6 +609,8 @@ public class GameManager : MonoBehaviour
     public void ReturnMenu()
     {
         winState = false;
+        if (Time.timeScale != 1)
+            Time.timeScale = 1f;
         StartCoroutine(ChangeScene(0));
         Sound_Manager.Instance.PlayMusicLevel(m_mainMenuMusic);
         Destroy(UIManager.Instance.gameObject);
@@ -656,17 +658,17 @@ public class GameManager : MonoBehaviour
 
     public void UnPauseGame()
     {
+        Time.timeScale = 1f;
+        Invoke("RestartAfterPause", 0.1f);
+    }
+
+    public void RestartAfterPause()
+    {
         foreach (PlayerController player in l_playersPlaying)
         {
             player.UnlockControls();
         }
         b_isPause = false;
-        Time.timeScale = 1f;
         UIManager.Instance.HidePause();
-    }
-
-    public void RestartAfterPause()
-    {
-
     }
 }

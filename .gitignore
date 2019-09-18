@@ -4,6 +4,12 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+Assets/Plugins/FMOD/Resources/FMODStudioCache.asset
+Assets/Plugins/FMOD/Resources/FMODStudioCache.asset.meta
+Assets/StreamingAssets/**/*.bank
+Assets/StreamingAssets/**/*.bank.meta
+fmod_editor.log
+
 
 # Visual Studio cache directory
 .vs/
@@ -34,3 +40,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
