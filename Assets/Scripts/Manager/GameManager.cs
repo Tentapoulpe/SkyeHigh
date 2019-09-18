@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
     private int i_mapIdx = 0;
     private bool b_isPause = false;
 
+    public AudioClip m_mainMenuMusic;
 
     private void Awake()
     {
@@ -411,6 +412,7 @@ public class GameManager : MonoBehaviour
     {
         b_isInMapSelection = false;
         StartCoroutine(ChangeScene(m_Levels[i_mapIdx].GetComponent<Script_Level_Manager>().m_myLevel.m_levelName));
+        Sound_Manager.Instance.PlayMusicLevel(m_Levels[i_mapIdx].GetComponent<Script_Level_Manager>().m_myLevel.m_levelmusic);
         UIManager.Instance.GameScreen();
     }
 
@@ -568,8 +570,6 @@ public class GameManager : MonoBehaviour
                 b_isInCharacterSelection = false;
                 UIManager.Instance.ShowMapMenu();
                 b_isInMapSelection = true;
-                //SceneManager.LoadScene(1);
-                //UIManager.Instance.GameScreen();
             }
         }
     }
@@ -610,6 +610,7 @@ public class GameManager : MonoBehaviour
     {
         winState = false;
         StartCoroutine(ChangeScene(0));
+        Sound_Manager.Instance.PlayMusicLevel(m_mainMenuMusic);
         Destroy(UIManager.Instance.gameObject);
         Destroy(gameObject);
     }

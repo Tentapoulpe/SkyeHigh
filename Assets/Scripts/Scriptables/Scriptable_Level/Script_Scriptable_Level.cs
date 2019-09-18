@@ -6,4 +6,5 @@ using UnityEngine;
 public class Script_Scriptable_Level : ScriptableObject
 {
     public string m_levelName;
+    public AudioClip m_levelmusic;
 }

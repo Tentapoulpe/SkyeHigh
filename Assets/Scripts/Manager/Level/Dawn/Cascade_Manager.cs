@@ -6,7 +6,7 @@ public class Cascade_Manager : MonoBehaviour
 {
     public float m_maxTimer;
     public List<GameObject> my_Spawn;
-    public ParticleSystem m_coinsVFX;
+    public GameObject m_coinsVFX;
     private bool b_spawn;
     private float f_currenTimer = 0;
     private bool b_alreadySpawn;

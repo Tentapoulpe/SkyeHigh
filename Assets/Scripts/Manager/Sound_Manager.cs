@@ -7,7 +7,9 @@ public class Sound_Manager : MonoBehaviour
     public static Sound_Manager Instance {get; private set;}
 
     private AudioSource a_myCurrentAudio;
-    public AudioSource m_soundMainMenu;
+    private AudioClip a_myAudioClip;
+    public AudioSource m_soundStage;
+    public AudioSource m_soundEffect;
 
     private void Awake()
     {
@@ -22,9 +24,24 @@ public class Sound_Manager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void CurrentAudio(AudioSource my_Audio)
+    public void PlayMusicLevel(AudioClip my_audioClip)
     {
-        a_myCurrentAudio = my_Audio;
+        if(m_soundStage.isPlaying)
+        {
+            m_soundStage.Stop();
+        }
+        m_soundStage.PlayOneShot(my_audioClip);
+    }
+
+    public void StopMusicLevel()
+    {
+        m_soundStage.Stop();
+    }
+
+    private void CurrentAudio(AudioClip my_Audio)
+    {
+        a_myAudioClip = my_Audio;
+        PlayOrStopAudio();
     }
 
     public void PlayOrStopAudio()
@@ -35,28 +52,7 @@ public class Sound_Manager : MonoBehaviour
         }
         else
         {
-            a_myCurrentAudio.Play();
+            a_myCurrentAudio.PlayOneShot(a_myAudioClip);
         }
-    }
-
-    public void PlayMainMenuSound()
-    {
-        m_soundMainMenu.Play();
-        CurrentAudio(m_soundMainMenu);
-    }
-
-
-
-
-
-
-    public void StopPlayCurrentAudio()
-    {
-        a_myCurrentAudio.Stop();
-    }
-
-    public void PlayCurrentAudio()
-    {
-        a_myCurrentAudio.Play();
     }
 }
