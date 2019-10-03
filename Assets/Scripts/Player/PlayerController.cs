@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
 
     private bool b_playerIsDashing;
     private bool b_canDash = true;
+    private bool b_dashUnlocked = false;
     private float f_dashCooldown = 0f;
     public float m_timerDashing;
     public float f_currentTimerDashing;
@@ -119,6 +120,11 @@ public class PlayerController : MonoBehaviour
             
         }
 
+        if( (vertical != 0 || horizontal != 0) && !b_dashUnlocked)
+        {
+            b_dashUnlocked = true;
+        }
+
         if (b_isInCloud)
         {
             rigidbodyPlayer.AddForce(new Vector2(horizontal, vertical) / m_character_info.m_cloudSlow, ForceMode2D.Impulse);
@@ -174,7 +180,7 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if (Input.GetButtonDown(s_fireInput) && b_canDash && b_canMove)
+        if (Input.GetButtonDown(s_fireInput) && b_canDash && b_canMove && b_dashUnlocked)
         {
             Dash();
         }
