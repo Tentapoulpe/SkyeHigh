@@ -27,6 +27,7 @@ public class PlayerCloud : MonoBehaviour
         {
             if (collision.CompareTag("Player") && collision.gameObject != player.transform.gameObject && collision.gameObject.GetComponent<PlayerController>().ReturnDashState())
             {
+                AudioManager.Instance.PlaySFX(SFXToPlay.Hit_Cloud);
                 player.Fall();
                 collision.gameObject.GetComponent<PlayerController>().StopDash(true);
                 if (collision.gameObject.GetComponent<PlayerController>().GetCloudHealth() <= 0)

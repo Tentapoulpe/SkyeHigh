@@ -222,6 +222,7 @@ public class GameManager : MonoBehaviour
                 {
                     if (playerConnected == 0)
                     {
+                        AudioManager.Instance.PlaySFX(SFXToPlay.Menu_Cancel);
                         UIManager.Instance.CharacterSelectionToStart();
                         b_isInCharacterSelection = false;
                     }
@@ -244,6 +245,7 @@ public class GameManager : MonoBehaviour
                 {
                     if (playerConnected == 0)
                     {
+                        AudioManager.Instance.PlaySFX(SFXToPlay.Menu_Cancel);
                         UIManager.Instance.CharacterSelectionToStart();
                         b_isInCharacterSelection = false;
                     }
@@ -266,6 +268,7 @@ public class GameManager : MonoBehaviour
                 {
                     if (playerConnected == 0)
                     {
+                        AudioManager.Instance.PlaySFX(SFXToPlay.Menu_Cancel);
                         UIManager.Instance.CharacterSelectionToStart();
                         b_isInCharacterSelection = false;
                     }
@@ -289,6 +292,7 @@ public class GameManager : MonoBehaviour
                 {
                     if (playerConnected == 0)
                     {
+                        AudioManager.Instance.PlaySFX(SFXToPlay.Menu_Cancel);
                         UIManager.Instance.CharacterSelectionToStart();
                         b_isInCharacterSelection = false;
                     }
@@ -361,6 +365,7 @@ public class GameManager : MonoBehaviour
 
             if (b_canChangeMap && (f_controllerSensibility == 1 || f_controllerSensibility == -1))
             {
+                AudioManager.Instance.PlaySFX(SFXToPlay.Menu_Selec);
                 Debug.Log("CHANGE");
                 b_canChangeMap = false;
                 ChangeMap(f_controllerSensibility);
@@ -368,6 +373,7 @@ public class GameManager : MonoBehaviour
 
             if (Input.GetButtonDown("F1_PS4_P1") || Input.GetButtonDown("F1_XBOX_P1"))
             {
+                AudioManager.Instance.PlaySFX(SFXToPlay.Menu_Valid);
                 LockMap();
             }
         }
@@ -377,10 +383,12 @@ public class GameManager : MonoBehaviour
             {
                 if (b_isPause)
                 {
+                    AudioManager.Instance.PlaySFX(SFXToPlay.Menu_Selec);
                     UnPauseGame();
                 }
                 else
                 {
+                    AudioManager.Instance.PlaySFX(SFXToPlay.Menu_Selec);
                     PauseGame();
                 }
             }
@@ -515,6 +523,7 @@ public class GameManager : MonoBehaviour
 
     public void AddPlayer(int player)
     {
+        AudioManager.Instance.PlaySFX(SFXToPlay.Menu_Selec);
         playerConnected++;
         l_Players[player] = playerConnected;
         UIManager.Instance.ActivatePlayer(playerConnected, player);
@@ -522,6 +531,7 @@ public class GameManager : MonoBehaviour
 
     public void RemovePlayer(int player)
     {
+        AudioManager.Instance.PlaySFX(SFXToPlay.Menu_Cancel);
         int playerPlace = l_Players[player];
         UIManager.Instance.DeactivatePlayer(playerPlace);
         l_Players[player] = 0;
@@ -539,6 +549,7 @@ public class GameManager : MonoBehaviour
 
     public void ChangeCharacter(int player,int changing)
     {
+        AudioManager.Instance.PlaySFX(SFXToPlay.Menu_Selec);
         m_PlayersCharacter[player] += changing;
         if (m_PlayersCharacter[player] < 0)
         {
@@ -553,6 +564,20 @@ public class GameManager : MonoBehaviour
 
     public void LockPlayer(int player)
     {
+        switch (m_PlayersCharacter[player])
+        {
+            case 0:
+                AudioManager.Instance.PlaySFX(SFXToPlay.Menu_Skye);
+                break;
+            case 1:
+                AudioManager.Instance.PlaySFX(SFXToPlay.Menu_Dawn);
+                break;
+            case 2:
+                AudioManager.Instance.PlaySFX(SFXToPlay.Menu_King);
+                break;
+            default:
+                break;
+        }
         lockedPlayer[player] = true;
         UIManager.Instance.LockPlayerCharacter(l_Players[player]);
         if ((playerConnected >= 2 && !m_debugMode) || (playerConnected >= 1 && m_debugMode))
@@ -576,6 +601,7 @@ public class GameManager : MonoBehaviour
 
     public void UnlockPlayer(int player)
     {
+        AudioManager.Instance.PlaySFX(SFXToPlay.Menu_Cancel);
         lockedPlayer[player] = false;
         UIManager.Instance.UnlockPlayerCharacter(l_Players[player]);
     }

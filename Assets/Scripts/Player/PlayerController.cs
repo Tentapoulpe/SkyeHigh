@@ -268,9 +268,16 @@ public class PlayerController : MonoBehaviour
             {
                 if (otherPlayer.ReturnDashState())
                 {
+
+                    AudioManager.Instance.PlaySFX(SFXToPlay.Hit_Dash_vs_Dash);
                     SetStun(f_collisionStunTime, otherPlayer.rigidbodyPlayer.velocity);
                     //Debug.Log("velocity other: " + otherPlayer.v_dashVelocity);
                     rigidbodyPlayer.velocity = otherPlayer.v_dashVelocity * new Vector2(0.75f, 0.75f);
+                }
+                else
+                {
+
+                    AudioManager.Instance.PlaySFX(SFXToPlay.Hit_Dash);
                 }
                 if (otherPlayer.f_currentStun <= 0)
                 { 
@@ -306,6 +313,11 @@ public class PlayerController : MonoBehaviour
 
     public void Dash()
     {
+        if (f_currentHealth <= m_character_info.m_dashCost)
+        AudioManager.Instance.PlaySFX(SFXToPlay.Last_Dash);
+        else
+        AudioManager.Instance.PlaySFX(SFXToPlay.Dash);
+
         a_Animator.SetBool("Dash",true);
         b_canDash = false;
         b_playerIsDashing = true;
@@ -316,6 +328,7 @@ public class PlayerController : MonoBehaviour
         m_DashParticle.GetComponent<ParticleSystemRenderer>().material.SetTexture("_NewTex_1", m_DashTexture);
         m_DashParticle.Play();
         v_dashVelocity = rigidbodyPlayer.velocity;
+
     }
 
     public void StopDash(bool stopSpeed)
@@ -352,6 +365,7 @@ public class PlayerController : MonoBehaviour
     {
         if (f_currentHealth <= m_character_info.m_maxHealth)
         {
+            AudioManager.Instance.PlaySFX(SFXToPlay.Absorb_Cloud);
             f_currentHealth += f_health;
             
             if (f_currentHealth >= m_character_info.m_maxHealth)
@@ -512,6 +526,7 @@ public class PlayerController : MonoBehaviour
 
     public void Fall()
     {
+
         a_Animator.SetTrigger("Fall");
         LockControls();
 
